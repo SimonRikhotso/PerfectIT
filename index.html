@@ -8,153 +8,44 @@
 <link rel="icon" type="image/png" href="images/PerfectITLogo4.png">
 <meta name="description" content="PerfectIT provides structured programming education in C#, Java, and C++ led by an experienced lecturer and software developer.">
 
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #070b14;
-        color: #e5e7eb;
-        line-height: 1.6;
-    }
-
-    /* HERO */
-    .hero {
-        text-align: center;
-        padding: 110px 20px;
-        background: radial-gradient(circle at top, #111827, #070b14);
-    }
-
-    .hero h1 {
-        font-size: 56px;
-        margin-bottom: 10px;
-        letter-spacing: 1px;
-    }
-
-    .hero p {
-        font-size: 18px;
-        color: #9ca3af;
-        margin: 8px 0;
-    }
-
-    .cta {
-        display: inline-block;
-        margin-top: 25px;
-        padding: 15px 30px;
-        background: #22c55e;
-        color: white;
-        text-decoration: none;
-        border-radius: 10px;
-        font-weight: bold;
-    }
-
-    .cta:hover {
-        background: #16a34a;
-    }
-
-    section {
-        max-width: 950px;
-        margin: auto;
-        padding: 60px 20px;
-    }
-
-    h2 {
-        color: #60a5fa;
-        font-size: 26px;
-        margin-bottom: 15px;
-    }
-
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2px;
-    margin-bottom: 20px;
-}
-
-.logo-container img {
-    width: 400px;
-    height: auto;
-}
-
-.logo-text {
-    text-align: left;
-}
-
-.logo-text h1 {
-    margin: 0;
-    font-size: 56px;
-    color: white;
-}
-
-.logo-text p {
-    margin: 0;
-    color: #60a5fa;
-    font-size: 16px;
-}
-
-@media (max-width: 768px) {
-    .logo-container {
-        flex-direction: column;
-    }
-
-    .logo-text {
-        text-align: center;
-    }
-
-    .logo-text h1 {
-        font-size: 42px;
-    }
-}
-
-
-    .card {
-        background: #0f172a;
-        border: 1px solid #1f2937;
-        padding: 25px;
-        border-radius: 12px;
-        margin-bottom: 20px;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-
-    .profile {
-        text-align: center;
-        margin-top: -60px;
-    }
-
-    .profile img {
-        width: 170px;
-        height: 170px;
-        border-radius: 50%;
-        border: 3px solid #22c55e;
-        object-fit: cover;
-    }
-
-    ul {
-        padding-left: 18px;
-    }
-
-    footer {
-        text-align: center;
-        padding: 30px;
-        background: #0b1220;
-        color: #6b7280;
-    }
-
-    @media (max-width: 768px) {
-        .hero h1 { font-size: 40px; }
-        .grid { grid-template-columns: 1fr; }
-    }
-</style>
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
+<header>
+
+<nav class="navbar">
+
+    <div class="logo">
+        <img src="images/PerfectITLogo4.png" alt="PerfectIT Logo">
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu">
+        ☰
+    </div>
+
+    <div class="nav-links" id="nav-links">
+
+        <a href="index.html" class="active">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="programs.html">Programs</a>
+
+        <a href="methodology.html">Methodology</a>
+
+        <a href="referrals.html">Referrals</a>
+
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</nav>
+</header>
+
+<main>
 <!-- HERO -->
 
 <div class="hero">
@@ -171,164 +62,52 @@
 
 </div>
 
-<!-- PROFILE -->
-
-<section class="profile">
-    <img src="images/Mypp.jpeg" alt="Lecturer Profile">
-
-<div class="card">
-    <h2>Academic & Professional Profile</h2>
-    <p>
-        a Software Developer and Programming Lecturer with over a decade of experience
-        teaching structured programming in academic environments.
-    </p>
-    <p>
-        My focus is building strong problem-solving foundations in students through structured,
-        practical, and guided learning experiences.
-    </p>
-</div>
-
-</section>
-
-<!-- PHILOSOPHY -->
-
 <section>
-    <h2>Learning Philosophy</h2>
-    <div class="card">
-        <p>
-            Programming is best learned through structured guidance, repetition, and practical application.
-            My teaching approach is designed to transition students from theoretical understanding to independent problem-solving ability.
-        </p>
-        <p>
-            Learning is reinforced through step-by-step explanations, live coding sessions, and structured practice.
-        </p>
-    </div>
-</section>
+    <h2>Why Students Choose PerfectIT</h2>
 
-<!-- SYSTEM -->
-
-<section>
-    <h2>Structured Learning System</h2>
     <div class="grid">
+        <div class="card">
+            <h3>10+ Years Experience</h3>
+            <p>Professional programming lecturer since 2014.</p>
+        </div>
 
-    <div class="card">
-        <h3>Live Instruction</h3>
-        <p>Interactive online sessions focused on real-time coding and explanation.</p>
-    </div>
+        <div class="card">
+            <h3>Structured Learning</h3>
+            <p>Step-by-step guidance that builds confidence.</p>
+        </div>
 
-    <div class="card">
-        <h3>Guided Practice</h3>
-        <p>Step-by-step problem solving with lecturer support.</p>
-    </div>
+        <div class="card">
+            <h3>Practical Focus</h3>
+            <p>Learn through coding, not memorisation.</p>
+        </div>
 
-    <div class="card">
-        <h3>Reinforcement Learning</h3>
-        <p>Students review structured explanations to strengthen understanding.</p>
-    </div>
-
-    <div class="card">
-        <h3>Exam Preparation</h3>
-        <p>Focused preparation aligned with academic requirements and assessments.</p>
-    </div>
-
-</div>
-
-</section>
-
-<!-- SUBJECTS -->
-
-<section>
-    <h2>Academic Programs</h2>
-    <div class="card">
-        <ul>
-            <li>C# Programming (Fundamentals to Intermediate)</li>
-            <li>Java Programming</li>
-            <li>C++ Programming</li>
-            <li>Python Programming</li>            
-            <li>Programming Fundamentals</li>
-	    <li>Problem Solving & Logic Development</li>
-        </ul>
+        <div class="card">
+            <h3>Exam Preparation</h3>
+            <p>Focused support for assessments and exams.</p>
+        </div>
     </div>
 </section>
-
-<!-- WHO -->
-
-<section>
-    <h2>Who This Program Is Designed For</h2>
-    <div class="card">
-        <ul>
-            <li>University Computer Science & IT students</li>
-            <li>College programming students</li>
-            <li>Learners struggling with coding modules</li>
-            <li>Students preparing for exams and assessments</li>
-        </ul>
-    </div>
-</section>
-
-<!-- VALUE -->
-
-<section>
-    <h2>Enrollment Information</h2>
-    <div class="card">
-        <p><strong>R500 per student per module per month</strong></p>
-        <p>Structured academic support designed to improve understanding, performance, and exam outcomes.</p>
-    </div>
-</section>
+</main>
 
 
-<!-- REFERRAL PROGRAM -->
+<a href="https://wa.me/27744464317?text=Hi%20I%20would%20like%20to%20enquire%20about%20PerfectIT"
+   class="whatsapp-float"
+   target="_blank">
 
-<section>
-    <h2>Student Referral Program</h2>
+    <img src="images/whatsapp.png" alt="WhatsApp">
+</a>
 
-<div class="card">
-    <p>
-        PerfectIT rewards students who help grow the learning community.
-    </p>
-
-    <p>
-        If you refer a student who successfully enrolls in a module, you receive a reward.
-    </p>
-
-    <h3>How it works</h3>
-    <ul>
-        <li>Refer a friend who needs programming support</li>
-        <li>They register for a PerfectIT module</li>
-        <li>Your reward is activated automatically</li>
-    </ul>
-
-    <h3>Rewards</h3>
-    <ul>
-        <li>Free additional support session OR</li>
-        <li>Discount on your next module fee</li>
-    </ul>
-
-    <p>
-        This system encourages collaboration and helps build a strong learning network among students.
-    </p>
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section>
-    <h2>Contact & Enrollment</h2>
-    <div class="card">
-        <p>WhatsApp: 074 446 4317</p>
-        <p>Email: info@perfectit.co.za</p>
-
-    <a class="cta" href="https://wa.me/27744464317?text=Hi%20I%20would%20like%20to%20enquire%20about%20PerfectIT" target="_blank">
-        Start Enrollment Chat
-    </a>
-</div>
-
-</section>
 
 <footer>
     © 2026 PerfectIT. All rights reserved.
 </footer>
+<script src="js/script.js"></script>
+
+<button id="topBtn">
+↑
+</button>
+
 
 </body>
+
 </html>
