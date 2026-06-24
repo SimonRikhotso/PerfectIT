@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: space-between;
 
-    padding: 10px 20px;
+    padding: 10px 0px;
     box-sizing: border-box;
     background: #0b1220;
 
@@ -75,13 +75,12 @@
 .logo {
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .logo img {
-    width: 200px;
-    height: 40px;
-    object-fit: contain;
+    width: 34px;
+    height: 40px;    
 }
 
 body {
