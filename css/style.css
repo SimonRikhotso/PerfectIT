@@ -73,15 +73,36 @@
     }
 }
 
+.main-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.main-logo img {
+    width: 150px;
+    height: 60px;    
+}
+
 .logo {
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 .logo img {
-    width: 34px;
-    height: 40px;    
+    width: 50px;
+    height: 35px;    
+}
+.logo-text h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.logo-text span {
+    color: #60a5fa;
+    font-size: 0.85rem;
 }
 
 body {
@@ -174,6 +195,12 @@ h2 {
 }
 
 .card {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center; /* Centers items vertically */
+    align-items: center;    /* Centers items horizontally */
+    text-align: center;  
+    align-items: centre;
     background: #0f172a;
     border: 1px solid #1f2937;
     padding: 25px;
@@ -193,10 +220,20 @@ h2 {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
+
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+
+.main-Icon img
+{
+    width: 100px;
+  height: auto;
+  object-fit: cover;
+
 }
 
 .profile {
@@ -294,8 +331,8 @@ ul {
     bottom: 25px;
     left: 25px;
 
-    width: 65px;
-    height: 65px;
+    width: 40px;
+    height: 40px;
 
     z-index: 9999;
 
@@ -339,6 +376,111 @@ footer {
     .grid { 
         grid-template-columns: 1fr; 
     }
+	
 }
 
+.grid .card .cta {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+}
 
+/* ===========================================
+   LANDING PAGE NAVIGATION
+=========================================== */
+
+.landing-navbar{
+
+    position: fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:85px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 25px;
+
+    box-sizing:border-box;
+
+    background:#0b1220;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.4);
+
+    z-index:1000;
+
+}
+
+.landing-icons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-right:25px;
+
+}
+
+.landing-icons a{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    transition:0.3s;
+
+}
+
+.landing-icons img{
+
+    width:40px;
+
+    height:40px;
+
+    transition:0.3s;
+
+}
+
+.landing-icons a:hover{
+
+    background:#172033;
+
+}
+
+.landing-icons a:hover img{
+
+    transform:scale(1.2);
+
+}
+@media(max-width:768px){
+
+    .landing-icons{
+
+        gap:12px;
+
+        margin-right:10px;
+
+    }
+
+    .landing-icons img{
+
+        width:30px;
+
+        height:30px;
+
+    }
+
+}
