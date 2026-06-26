@@ -7,9 +7,59 @@ function toggleMenu() {
 const mobileMenu = document.getElementById("mobile-menu");
 const navLinks = document.getElementById("nav-links");
 
-mobileMenu.addEventListener("click", () => {
+
+if(mobileMenu && navLinks){
+
+
+mobileMenu.addEventListener("click", (e)=>{
+
+    e.stopPropagation();
+
     navLinks.classList.toggle("active");
+    mobileMenu.classList.toggle("open");
+
 });
+
+
+
+// close when clicking outside
+
+document.addEventListener("click",(e)=>{
+
+
+    if(
+        !navLinks.contains(e.target) &&
+        !mobileMenu.contains(e.target)
+    ){
+
+        navLinks.classList.remove("active");
+
+    }
+
+
+});
+
+
+
+// close after selecting link
+
+navLinks.querySelectorAll("a")
+.forEach(link=>{
+
+
+link.addEventListener("click",()=>{
+
+
+    navLinks.classList.remove("active");
+
+
+});
+
+
+});
+
+
+}
 
 const cards =
 document.querySelectorAll(".card");
@@ -56,3 +106,4 @@ window.scrollTo({
 });
 
 });
+
