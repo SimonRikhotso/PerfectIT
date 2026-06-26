@@ -165,6 +165,16 @@ ul{padding-left:18px}
     transition: var(--transition);
 }
 
+/* ==========================================
+   Landing Page Cards
+========================================== */
+
+.landing-page .card{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .card.show{opacity:1;transform:translateY(0)}
 .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
 .grid .card .cta{margin-top:15px;padding:10px 20px}
