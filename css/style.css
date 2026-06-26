@@ -282,36 +282,88 @@ footer{
 
 @media (max-width:768px){
 
-.main-logo{
-        margin-left:5px;
+    /* Navigation */
+
+    .navbar{
+        padding:10px 8px;
     }
-.menu-toggle{display:block}
 
-.nav-links{
-display:none;
-flex-direction:column;
-position:absolute;
-top:70px;
-left:0;
-width:100%;
-background:#003366;
-box-shadow:0 5px 10px rgba(0,0,0,.2);
-margin-right:0;
-gap:0;
-}
+    .main-logo{
+        margin-left:0;
+    }
 
-.nav-links.active{display:flex}
+    .menu-toggle{
+        display:block;
+    }
 
-.nav-links a{
-padding:15px;
-border-bottom:1px solid rgba(255,255,255,.1);
-}
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#003366;
+    }
 
-.logo-container{flex-direction:column}
-.hero-logo-text{text-align:center}
-.hero-logo-text h1,.hero h1{font-size:2.5rem}
-.grid{grid-template-columns:1fr}
+    .nav-links.active{
+        display:flex;
+    }
 
-.landing-icons{gap:12px;margin-right:10px}
-.landing-icons img{width:30px;height:30px}
+    /* Hero */
+
+    .hero{
+        padding:40px 15px;
+    }
+
+    .hero h1{
+        font-size:2.3rem;
+    }
+
+    .logo-container{
+        flex-direction:column;
+    }
+
+    .logo-container img{
+        width:85%;
+        max-width:280px;
+        height:auto;
+    }
+
+    .hero-logo-text{
+        text-align:center;
+    }
+
+    .hero-logo-text h1{
+        font-size:2.3rem;
+    }
+
+    /* Cards */
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    /* Landing Navigation */
+
+    .landing-navbar{
+        height:70px;
+        padding:0 10px;
+    }
+
+    .landing-icons{
+        gap:6px;
+        margin-right:0;
+    }
+
+    .landing-icons a{
+        width:44px;
+        height:44px;
+    }
+
+    .landing-icons img{
+        width:24px;
+        height:24px;
+    }
+
 }
