@@ -282,6 +282,9 @@ footer{
 
 @media (max-width:768px){
 
+.main-logo{
+        margin-left:5px;
+    }
 .menu-toggle{display:block}
 
 .nav-links{
