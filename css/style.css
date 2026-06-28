@@ -473,6 +473,8 @@ footer{
 
 .testimonial-card{
 
+    margin:20px;
+    
     background:var(--card);
 
     border:1px solid var(--border);
@@ -526,23 +528,25 @@ gap:15px;
 
 .student img{
 
-width:100px;
-
-height:100px;
+width:160px;
+height:160px;
 
 border-radius:50%;
 
 object-fit:cover;
 
-border:3px solid var(--primary);
+border:4px solid var(--primary);
+
+box-shadow:0 0 18px rgba(0,0,0,.25);
+
+transition:.3s;
 
 }
-
 .avatar
 {
 
-    width:100px;
-    height:100px;
+    width:160px;
+    height:160px;
 
     min-width:75px;
 
@@ -564,9 +568,9 @@ border:3px solid var(--primary);
 
     text-transform:uppercase;
 
-    border:3px solid var(--primary);
+    border:4px solid var(--primary);
 
-    box-shadow:0 6px 18px rgba(0,0,0,.30);
+    box-shadow:0 0 18px rgba(0,0,0,.25);
 
     user-select:none;
 
@@ -651,8 +655,8 @@ font-weight:bold;
 
     .student img,
     .avatar{
-        width:80px;
-        height:80px;
+        width:100px;
+        height:100px;
         min-width:80px;
         min-height:80px;
         max-width:80px;
@@ -685,8 +689,290 @@ font-weight:bold;
       font-size:1.1rem;
   }
 
+  @media(max-width:768px){
+
+
+.skill-badges{
+
+justify-content:center;
+
+}
+
+
+.skill-badge{
+
+width:70px;
+
+height:80px;
+
+}
+
+
+.cert-title{
+
+font-size:.9rem;
+
+}
+
+
+}
+
+}
+
+/* ==========================================
+   Student Certification Badges
+========================================== */
+
+
+.certification{
+
+margin-top:25px;
+
+padding-top:20px;
+
+border-top:1px solid var(--border);
+
+}
+
+
+.cert-title{
+
+font-weight:bold;
+
+color:var(--primary);
+
+margin-bottom:15px;
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
 }
 
 
 
+.skill-badges{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+
+}
+
+.badge-container{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    width:75px;
+
+}
+
+.skill-badge{
+
+    width:70px;
+    height:70px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:15px;
+
+    background:#111827;
+
+    border:2px solid #334155;
+
+    transition:all .3s ease;
+
+}
+
+.skill-badge img{
+
+    width:38px;
+    height:38px;
+
+    object-fit:contain;
+
+}
+
+.badge-label{
+
+    margin-top:8px;
+
+    text-align:center;
+
+    font-size:.72rem;
+
+    color:#d1d5db;
+
+    line-height:1.2;
+
+}
+
+/* Badge Colours */
+
+.badge-java{
+
+border-color:#F97316;
+
+}
+.badge-java:hover{
+
+    box-shadow:0 0 18px rgba(249,115,22,.45);
+
+}
+
+.badge-csharp{
+
+border-color:#8B5CF6;
+
+}
+.badge-csharp:hover{
+
+    box-shadow:0 0 18px rgba(139,92,246,.45);
+
+}
+
+.badge-python{
+
+border-color:#FACC15;
+
+}
+.badge-python:hover{
+
+    box-shadow:0 0 18px rgba(250,204,21,.45);
+
+}
+.badge-cpp{
+
+border-color:#2563EB;
+
+}
+.badge-cpp:hover{
+
+    box-shadow:0 0 18px rgba(37,99,235,.45);
+
+}
+
+.badge-db{
+
+border-color:#2563EB;
+
+}
+.badge-db:hover{
+
+    box-shadow:0 0 18px rgba(37,99,235,.45);
+
+}
+.badge-pld{
+
+border-color:#22C55E;
+
+}
+.badge-pld:hover{
+
+    box-shadow:0 0 18px rgba(34,197,94,.45);
+
+}
+.badge-intro{
+
+border-color:#4ADE80;
+
+}
+.badge-intro:hover{
+
+    box-shadow:0 0 18px rgba(74,222,128,.45);
+
+}
+.badge-sad{
+
+border-color:#9CA3AF;
+
+}
+.skill-badge:hover{
+
+ transform:translateY(-6px) scale(1.08);
+
+}
+.badge-sad:hover{
+
+    box-shadow:0 0 18px rgba(156,163,175,.45);
+
+}
+
+
+.skill-badge img{
+
+width:65px;
+
+height:65px;
+
+object-fit:contain;
+
+}
+
+
+
+.skill-badge span{
+
+font-size:.75rem;
+
+margin-top:5px;
+
+color:white;
+
+text-align:center;
+
+}
+
+/* ==========================================
+   Student Specialization Colours
+========================================== */
+
+/* C# */
+.spec-csharp{
+    border-color:#8B5CF6 !important;
+    box-shadow:0 0 18px rgba(139,92,246,.45);
+}
+
+/* Java */
+.spec-java{
+    border-color:#F97316 !important;
+    box-shadow:0 0 18px rgba(249,115,22,.45);
+}
+
+/* C++ */
+.spec-cpp{
+    border-color:#2563EB !important;
+}
+
+/* Python */
+.spec-python{
+    border-color:#FACC15 !important;
+    box-shadow:0 0 18px rgba(250,204,21,.45);
+}
+
+/* Database */
+.spec-db{
+    border-color:#2563EB !important;
+}
+
+/* Programming Logic & Design */
+.spec-pld{
+    border-color:#22C55E !important;
+}
+
+/* Introduction to Programming Logic */
+.spec-intro{
+    border-color:#4ADE80 !important;
+}
+
+/* System Analysis & Design */
+.spec-sad{
+    border-color:#9CA3AF !important;
+}
 
