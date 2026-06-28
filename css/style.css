@@ -683,10 +683,10 @@ font-weight:bold;
     .avatar{
         width:100px;
         height:100px;
-        min-width:80px;
-        min-height:80px;
-        max-width:80px;
-        max-height:80px;
+        min-width:100px;
+        min-height:100px;
+        max-width:120px;
+        max-height:120px;
 
         border-radius:50%;
         object-fit:cover;
@@ -780,6 +780,7 @@ gap:8px;
     display:flex;
     flex-wrap:wrap;
     gap:16px;
+    justify-content: flex-start; 
 
 }
 
