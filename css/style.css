@@ -664,6 +664,27 @@ font-weight:bold;
         flex-shrink:0;
     }
 
+
+    /* Student testimonials on mobile */
+
+  .testimonial-header
+  {
+      flex-direction:column;
+      align-items:flex-start;
+      gap:15px;
+  }
+
+  .student
+  {
+      width:100%;
+  }
+
+  .rating
+  {
+      align-self:flex-start;
+      font-size:1.1rem;
+  }
+
 }
 
 
