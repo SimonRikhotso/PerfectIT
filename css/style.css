@@ -538,7 +538,8 @@ border:3px solid var(--primary);
 
 }
 
-.avatar{
+.avatar
+{
 
     width:100px;
     height:100px;
@@ -642,7 +643,28 @@ font-weight:bold;
 
 }
 
+/* ==========================================
+   Student Cards - Mobile Fix
+========================================== */
 
+@media (max-width:768px){
+
+    .student img,
+    .avatar{
+        width:80px;
+        height:80px;
+        min-width:80px;
+        min-height:80px;
+        max-width:80px;
+        max-height:80px;
+
+        border-radius:50%;
+        object-fit:cover;
+
+        flex-shrink:0;
+    }
+
+}
 
 
 
