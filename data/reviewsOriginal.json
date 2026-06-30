@@ -1,0 +1,471 @@
+[
+    {
+        "id": 1,
+        "featured": true,
+        "name": "Mathebula Tiyiselani Ashley",
+        "photo": "Mathebula-Tiyiselani.jpeg",
+        "email": "mathebulatiyi5@gmail.com",
+        "cell": "0769437611",
+        "institution": "RI PLK",
+        "firstYear": 2022,
+        "lastYear": 2024,
+        "highestModule": "java",
+        "rating": 5,
+        "modules": 
+        [
+            "Java",
+            "Database",
+            "PRLD",
+            "IPRG"
+        ],
+        "testimonial": "I had the privilege of being taught by Mr. Rikhotso in Programming Logic and Design, Programming 1A, System Analysis and Design, and Databases. He is a knowledgeable, patient, and dedicated lecturer who always made complex concepts easy to understand. He encouraged us to think critically, solve problems independently, and never hesitated to provide extra support whenever we needed it. His passion for teaching and commitment to his students' success played a significant role in building my confidence and technical skills. I am grateful for the positive impact he had on my academic journey and would highly recommend him to any student.",
+        "date": "2026-06-27",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 2,
+        "featured": true,
+        "name": "Mukwevho Selwyn",
+        "photo": "",
+        "email": "mukwevho97@gmail.com",
+        "cell": "0717456758",
+        "institution": "RI Online & Extra Class",
+        "firstYear": 2025,
+        "lastYear": 2026,
+        "highestModule": "csharp",
+        "rating": 5,
+        "modules": 
+        [
+            "C sharp",
+            "Java",
+            "PRLD"
+        ],
+        "testimonial": "Simon is a very good Tutor , His classes are very interactive and educational.I definitely learnt alot from him.",
+        "date": "2026-06-27",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 3,
+        "featured": true,
+        "name": "Bopape Matome Elijah",
+        "photo": "Bopape-Matome.png",
+        "email": "bopapeelijah09@gmail.com",
+        "cell": "0691998728",
+        "institution": "RI PLK",
+        "firstYear": 2024,
+        "lastYear": 2025,
+        "highestModule": "csharp",
+        "rating": 5,
+        "modules": 
+        [
+            "C sharp",
+            "Java",
+            "PRLD"
+        ],
+        "testimonial": "Mr. Rikhotso lectured me for two years, in 2024 and 2025. He was a very patient lecturer, he was someone who knew what he was doing,  and he always prioritised a student’s understanding. He would never let anyone trail behind in his class. He’s a great man, he’s a great lecturer, he’s just a great individual to have in your corner.",
+        "date": "2026-06-27",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 4,
+        "featured": true,
+        "name": "Pheme Tlou",
+        "photo": "Pheme-Tlou.jpg",
+        "email": "tloupheme@outlook.com",
+        "cell": "0761570826",
+        "institution": "RI PLK",
+        "firstYear": 2024,
+        "lastYear": 2025,
+        "highestModule": "csharp",
+        "rating": 5,
+        "modules": 
+        [
+            "C sharp",
+            "Java",
+            "PRLD"
+        ],
+        "testimonial": "Mr Rikhotso made me fall in love with programming. I was new to it and he made learning it quite easy and even gave me tips on how to keep my skills sharp. I'll always be grateful for the help he gave me and for what I've learned from him.",
+        "date": "2026-06-27",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 5,
+        "featured": true,
+        "name": "Mphelo Mahlatse",
+        "photo": "",
+        "email": "luckymahlatse879@gmail.com",
+        "cell": "",
+        "institution": "RI PLK",
+        "firstYear": 2024,
+        "lastYear": 2025,
+        "highestModule": "csharp",
+        "rating": 5,
+        "modules": 
+        [
+            "C sharp",
+            "Java",
+            "PRLD"
+        ],
+        "testimonial": "Mr.Rikhotso has been the best programming lecturer from my experience and still is….he’s passion for coding inspires many students including myself. He definitely convinced me and others that programming can be cool!😎👌🏽",
+        "date": "2026-06-27",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 6,
+        "featured": true,
+        "name": "Gwala Zandile",
+        "photo": "",
+        "email": "zandilezandie233@gmail.com",
+        "cell": "0840197857",
+        "institution": "RI Online",
+        "firstYear": 2025,
+        "lastYear": 2025,
+        "highestModule": "java",
+        "rating": 5,
+        "modules": 
+        [
+            "Java"
+        ],
+        "testimonial": "Mr Rikhotso is are of dedicated lectures who is not only passionate about education but he goes above and beyond to ensure education is linked to our daily lives activities. ",
+        "date": "2026-06-27",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 7,
+        "featured": true,
+        "name": "Mahlaela Keabetswe",
+        "photo": "",
+        "email": "mahlaelakeabetswe@gmail.com",
+        "cell": "",
+        "institution": "RI Online",
+        "firstYear": 2025,
+        "lastYear": 2025,
+        "highestModule": "intro",
+        "rating": 5,
+        "modules": 
+        [
+            "IPRG"
+        ],
+        "testimonial": "He is a very nice and patient lecturer and let’s the classes be about learning and not about being told what to do.",
+        "date": "2026-06-27",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 8,
+        "featured": true,
+        "name": "Eltawil Isam",
+        "photo": "",
+        "email": "isamelt2005@gmail.com",
+        "cell": "068 107 6013",
+        "institution": "RI PLK",
+        "firstYear": 2024,
+        "lastYear": 2025,
+        "highestModule": "csharp",
+        "rating": 5,
+        "modules": 
+        [
+            "C sharp",
+            "Java",
+            "PRLD"
+        ],
+        "testimonial": "MR. Simon was one of the best lecturers to teach me. He has made my time at my institution pleasant and he is very understanding. Anybody would be lucky to have him as their lecturer and I assure you anywhere I go in life, his name will be echoed as the person who helped me get to where I would be.",
+        "date": "2026-06-27",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 9,
+        "featured": true,
+        "name": "Motsepe Kholofelo",
+        "photo": "Motsepe-Kholofelo.jpeg",
+        "email": "motsepetsholo@gmail.com",
+        "cell": "0728893989",
+        "institution": "RI Online",
+        "firstYear": 2024,
+        "lastYear": 2025,
+        "highestModule": "intro",
+        "rating": 5,
+        "modules": 
+        [
+            "IPRG"
+        ],
+        "testimonial": "Mr. Rikhotso was an excellent lecturer who explained concepts clearly and made learning enjoyable. He lectured me in Introduction to Web Development and Introduction to Programming Logic, and he was always patient, supportive, and willing to help. I truly appreciate his guidance and the positive impact he had on my learning journey.",
+        "date": "2026-06-27",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 10,
+        "featured": true,
+        "name": "Banyini Ntsako",
+        "photo": "",
+        "email": "",
+        "cell": "",
+        "institution": "Extra Class",
+        "firstYear": 2025,
+        "lastYear": 2026,
+        "highestModule": "cpp",
+        "rating": 5,
+        "modules": 
+        [
+            "C++",
+            "Python"
+        ],
+        "testimonial": "Mr Rikhotso is an honourable man, very humble man, yet very knowledgeable, I have learned a lot about Programming from him. He is a very patient teacher and a Programming genius( all languages) I am a better programmer because of his teaching.",
+        "date": "2026-06-27",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 11,
+        "featured": true,
+        "name": "Kgaphola Elias Malope Ntswaborwa",
+        "photo": "Kgaphola-Elias.jpg",
+        "email": "Kgapholalogik@gmail.com",
+        "cell": "0813426929",
+        "institution": "RI PLK",
+        "firstYear": 2024,
+        "lastYear": 2024,
+        "highestModule": "intro",
+        "rating": 5,
+        "modules": 
+        [
+            "IPRG"
+        ],
+        "testimonial": "Mr Simon it is a great teacher he always find many ways to break codes into smaller pieces for a student to understand which many people are rare to find he is one of the best teacher I had.",
+        "date": "2026-06-27",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 12,
+        "featured": true,
+        "name": "Lemao Olerato",
+        "photo": "",
+        "email": "lemaoolerato96@gmail.com",
+        "cell": "",
+        "institution": "RI Online",
+        "firstYear": 2025,
+        "lastYear": 2025,
+        "highestModule": "pld",
+        "rating": 5,
+        "modules": 
+        [
+            "PRLD"
+        ],
+        "testimonial": "Mr. Rikhotso was by far the most helpful lecturer I had in my first year. He taught me Web Development, and thanks to his clear explanations and constant support, I passed with a distinction. He was always approachable. I never felt intimidated to ask questions, and he responded to my emails and messages incredibly quickly. His passion for teaching really shows in every lesson; he genuinely wants his students to understand and succeed. I highly recommend him to anyone looking for extra classes or guidance.",
+        "date": "2026-06-27",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 13,
+        "featured": true,
+        "name": "Mathalise Vusani",
+        "photo": "",
+        "email": "hopevusani@gmail.com",
+        "cell": "0722027094",
+        "institution": "RI PLK",
+        "firstYear": 2022,
+        "lastYear": 2023,
+        "highestModule": "java",
+        "rating": 5,
+        "modules": 
+        [
+            "Java",
+            "Database",
+            "PRLD"
+        ],
+        "testimonial": "Mr Rokhotso was a great lecture who was always  kind, patient, and passionate about seeing his students progress. He took his time explaining difficult topics to make us understand and made sure that we as his students were comfortable asking questions. Mr Rikhotso was also willing to help during his free time. His commitment in teaching inspired me to put in more effort and boosted my self esteem.",
+        "date": "2026-06-28",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 14,
+        "featured": true,
+        "name": "Madisha Thlompho",
+        "photo": "Madisha-Thlompho.jpeg",
+        "email": "thlomphomadisha09@gmail.com",
+        "cell": "0763206690",
+        "institution": "RI PLK",
+        "firstYear": 2022,
+        "lastYear": 2024,
+        "highestModule": "db",
+        "rating": 5,
+        "modules": 
+        [
+            "Database",
+            "PRLD",
+            "IPRG"
+        ],
+        "testimonial": "I had the privilege of being his student, and he was always patient, supportive, and willing to help whenever we needed guidance. He explained concepts clearly, encouraged us to do our best, and treated everyone with respect. His dedication and positive attitude made learning easier, and I appreciate the knowledge and support he gave throughout my studies.",
+        "date": "2026-06-28",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 15,
+        "featured": true,
+        "name": "Phasiwe Bokang",
+        "photo": "",
+        "email": "",
+        "cell": "",
+        "institution": "RI PLK",
+        "firstYear": 2023,
+        "lastYear": 2024,
+        "highestModule": "db",
+        "rating": 5,
+        "modules": 
+        [
+            "Database",
+            "IPRG"
+        ],
+        "testimonial": "Very patient and enthusiastic about the topics.",
+        "date": "2026-06-28",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 16,
+        "featured": true,
+        "name": "Maluleke Senzo Luther",
+        "photo": "Maluleke-Senzo.jpg",
+        "email": "Senzoluther@gmail.com",
+        "cell": "0818883105",
+        "institution": "RI PLK",
+        "firstYear": 2023,
+        "lastYear": 2024,
+        "highestModule": "java",
+        "rating": 5,
+        "modules": 
+        [
+            "Java",
+            "PRLD",
+            "IPRG"
+        ],
+        "testimonial": "Very excellent programming lectures.",
+        "date": "2026-06-28",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 17,
+        "featured": true,
+        "name": "Ramabulana Fulufhelo Hope",
+        "photo": "Ramabulana-Fulufhelo.jpg",
+        "email": "hoperams300@gmail.com",
+        "cell": "0649438827",
+        "institution": "RI PLK",
+        "firstYear": 2023,
+        "lastYear": 2023,
+        "highestModule": "java",
+        "rating": 5,
+        "modules": 
+        [
+            "Java",
+            "PRLD"
+        ],
+        "testimonial": "Mr Rikhotso was one of the best lecturers in the institution, he had time to cater and help each and every student. The other thing he did is that he used to love all his students, and he was not bias or picky each and everyone was loved by that man.",
+        "date": "2026-06-28",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 18,
+        "featured": true,
+        "name": "Nephawe Tshedza",
+        "photo": "",
+        "email": "tshedzanephawe3@gmail.com",
+        "cell": "0795214861",
+        "institution": "RI PLK",
+        "firstYear": 2023,
+        "lastYear": 2023,
+        "highestModule": "java",
+        "rating": 5,
+        "modules": 
+        [
+            "Java",
+            "Database",
+            "PRLD",
+            "IPRG"
+        ],
+        "testimonial": "Mr. Rikhotso was a knowledgeable, patient and supportive lecturer who made IT concepts easier to understand. He always encouraged us to ask questions and was willing to help whenever we needed guidance. His dedication to his students and passion for teaching created a positive learning environment that motivated us to do our best. I appreciate the knowledge and skills I gained from his classes.",
+        "date": "2026-06-29",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 19,
+        "featured": true,
+        "name": "Kapa Derrick",
+        "photo": "Kapa-Derrick.jpg",
+        "email": "",
+        "cell": "",
+        "institution": "RI Online & Extra Class",
+        "firstYear": 2024,
+        "lastYear": 2026,
+        "highestModule": "csharp",
+        "rating": 5,
+        "modules": 
+        [
+            "C sharp",
+            "Java",
+            "IPRG"
+        ],
+        "testimonial": "Mr. Rikhotso was one of the lecturers who made programming easier to understand for me as a student. He explained concepts clearly, encouraged us to think logically, and helped us build confidence in solving programming problems. His teaching style was patient, practical, and professional, especially when dealing with topics that were difficult at first. As his student, I appreciated the way he guided us, supported our learning, and pushed us to improve our skills. He contributed positively to my growth in programming and helped me understand the importance of practice, discipline, and problem-solving in the IT field. I would honestly rate him highly as a lecturer because he made a meaningful impact on my learning journey..",
+        "date": "2026-06-29",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    },
+    {
+        "id": 20,
+        "featured": true,
+        "name": "Rikhotso Nkhensani",
+        "photo": "Rikhotso-Nkhensani.jpg",
+        "email": "nkhensaniblocks23@gmail.com",
+        "cell": "0794490017",
+        "institution": "RI PLK",
+        "firstYear": 2023,
+        "lastYear": 2024,
+        "highestModule": "pld",
+        "rating": 5,
+        "modules": 
+        [
+            "PRLD",
+            "IPRG"
+        ],
+        "testimonial": "He helped me alot .. am doing my last academic year becouse of him .. if it was not for him .. i wouldn't be here",
+        "date": "2026-06-29",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
+    }   
+
+]

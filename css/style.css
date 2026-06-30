@@ -493,7 +493,7 @@ footer{
 
     border-radius:20px;
 
-    padding:30px;
+    padding:22px;
 
     display:flex;
 
@@ -534,6 +534,8 @@ display:flex;
 align-items:center;
 
 gap:15px;
+
+width:100%;
 
 }
 
@@ -617,9 +619,9 @@ color:gold;
 
 .review{
 
-    margin:25px 0;
+    margin:15px 0;
 
-    padding:18px;
+    padding:12px 16px;
 
     background:#111827;
 
@@ -627,13 +629,13 @@ color:gold;
 
     border-radius:12px;
 
-    line-height:1.7;
+    line-height:1.6;
 
     font-style:italic;
 
-    min-height:140px;
+    min-height:110px;
 
-    max-height:140px;
+    max-height:110px;
 
     overflow:hidden;
 
@@ -750,7 +752,7 @@ font-size:.9rem;
 
     margin-top:auto;
 
-    padding-top:20px;
+    padding-top:12px;
 
     border-top:1px solid var(--border);
 
@@ -999,6 +1001,49 @@ text-align:center;
 .spec-sad{
     border-color:#9CA3AF !important;
 }
+
+.spec-java-ring{
+
+    border-color:#F97316 !important;
+
+}
+
+.spec-csharp-ring{
+
+    border-color:#8B5CF6 !important;
+
+}
+
+.spec-python-ring{
+
+    border-color:#FACC15 !important;
+
+}
+
+.spec-cpp-ring{
+
+    border-color:#2563EB !important;
+
+}
+
+.spec-db-ring{
+
+    border-color:#2563EB !important;
+
+}
+
+.spec-pld-ring{
+
+    border-color:#22C55E !important;
+
+}
+
+.spec-intro-ring{
+
+    border-color:#4ADE80 !important;
+
+}
+
 
 .student-specialization{
 
