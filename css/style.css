@@ -29,11 +29,11 @@ body{
   line-height:1.6;
 }
 
-main{max-width:1200px;margin:auto}
-section{max-width:950px;margin:auto;padding:25px 20px}
+main{max-width:2000px;margin:auto}
+section{max-width:2000px;margin:auto;padding:25px 20px}
 #student-success{
 
-    max-width:1600px;
+    max-width:2000px;
 
     margin:auto;
 
