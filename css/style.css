@@ -493,9 +493,9 @@ footer{
 
     border-radius:20px;
 
-    padding:22px;
+    padding:20px;
 
-    display:flex;
+    /*display:flex;*/
 
     flex-direction:column;
 
@@ -520,8 +520,6 @@ footer{
 display:flex;
 
 align-items:center;
-
-justify-content:space-between;
 
 margin-bottom:20px;
 
@@ -611,17 +609,18 @@ opacity:.8;
 
 .rating{
 
-font-size:1.2rem;
+font-size:1.4rem;
 
 color:gold;
+
 
 }
 
 .review{
 
-    margin:15px 0;
+    margin:10px 0;
 
-    padding:12px 16px;
+    padding:0px 20px;
 
     background:#111827;
 
