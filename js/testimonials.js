@@ -1,3 +1,17 @@
+const perfectITStats = {
+
+    founded: 2015,
+
+    studentsMentored: 1000
+
+};
+
+let allReviews = [];
+
+let selectedModule = "All";
+
+let searchText = "";
+
 const moduleInfo = {
 
     java: {
@@ -72,7 +86,13 @@ async function loadReviews() {
 
         reviews.sort((a, b) => a.sortOrder - b.sortOrder);
 
-        renderReviews(reviews);
+        allReviews = reviews;
+
+        document.getElementById("reviewCount").textContent = reviews.length;
+
+        applyFilters();
+
+        createModuleFilters();
 
     } catch (error) {
 
@@ -96,6 +116,90 @@ function renderReviews(reviews){
     createCard(student, grid);
 
 });
+
+}
+
+function createModuleFilters(){
+
+    const container =
+        document.getElementById("moduleFilters");
+
+    container.innerHTML = "";
+
+    const modules = new Set();
+
+    allReviews.forEach(student=>{
+
+        student.modules.forEach(module=>{
+
+            modules.add(module);
+
+        });
+
+    });
+
+    const list = ["All", ...Array.from(modules).sort()];
+
+    list.forEach(module=>{
+
+        const button =
+            document.createElement("button");
+
+        button.className = "filter-btn";
+
+        if(module===selectedModule){
+
+            button.classList.add("active");
+
+        }
+
+        button.textContent = module;
+
+        button.addEventListener("click",()=>{
+
+            selectedModule = module;
+
+            applyFilters();
+
+        });
+
+        container.appendChild(button);
+
+    });
+
+}
+
+function applyFilters(){
+
+    const filtered = allReviews.filter(student=>{
+
+        const matchesSearch =
+
+            student.name.toLowerCase().includes(searchText)
+
+            ||
+
+            student.institution.toLowerCase().includes(searchText)
+
+            ||
+
+            student.modules.join(" ").toLowerCase().includes(searchText);
+
+        const matchesModule =
+
+            selectedModule==="All"
+
+            ||
+
+            student.modules.includes(selectedModule);
+
+        return matchesSearch && matchesModule;
+
+    });
+
+    renderReviews(filtered);
+
+    createModuleFilters();
 
 }
 
@@ -221,11 +325,19 @@ function createCard(student, grid){
 
 </div>
 
-        <div class="review">
+        <div class="review collapsed">
 
-            "${student.testimonial}"
+            <span class="quote-icon">&ldquo;</span>
+
+            <span class="review-text">
+                "${student.testimonial}"
+            </span>
 
         </div>
+
+        <button class="read-more-btn">
+            Read More
+        </button>
 
         <div class="certification">
 
@@ -264,4 +376,50 @@ function createCard(student, grid){
 
 badgeContainer.innerHTML =
     createModuleBadges(student);
+
+    const review =
+    card.querySelector(".review");
+
+const button =
+    card.querySelector(".read-more-btn");
+
+requestAnimationFrame(() => {
+
+    if(review.scrollHeight <= 120){
+
+        button.style.display = "none";
+
+        review.classList.remove("collapsed");
+
+        return;
+
+    }
+
+    button.addEventListener("click", () => {
+
+        review.classList.toggle("collapsed");
+        review.classList.toggle("expanded");
+
+        button.textContent =
+            review.classList.contains("expanded")
+            ? "Read Less"
+            : "Read More";
+
+    });
+
+});
 }
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+    const search =
+        document.getElementById("testimonialSearch");
+
+    search.addEventListener("input",()=>{
+
+        searchText = search.value.toLowerCase();
+        applyFilters();
+
+    });
+
+});
