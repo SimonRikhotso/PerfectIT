@@ -466,6 +466,30 @@
         "verified": true,
         "showOnHomepage": true,
         "sortOrder": 1
+    },
+   
+    {
+        "id": 21,
+        "featured": true,
+        "name": "Kgosi Sheila",
+        "photo": "",
+        "email": "sheilakgosi1@gmail.com",
+        "cell": "0817010661",
+        "institution": "RI Online",
+        "firstYear": 2025,
+        "lastYear": 2025,
+        "highestModule": "pld",
+        "rating": 5,
+        "modules": 
+        [
+            "PRLD",
+            "IPRG"
+        ],
+        "testimonial": "Mr. Simon Rikhotso is a well spoken person who is very professional in his job and delivers on his work. He sometimes goes out of his way for students in order to assist them with their needs, he does follow ups and works on weekends also when students need him for any sort of school related tasks. I found him a professional and ethical mentor and lecturer who is open to input and beyond.",
+        "date": "2026-07-01",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 1
     }   
 
 ]
