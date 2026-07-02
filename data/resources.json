@@ -7,73 +7,185 @@
         "type": "PDF",
         "size": "Coming Soon",
         "description": "Quick reference guide covering Java syntax, variables, loops, methods and classes.",
-        "file": "",
         "featured": true,
-        "icon": "☕"
+        "icon": "☕",
+        "topics":[
+            "Classes",
+            "Objects",
+            "Constructors",
+            "Inheritance",
+            "Polymorphism",
+            "Encapsulation"
+        ],
+
+        "image":"../images/resources/java-oop.png",
+
+        "file":"../resources/java-oop-cheatsheet.pdf"
+    },
+{
+        "id": 2,
+        "title": "C++ Basics",
+        "category": "C++",
+        "level": "Beginner",
+        "type": "PDF",
+        "size": "Coming Soon",
+        "description": "Quick reference guide covering C++ syntax, variables, loops, methods and classes.",
+        "featured": true,
+        "icon": "☕",
+        "topics":[
+            "Classes",
+            "Objects",
+            "Constructors",
+            "Inheritance",
+            "Polymorphism",
+            "Encapsulation"
+        ],
+
+        "image":"../images/resources/java-oop.png",
+
+        "file":"../resources/java-oop-cheatsheet.pdf"
+    },
+{
+        "id": 3,
+        "title": "Python Basics",
+        "category": "Python",
+        "level": "Beginner",
+        "type": "PDF",
+        "size": "Coming Soon",
+        "description": "Quick reference guide covering Python syntax, variables, loops, methods and classes.",
+        "featured": false,
+        "icon": "☕",
+        "topics":[
+            "Classes",
+            "Objects",
+            "Constructors",
+            "Inheritance",
+            "Polymorphism",
+            "Encapsulation"
+        ],
+
+        "image":"../images/resources/java-oop.png",
+
+        "file":"../resources/java-oop-cheatsheet.pdf"
     },
 
     {
-        "id": 2,
+        "id": 4,
         "title": "Programming Logic Exam Guide",
         "category": "Programming Logic",
         "level": "Beginner",
         "type": "PDF",
         "size": "Coming Soon",
         "description": "Programming logic revision notes and examination preparation guide.",
-        "file": "",
         "featured": true,
-        "icon": "💡"
+        "icon": "💡",
+        "topics":[
+            "Classes",
+            "Objects",
+            "Constructors",
+            "Inheritance",
+            "Polymorphism",
+            "Encapsulation"
+        ],
+
+        "image":"../images/resources/java-oop.png",
+
+        "file":"../resources/java-oop-cheatsheet.pdf"
     },
 
     {
-        "id": 3,
+        "id": 5,
         "title": "SQL Quick Reference",
         "category": "Database",
         "level": "Intermediate",
         "type": "PDF",
         "size": "Coming Soon",
         "description": "Frequently used SQL commands with examples.",
-        "file": "",
         "featured": false,
-        "icon": "🗄️"
+        "icon": "🗄️",
+        "topics":[
+            "Classes",
+            "Objects",
+            "Constructors",
+            "Inheritance",
+            "Polymorphism",
+            "Encapsulation"
+        ],
+
+        "image":"../images/resources/java-oop.png",
+
+        "file":"../resources/java-oop-cheatsheet.pdf"
     },
 
     {
-        "id": 4,
+        "id": 6,
         "title": "C# Fundamentals",
         "category": "C#",
         "level": "Beginner",
         "type": "PDF",
         "size": "Coming Soon",
         "description": "C# programming basics with practical examples.",
-        "file": "",
         "featured": false,
-        "icon": "💜"
+        "icon": "💜",
+        "topics":[
+            "Classes",
+            "Objects",
+            "Constructors",
+            "Inheritance",
+            "Polymorphism",
+            "Encapsulation"
+        ],
+
+        "image":"../images/resources/java-oop.png",
+
+        "file":"../resources/java-oop-cheatsheet.pdf"
     },
 
     {
-        "id": 5,
+        "id": 7,
         "title": "CV Writing Guide",
         "category": "Career",
         "level": "All",
         "type": "PDF",
         "size": "Coming Soon",
         "description": "Professional CV writing guide for IT students.",
-        "file": "",
         "featured": false,
-        "icon": "📄"
+        "icon": "📄",
+        "topics":[
+            "Classes",
+            "Objects",
+            "Constructors",
+            "Inheritance",
+            "Polymorphism",
+            "Encapsulation"
+        ],
+
+        "image":"../images/resources/java-oop.png",
+
+        "file":"../resources/java-oop-cheatsheet.pdf"
     },
 
     {
-        "id": 6,
+        "id": 8,
         "title": "Study Skills Handbook",
         "category": "Study Skills",
         "level": "All",
         "type": "PDF",
         "size": "Coming Soon",
         "description": "Learn effective study techniques for programming modules.",
-        "file": "",
         "featured": false,
-        "icon": "📚"
+        "icon": "📚",
+        "topics":[
+            "Classes",
+            "Objects",
+            "Constructors",
+            "Inheritance",
+            "Polymorphism",
+            "Encapsulation"
+        ],
+
+        "image":"../images/resources/java-oop.png",
+
+        "file":"../resources/java-oop-cheatsheet.pdf"
     }
 ]
