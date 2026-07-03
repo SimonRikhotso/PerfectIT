@@ -5,7 +5,7 @@
         "category": "Java",
         "level": "Beginner",
         "type": "PDF",
-        "size": "Coming Soon",
+        "size": "1.8MB",
         "description": "Quick reference guide covering Java syntax, variables, loops, methods and classes.",
         "featured": true,
         "icon": "☕",
@@ -18,7 +18,7 @@
             "Encapsulation"
         ],
 
-        "image":"../images/resources/java-oop.png",
+        "image":"../images/icons/java-icon.png",
 
         "file":"../resources/java-oop-cheatsheet.pdf"
     },
