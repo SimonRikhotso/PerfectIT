@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "title": "Student Management System",
+    "student": "Anonymous Student",
+    "module": "Java Programming",
+    "level": "Beginner",
+    "type": "Console / OOP Project",
+
+    "description": "A Java application that manages student records using object-oriented principles.",
+    "longDescription": "This project demonstrates core OOP concepts including classes, objects, encapsulation, and file handling. The system allows adding, updating, searching, and deleting student records.",
+
+    "technologies": ["Java", "OOP", "File Handling"],
+    "concepts": ["Classes & Objects", "Encapsulation", "Arrays/Lists", "CRUD Operations"],
+
+    "image": "../images/projects/student-management.jpg",
+
+    "github": "",
+    "download": "",
+
+    "difficulty": "Easy",
+    "featured": true
+  },
+
+  {
+    "id": 2,
+    "title": "Library Management System",
+    "student": "Anonymous Student",
+    "module": "Database Programming",
+    "level": "Intermediate",
+    "type": "SQL Project",
+
+    "description": "A relational database system for managing books, users, and borrowing records.",
+    "longDescription": "This project focuses on database design and SQL queries. It includes entity relationships, normalization, and query optimization.",
+
+    "technologies": ["MySQL", "SQL"],
+    "concepts": ["ERD Design", "Joins", "Normalization", "CRUD Queries"],
+
+    "image": "../images/projects/library-system.jpg",
+
+    "github": "",
+    "download": "",
+
+    "difficulty": "Medium",
+    "featured": true
+  },
+
+  {
+    "id": 3,
+    "title": "Weather App (API Integration)",
+    "student": "Anonymous Student",
+    "module": "Python Programming",
+    "level": "Intermediate",
+    "type": "GUI + API Project",
+
+    "description": "A Python application that fetches live weather data using an external API.",
+    "longDescription": "This project introduces API consumption, JSON parsing, and GUI development using Tkinter.",
+
+    "technologies": ["Python", "Tkinter", "REST API"],
+    "concepts": ["API Requests", "JSON Parsing", "GUI Design", "Error Handling"],
+
+    "image": "../images/projects/weather-app.png",
+
+    "github": "",
+    "download": "",
+
+    "difficulty": "Medium",
+    "featured": false
+  }
+]

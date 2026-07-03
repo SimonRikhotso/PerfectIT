@@ -1668,3 +1668,19 @@ transform:none;
     border-radius:20px;
     font-size:0.8rem;
 }
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.project-tech span {
+    background: #111827;
+    border: 1px solid var(--border);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: var(--text);
+}
