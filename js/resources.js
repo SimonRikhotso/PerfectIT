@@ -264,71 +264,46 @@ clearSearch.addEventListener("click", () => {
 function previewResource(id) {
 
     const resource = allResources.find(r => r.id === id);
-
     if (!resource) return;
 
     const downloadButton =
         resource.size === "Coming Soon"
-
             ? `
-                <button
-                    class="download-btn disabled"
-                    disabled>
-
+                <button class="download-btn disabled" disabled>
                     🚧 Coming Soon
-
                 </button>
             `
-
             : `
-                <a
-                    href="${resource.file}"
-                    class="download-btn"
-                    download>
-
+                <a href="${resource.file}" class="download-btn" download>
                     📥 Download (${resource.size})
-
                 </a>
             `;
 
+    // BODY CONTENT ONLY
     document.getElementById("previewBody").innerHTML = `
-
-        <img
-            src="${resource.image}"
-            class="preview-image">
+        <img src="${resource.image}" class="preview-image">
 
         <h2>${resource.title}</h2>
 
         <p>${resource.description}</p>
 
         <div class="resource-meta">
-
             <span>${resource.category}</span>
-
             <span>${resource.level}</span>
-
             <span>${resource.type}</span>
-
         </div>
 
         <h3>Topics Covered</h3>
 
         <div class="resource-meta">
-
-            ${resource.topics.map(topic =>
-                `<span>${topic}</span>`
-            ).join("")}
-
+            ${resource.topics.map(topic => `<span>${topic}</span>`).join("")}
         </div>
-
-        ${downloadButton}
-
     `;
 
-    document
-        .getElementById("previewModal")
-        .style.display = "flex";
+    // ACTION AREA (NO DUPLICATION)
+    document.getElementById("previewActions").innerHTML = downloadButton;
 
+    document.getElementById("previewModal").style.display = "flex";
 }
 
 document
