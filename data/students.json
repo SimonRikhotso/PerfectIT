@@ -1,0 +1,49 @@
+[
+    {
+        "studentId": "mathebula-tiyiselani-ashley",
+
+        "displayName": "Ashley",
+
+        "photo": "../images/students/Mathebula-Tiyiselani.jpeg",
+
+        "bio": "Ashley developed a strong programming foundation through Java, Databases and Programming Logic. She enjoys building practical software solutions and continues expanding her programming skills.",
+
+        "github": "",
+
+        "linkedin": "",
+
+        "portfolioWebsite": "",
+
+        "cv": "",
+
+        "availableForEmployment": true,
+
+        "allowPortfolio": true,
+
+        "featuredProject": 1
+    },
+
+    {
+        "studentId": "mukwevho-selwyn",
+
+        "displayName": "Selwyn",
+
+        "photo": "",
+
+        "bio": "",
+
+        "github": "",
+
+        "linkedin": "",
+
+        "portfolioWebsite": "",
+
+        "cv": "",
+
+        "availableForEmployment": true,
+
+        "allowPortfolio": false,
+
+        "featuredProject": null
+    }
+]

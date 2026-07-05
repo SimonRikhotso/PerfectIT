@@ -8,6 +8,8 @@ const perfectITStats = {
 
 let allReviews = [];
 
+let allProjects = [];
+
 let selectedModule = "All";
 
 let searchText = "";
@@ -76,13 +78,13 @@ async function loadReviews() {
 
     try {
 
-        const response = await fetch("../data/reviews.json");
+        const [reviewResponse, projectResponse] = await Promise.all([
+            fetch("../data/reviews.json"),
+            fetch("../data/projects.json")
+        ]);
 
-        if (!response.ok) {
-            throw new Error("Unable to load reviews.json");
-        }
-
-        const reviews = await response.json();
+        const reviews = await reviewResponse.json();
+        allProjects = await projectResponse.json();
 
         reviews.sort((a, b) => a.sortOrder - b.sortOrder);
 
@@ -91,6 +93,8 @@ async function loadReviews() {
         document.getElementById("reviewCount").textContent = reviews.length;
 
         applyFilters();
+
+        renderProjects();
 
         createModuleFilters();
 
@@ -116,6 +120,75 @@ function renderReviews(reviews){
     createCard(student, grid);
 
 });
+
+}
+
+function renderProjects(){
+
+    const container =
+        document.getElementById("projectsShowcase");
+
+    if(!container) return;
+
+    container.innerHTML = "";
+
+    allProjects.forEach(project=>{
+
+        const student =
+            allReviews.find(review =>
+                review.studentId === project.studentId
+            );
+
+        const card =
+            document.createElement("div");
+
+        card.className = "project-showcase-card";
+
+        card.innerHTML = `
+
+            <img
+                src="${project.image}"
+                alt="${project.title}">
+
+            <div class="project-showcase-info">
+
+                <h3>${project.title}</h3>
+
+                <p>
+
+                    👨‍🎓 ${student ? student.name : "Former Student"}
+
+                </p>
+
+                <p>
+
+                    ${project.module}
+
+                </p>
+
+                <a
+                    href="student-projects.html"
+                    class="cta">
+
+                    View Project →
+
+                </a>
+
+            </div>
+
+        `;
+
+        container.appendChild(card);
+
+    });
+
+}
+
+function getStudentProjects(studentId){
+
+    return allProjects.filter(project =>
+        project.studentId === studentId
+    );
 
 }
 
@@ -290,6 +363,12 @@ function createCard(student, grid){
 
     const stars = createStars(student.rating);
 
+    const projects = getStudentProjects(student.studentId);
+
+    console.log(student.name);
+    console.log(student.studentId);
+    console.log(project);
+
     const photo = createStudentPhoto(student);
 
     card.innerHTML = `
@@ -355,6 +434,10 @@ function createCard(student, grid){
 
     </div>
 
+
+    <div class="student-project-gallery" id="projects-${student.studentId}">
+    </div>
+
     ${student.verified ? `
 
         <p class="recommend">
@@ -377,6 +460,14 @@ function createCard(student, grid){
 badgeContainer.innerHTML =
     createModuleBadges(student);
 
+    const projectGallery =
+    card.querySelector(
+        `#projects-${student.studentId}`
+    );
+
+projectGallery.innerHTML =
+    createProjectGallery(projects, student);
+    
     const review =
     card.querySelector(".review");
 

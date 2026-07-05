@@ -1,1 +1,20 @@
 Root/[index.html, tutoring/[index.html, about.html, student-success.html, free-resources.html, student-projects.html,...],  technical-support/[], software-development/[], arcade-systems/[], css/[style.css], data/[resources.json, reviews.json], js/[resources.js, script.js, student-projects.js, testimonials.js], resources/[career/[], cpp/[], csharp/[], ...], images/[icons/[...], moduleIcon/[...], testimonials/[], perfectITTutoringIcon.png, ...]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+👁️ View Details (opens your modal)
+💻 View Code (GitHub)
+🌐 Live Demo (website if deployed)
+🎥 Watch Demo (YouTube)
+📄 Download Project (zip)

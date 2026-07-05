@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "studentId": "mathebula-tiyiselani-ashley",
         "featured": true,
         "name": "Mathebula Tiyiselani Ashley",
         "photo": "Mathebula-Tiyiselani.jpeg",
@@ -25,6 +26,7 @@
     },
     {
         "id": 2,
+        "studentId": "mukwevho-selwyn",
         "featured": true,
         "name": "Mukwevho Selwyn",
         "photo": "",
@@ -48,6 +50,7 @@
     },
     {
         "id": 3,
+        "studentId": "bopape-matome-elijah",
         "featured": true,
         "name": "Bopape Matome Elijah",
         "photo": "Bopape-Matome.png",
@@ -71,6 +74,7 @@
     },
     {
         "id": 4,
+        "studentId": "pheme-tlou",
         "featured": true,
         "name": "Pheme Tlou",
         "photo": "Pheme-Tlou.jpg",
@@ -94,6 +98,7 @@
     },
     {
         "id": 5,
+        "studentId": "mphelo-mahlatse",
         "featured": true,
         "name": "Mphelo Mahlatse",
         "photo": "",
@@ -117,6 +122,7 @@
     },
     {
         "id": 6,
+        "studentId": "gwala-zandile",
         "featured": true,
         "name": "Gwala Zandile",
         "photo": "",
@@ -138,6 +144,7 @@
     },
     {
         "id": 7,
+        "studentId": "mahlaela-keabetswe",
         "featured": true,
         "name": "Mahlaela Keabetswe",
         "photo": "",
@@ -159,6 +166,7 @@
     },
     {
         "id": 8,
+        "studentId": "eltawil-isam",
         "featured": true,
         "name": "Eltawil Isam",
         "photo": "",
@@ -182,6 +190,7 @@
     },
     {
         "id": 9,
+        "studentId": "motsepe-kholofelo",
         "featured": true,
         "name": "Motsepe Kholofelo",
         "photo": "Motsepe-Kholofelo.jpeg",
@@ -203,6 +212,7 @@
     },
     {
         "id": 10,
+        "studentId": "banyini-ntsako",
         "featured": true,
         "name": "Banyini Ntsako",
         "photo": "",
@@ -225,6 +235,7 @@
     },
     {
         "id": 11,
+        "studentId": "kgaphola-elias-malope-ntswaborwa",
         "featured": true,
         "name": "Kgaphola Elias Malope Ntswaborwa",
         "photo": "Kgaphola-Elias.jpg",
@@ -246,6 +257,7 @@
     },
     {
         "id": 12,
+        "studentId": "lemao-olerato",
         "featured": true,
         "name": "Lemao Olerato",
         "photo": "",
@@ -267,6 +279,7 @@
     },
     {
         "id": 13,
+        "studentId": "mathalise-vusani",
         "featured": true,
         "name": "Mathalise Vusani",
         "photo": "",
@@ -290,6 +303,7 @@
     },
     {
         "id": 14,
+        "studentId": "madisha-thlompho",
         "featured": true,
         "name": "Madisha Thlompho",
         "photo": "Madisha-Thlompho.jpeg",
@@ -313,6 +327,7 @@
     },
     {
         "id": 15,
+        "studentId": "phasiwe-bokang",
         "featured": true,
         "name": "Phasiwe Bokang",
         "photo": "",
@@ -335,6 +350,7 @@
     },
     {
         "id": 16,
+        "studentId": "maluleke-senzo-luther",
         "featured": true,
         "name": "Maluleke Senzo Luther",
         "photo": "Maluleke-Senzo.jpg",
@@ -358,6 +374,7 @@
     },
     {
         "id": 17,
+        "studentId": "ramabulana-fulufhelo-hope",
         "featured": true,
         "name": "Ramabulana Fulufhelo Hope",
         "photo": "Ramabulana-Fulufhelo.jpg",
@@ -380,6 +397,7 @@
     },
     {
         "id": 18,
+        "studentId": "nephawe-tshedza",
         "featured": true,
         "name": "Nephawe Tshedza",
         "photo": "",
@@ -404,6 +422,7 @@
     },
     {
         "id": 19,
+        "studentId": "kapa-derrick",
         "featured": true,
         "name": "Kapa Derrick",
         "photo": "Kapa-Derrick.jpg",
@@ -428,6 +447,7 @@
 
     {
         "id": 20,
+        "studentId": "rikhotso-nkhensani",
         "featured": true,
         "name": "Rikhotso Nkhensani",
         "photo": "Rikhotso-Nkhensani.jpg",
@@ -451,6 +471,7 @@
 
         {
         "id": 21,
+        "studentId": "kgosi-sheila",
         "featured": true,
         "name": "Kgosi Sheila",
         "photo": "",
@@ -470,6 +491,75 @@
         "showOnHomepage": true,
         "sortOrder": 21,
         "source":"Google Forms"
-    }   
-
+    },
+    {
+        "id": 22,
+        "studentId": "mashobane-erwin",
+        "featured": true,
+        "name": "Mashobane Erwin",
+        "photo": "",
+        "institution": "Rosebank Polokwane",
+        "firstYear": 2025,
+        "lastYear": 2025,
+        "highestModule": "java",
+        "rating": 5,
+        "modules": 
+        [
+            "Java"
+        ],
+        "testimonial": "I had the privilege of being taught by Mr. Simon Rikhotso for the PROG6112 Java Programming module at Rosebank College. He was a knowledgeable and dedicated lecturer who explained Java programming concepts clearly and encouraged us to think critically when solving programming problems. He was approachable, patient, and always willing to assist students who needed extra help. His guidance and support contributed positively to my understanding of Java programming and helped me build confidence in developing practical applications. I appreciate the effort and commitment he showed throughout the course.",
+        "date": "2026-07-03",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 22,
+        "source":"Google Forms"
+    },
+    {
+        "id": 23,
+        "studentId": "manenzhe-madzanga",
+        "featured": true,
+        "name": "Manenzhe Madzanga",
+        "photo": "manenzhe-madzanga.jpeg",
+        "institution": "Rosebank Polokwane",
+        "firstYear": 2021,
+        "lastYear": 2022,
+        "highestModule": "java",
+        "rating": 5,
+        "modules": 
+        [
+            "Java",
+            "Database"
+        ],
+        "testimonial": "He was a supportive and knowledgeable lecturer who always encouraged students to do their best. He explained concepts clearly and was willing to help whenever needed..",
+        "date": "2026-07-04",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 23,
+        "source":"Google Forms"
+    },
+    {
+        "id": 24,
+        "studentId": "shipalane-rivoningo",
+        "featured": true,
+        "name": "Shipalane Rivoningo",
+        "photo": "shipalane-rivoningo.jpeg",
+        "institution": "RichField Graduate Institute",
+        "firstYear": 2018,
+        "lastYear": 2021,
+        "highestModule": "csharp",
+        "rating": 5,
+        "modules": 
+        [
+            "C sharp",
+            "Java",
+            "Cpp",
+            "VB"
+        ],
+        "testimonial": "Mr. Rikhotso Simon was an excellent programming lecturer at Richfield Graduate Institute. He explained programming concepts in a clear and practical way, making it easier to understand even challenging topics. He was patient, supportive, and always encouraged us to keep learning and improving. His guidance and dedication had a positive impact on my academic journey, and I am grateful to have been one of his students.",
+        "date": "2026-07-05",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 24,
+        "source":"Google Forms"
+    }
 ]

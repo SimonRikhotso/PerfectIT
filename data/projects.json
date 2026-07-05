@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
+    "studentId":"mathebula-tiyiselani-ashley",
     "title": "Student Management System",
-    "student": "Anonymous Student",
     "module": "Java Programming",
     "level": "Beginner",
     "type": "Console / OOP Project",
@@ -15,8 +15,9 @@
 
     "image": "../images/projects/student-management.jpg",
 
-    "github": "",
-    "download": "",
+    "youtubeEmbed": "https://www.youtube.com/embed/14YNfWI08X4",
+    "github": "https://github.com/SimonRikhotso/PerfectIT.git",
+    "download": "https://github.com/SimonRikhotso/PerfectIT.git",
 
     "difficulty": "Easy",
     "featured": true
@@ -24,8 +25,8 @@
 
   {
     "id": 2,
+    "studentId":"mukwevho-selwyn",
     "title": "Library Management System",
-    "student": "Anonymous Student",
     "module": "Database Programming",
     "level": "Intermediate",
     "type": "SQL Project",
@@ -38,6 +39,7 @@
 
     "image": "../images/projects/library-system.jpg",
 
+    "youtube": "https://www.youtube.com/embed/abcdefghijk",
     "github": "",
     "download": "",
 
@@ -47,8 +49,8 @@
 
   {
     "id": 3,
+    "studentId":"mathebula-tiyiselani-ashley",
     "title": "Weather App (API Integration)",
-    "student": "Anonymous Student",
     "module": "Python Programming",
     "level": "Intermediate",
     "type": "GUI + API Project",
@@ -61,6 +63,7 @@
 
     "image": "../images/projects/weather-app.png",
 
+    "youtube": "https://www.youtube.com/embed/abcdefghijk",
     "github": "",
     "download": "",
 

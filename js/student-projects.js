@@ -1,4 +1,6 @@
 let projects = [];
+let students = [];
+let reviews = [];
 
 const modal = document.getElementById("previewModal");
 const closeBtn = document.getElementById("closePreview");
@@ -6,19 +8,43 @@ const body = document.getElementById("previewBody");
 const actions = document.getElementById("previewActions");
 
 
-async function loadProjects() {
-    try {
-        const response = await fetch("../data/projects.json");
-        projects = await response.json();
+function getStudent(studentId) {
 
-        renderProjects(projects);
+    const student = students.find(
+        student => student.studentId === studentId
+    );
 
-    } catch (error) {
-        console.error("Error loading projects:", error);
+    if (!student) {
+        console.warn(`Student not found: ${studentId}`);
     }
+
+    return student;
+
 }
 
-loadProjects();
+function getReview(studentId) {
+
+    return reviews.find(review => review.studentId === studentId);
+
+}
+
+async function loadData() {
+
+    const [projectsResponse, studentsResponse, reviewsResponse] = await Promise.all([
+        fetch("../data/projects.json"),
+        fetch("../data/students.json"),
+        fetch("../data/reviews.json")
+    ]);
+
+    projects = await projectsResponse.json();
+    students = await studentsResponse.json();
+    reviews = await reviewsResponse.json();
+
+    renderProjects(projects);
+
+}
+
+loadData();
 
 const grid = document.getElementById("projectsGrid");
 
@@ -31,17 +57,42 @@ function renderProjects(data) {
         const card = document.createElement("div");
         card.className = "project-card";
 
+        const student = getStudent(project.studentId);
+
+        console.log(project.studentId);
+        console.log(student);
+
+        const review = getReview(project.studentId);
+
+          const studentName = review?.name || "Anonymous Student";
+
+        const institution = review?.institution || "";
+
+       const photo = student?.photo
+        ? student.photo
+        : "../images/Plogo.png";
+
         card.innerHTML = `
 
             <div class="project-image">
                 <img src="${project.image}" alt="${project.title}">
             </div>
 
-            <h3>${project.title}</h3>
+            <div class="project-student">
 
-            <p class="student-name">
-                ${project.student}
-            </p>
+                <img src="${photo}" alt="${studentName}">
+
+                <div class="student-details">
+
+                    <h4>${studentName}</h4>
+
+                    <small>${institution}</small>
+
+                </div>
+
+            </div>
+
+            <h3>${project.title}</h3>
 
             <div class="project-meta">
 
@@ -92,6 +143,32 @@ function openPreview(project) {
 
         <p>${project.longDescription}</p>
 
+        ${project.youtubeEmbed ? `
+
+        <h4>Project Demonstration</h4>
+
+        <div class="project-video">
+
+        <iframe
+            src="${project.youtubeEmbed}"
+            title="${project.title}"
+            frameborder="0"
+            allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share"
+            allowfullscreen>
+
+        </iframe>
+
+        </div>
+
+    ` : ""}
+
         <div class="resource-meta">
 
             <span>${project.module}</span>
@@ -111,29 +188,47 @@ function openPreview(project) {
     actions.innerHTML = "";
 
     if (project.github) {
-        actions.innerHTML += `
-            <a href="${project.github}" target="_blank" class="download-btn">
-                View Code
-            </a>
-        `;
-    }
 
-    if (project.download) {
-        actions.innerHTML += `
-            <a href="${project.download}" target="_blank" class="download-btn">
-                Download Project
-            </a>
-        `;
-    }
+    actions.innerHTML += `
+        <a href="${project.github}"
+           target="_blank"
+           class="download-btn">
+            💻 View Code
+        </a>
+    `;
+
 }
 
-closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-});
+if (project.download) {
+
+    actions.innerHTML += `
+        <a href="${project.download}"
+           target="_blank"
+           class="download-btn">
+            📥 Download Project
+        </a>
+    `;
+
+}
+}
+
+closeBtn.addEventListener("click", closePreview);
 
 window.addEventListener("click", (e) => {
+
     if (e.target === modal) {
-        modal.style.display = "none";
+        closePreview();
     }
+
 });
 
+function closePreview() {
+
+    const iframe = body.querySelector("iframe");
+
+    if (iframe) {
+        iframe.src = "";
+    }
+
+    modal.style.display = "none";
+}
