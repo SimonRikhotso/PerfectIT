@@ -2,6 +2,11 @@ let projects = [];
 let students = [];
 let reviews = [];
 
+const urlParams = new URLSearchParams(window.location.search);
+
+const selectedStudent =
+    urlParams.get("student");
+
 const modal = document.getElementById("previewModal");
 const closeBtn = document.getElementById("closePreview");
 const body = document.getElementById("previewBody");
@@ -40,7 +45,20 @@ async function loadData() {
     students = await studentsResponse.json();
     reviews = await reviewsResponse.json();
 
+    if(selectedStudent){
+
+    const filteredProjects =
+        projects.filter(project =>
+            project.studentId === selectedStudent
+        );
+
+    renderProjects(filteredProjects);
+
+}else{
+
     renderProjects(projects);
+
+}
 
 }
 

@@ -351,6 +351,37 @@ function createModuleBadges(student){
 }
 
 
+function createProjectGallery(projects, student){
+
+    if(projects.length === 0){
+        return "";
+    }
+
+    let html = "";
+
+    projects.forEach(project => {
+
+        html += `
+
+            <a
+                href="student-projects.html?student=${student.studentId}"
+                class="project-thumb"
+                title="${project.title}">
+
+                <img
+                    src="${project.image}"
+                    alt="${project.title}">
+
+            </a>
+
+        `;
+
+    });
+
+    return html;
+
+}
+
 function createCard(student, grid){
 
     const card = document.createElement("div");
@@ -364,10 +395,6 @@ function createCard(student, grid){
     const stars = createStars(student.rating);
 
     const projects = getStudentProjects(student.studentId);
-
-    console.log(student.name);
-    console.log(student.studentId);
-    console.log(project);
 
     const photo = createStudentPhoto(student);
 
@@ -435,8 +462,18 @@ function createCard(student, grid){
     </div>
 
 
-    <div class="student-project-gallery" id="projects-${student.studentId}">
+    <div class="student-project-section">
+
+    <h4 class="project-gallery-title">
+        🚀 Student Projects
+    </h4>
+
+    <div
+        class="student-project-gallery"
+        id="projects-${student.studentId}">
     </div>
+
+</div>
 
     ${student.verified ? `
 
@@ -467,6 +504,15 @@ badgeContainer.innerHTML =
 
 projectGallery.innerHTML =
     createProjectGallery(projects, student);
+
+    const projectSection =
+    card.querySelector(".student-project-section");
+
+if(projects.length === 0){
+
+    projectSection.style.display = "none";
+
+}
     
     const review =
     card.querySelector(".review");
