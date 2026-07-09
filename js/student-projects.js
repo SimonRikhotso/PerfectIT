@@ -2,6 +2,16 @@ let projects = [];
 let students = [];
 let reviews = [];
 
+const studentPhoto = document.getElementById("studentPhoto");
+const studentName = document.getElementById("studentName");
+const studentQualification = document.getElementById("studentQualification");
+const studentBio = document.getElementById("studentBio");
+
+const githubLink = document.getElementById("githubLink");
+const linkedinLink = document.getElementById("linkedinLink");
+const portfolioLink = document.getElementById("portfolioLink");
+const cvLink = document.getElementById("cvLink");
+
 const urlParams = new URLSearchParams(window.location.search);
 
 const selectedStudent =
@@ -15,15 +25,9 @@ const actions = document.getElementById("previewActions");
 
 function getStudent(studentId) {
 
-    const student = students.find(
+    return students.find(
         student => student.studentId === studentId
     );
-
-    if (!student) {
-        console.warn(`Student not found: ${studentId}`);
-    }
-
-    return student;
 
 }
 
@@ -44,6 +48,43 @@ async function loadData() {
     projects = await projectsResponse.json();
     students = await studentsResponse.json();
     reviews = await reviewsResponse.json();
+
+    if (selectedStudent) {
+
+    const student = getStudent(selectedStudent);
+
+    if (student) {
+
+        studentPhoto.src = student.photo || "../images/default-profile.png";
+        studentPhoto.alt = student.displayName;
+
+        studentName.textContent = student.displayName;
+        studentQualification.textContent = student.qualification || "";
+        studentBio.textContent = student.bio || "";
+
+        if (student.github) {
+            githubLink.href = student.github;
+            githubLink.style.display = "inline-block";
+        }
+
+        if (student.linkedin) {
+            linkedinLink.href = student.linkedin;
+            linkedinLink.style.display = "inline-block";
+        }
+
+        if (student.portfolio) {
+            portfolioLink.href = student.portfolio;
+            portfolioLink.style.display = "inline-block";
+        }
+
+        if (student.cv) {
+            cvLink.href = student.cv;
+            cvLink.style.display = "inline-block";
+        }
+
+    }
+
+}
 
     if(selectedStudent){
 

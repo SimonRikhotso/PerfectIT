@@ -1940,3 +1940,84 @@ transform:none;
     font-weight:700;
 
 }
+
+/* ===============================
+   Student Profile
+================================ */
+
+.student-profile{
+    margin:40px auto;
+}
+
+.student-profile-card{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    background:var(--card);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.student-profile-card img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid var(--primary);
+    flex-shrink:0;
+}
+
+.student-details{
+    flex:1;
+}
+
+.student-details h1{
+    margin-bottom:10px;
+    font-size:2.2rem;
+}
+
+.student-details p{
+    margin:10px 0;
+    line-height:1.7;
+}
+
+.student-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:20px;
+}
+
+.student-links a{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:30px;
+    background:var(--primary);
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.student-links a:hover{
+    transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+    .student-profile-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .student-profile-card img{
+        width:170px;
+        height:170px;
+    }
+
+    .student-links{
+        justify-content:center;
+    }
+
+}
