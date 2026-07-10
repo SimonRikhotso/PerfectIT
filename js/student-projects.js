@@ -202,14 +202,14 @@ function openPreview(project) {
 
         <p>${project.longDescription}</p>
 
-        ${project.youtubeEmbed ? `
+        ${project.youtube ? `
 
         <h4>Project Demonstration</h4>
 
         <div class="project-video">
 
         <iframe
-            src="${project.youtubeEmbed}"
+            src="${project.youtube}"
             title="${project.title}"
             frameborder="0"
             allow="
