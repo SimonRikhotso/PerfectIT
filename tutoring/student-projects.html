@@ -64,9 +64,7 @@ content="Read genuine experiences from university students who improved their pr
 
     <div class="student-profile-card">
 
-        <img id="studentPhoto"
-             src="../images/default-profile.png"
-             alt="Student">
+        <img id="studentPhoto" src="../images/PLogo.png" alt="Student">
 
         <div class="student-details">
 
@@ -74,7 +72,28 @@ content="Read genuine experiences from university students who improved their pr
 
             <p id="studentQualification"></p>
 
+            <div id="studentSummary">
+
+            <p id="studentVerification"></p>
+
+            <p id="studentRating"></p>
+
+            <p id="studentInstitution"></p>
+
+            <p id="studentYears"></p>
+
+            <h3>Programming Modules</h3>
+
+<div
+    id="studentModules"
+    class="portfolio-skills">
+</div>
+
+        </div>
+
             <p id="studentBio"></p>
+
+            
 
             <div class="student-links">
 
@@ -114,7 +133,15 @@ content="Read genuine experiences from university students who improved their pr
 
 </section>
 
-<section class="projects-header">
+<section id="portfolioHeader" style="display:none;">
+
+    <h2 id="portfolioTitle"></h2>
+
+    <p id="portfolioSubtitle"></p>
+
+</section>
+
+<section class="projects-header" id="projectsHeader">
 
     <h1>Student Projects</h1>
 
@@ -203,6 +230,8 @@ target="_blank">
 
 
 <script src="../js/script.js"></script>
+
+<script src="../js/student-ui.js"></script>
 
 <script src="../js/student-projects.js"></script>
 

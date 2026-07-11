@@ -7,6 +7,19 @@ const studentName = document.getElementById("studentName");
 const studentQualification = document.getElementById("studentQualification");
 const studentBio = document.getElementById("studentBio");
 
+
+const studentVerification = document.getElementById("studentVerification");
+const studentRating = document.getElementById("studentRating");
+const studentInstitution = document.getElementById("studentInstitution");
+const studentYears = document.getElementById("studentYears");
+const studentModules = document.getElementById("studentModules");
+const studentProfile = document.getElementById("studentProfile");
+const projectsHeader = document.getElementById("projectsHeader");
+const portfolioHeader = document.getElementById("portfolioHeader");
+const portfolioTitle = document.getElementById("portfolioTitle");
+const portfolioSubtitle = document.getElementById("portfolioSubtitle");
+
+
 const githubLink = document.getElementById("githubLink");
 const linkedinLink = document.getElementById("linkedinLink");
 const portfolioLink = document.getElementById("portfolioLink");
@@ -14,8 +27,25 @@ const cvLink = document.getElementById("cvLink");
 
 const urlParams = new URLSearchParams(window.location.search);
 
-const selectedStudent =
-    urlParams.get("student");
+const selectedStudent = urlParams.get("student");
+
+if (selectedStudent) {
+
+    studentProfile.style.display = "block";
+
+    portfolioHeader.style.display = "block";
+
+    projectsHeader.style.display = "none";
+
+} else {
+
+    studentProfile.style.display = "none";
+
+    portfolioHeader.style.display = "none";
+
+    projectsHeader.style.display = "block";
+
+}
 
 const modal = document.getElementById("previewModal");
 const closeBtn = document.getElementById("closePreview");
@@ -62,6 +92,28 @@ async function loadData() {
         studentQualification.textContent = student.qualification || "";
         studentBio.textContent = student.bio || "";
 
+        const review = getReview(student.studentId);
+
+        if(review)
+        {
+
+            studentVerification.textContent = review.verified ? "✔ Verified Former Student" : "";
+
+            studentRating.textContent = "⭐".repeat(review.rating);
+
+            studentInstitution.textContent = review.institution;
+
+            studentYears.textContent = `${review.firstYear} - ${review.lastYear}`;
+
+            //studentModules.innerHTML = createModuleBadges(review, false);
+            studentModules.innerHTML = createPortfolioSkills(review, true);
+
+        }
+
+        portfolioTitle.textContent = `${student.displayName}'s Portfolio`;
+
+        portfolioSubtitle.textContent = "A collection of programming projects completed during the student's learning journey with PerfectIT.";
+        
         if (student.github) {
             githubLink.href = student.github;
             githubLink.style.display = "inline-block";
@@ -129,7 +181,7 @@ function renderProjects(data) {
 
        const photo = student?.photo
         ? student.photo
-        : "../images/Plogo.png";
+        : "../images/default-profile.png";
 
         card.innerHTML = `
 
@@ -189,6 +241,7 @@ function renderProjects(data) {
 
     });
 }
+
 
 function openPreview(project) {
 

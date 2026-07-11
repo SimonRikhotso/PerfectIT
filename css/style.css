@@ -948,7 +948,7 @@ gap:8px;
     flex-wrap:wrap;
     gap:16px;
     justify-content: flex-start; 
-
+     margin-top:15px;
 }
 
 .badge-container{
@@ -1091,19 +1091,6 @@ border-color:#9CA3AF;
 .badge-sad:hover{
 
     box-shadow:0 0 18px rgba(156,163,175,.45);
-
-}
-
-
-.skill-badges{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-
-    margin-top:15px;
 
 }
 
@@ -2019,5 +2006,77 @@ transform:none;
     .student-links{
         justify-content:center;
     }
+
+}
+
+#studentSummary{
+
+    margin:20px 0;
+
+}
+
+#studentSummary p{
+
+    margin:6px 0;
+
+}
+
+#studentRating{
+
+    font-size:1.1rem;
+
+    letter-spacing:2px;
+
+}
+
+.portfolio-badge{
+
+    transform:scale(0.75);
+
+    transform-origin:left center;
+
+}
+
+.portfolio-skill{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 14px;
+
+    background:#1f2937;
+
+    border:1px solid #334155;
+
+    border-radius:999px;
+
+    color:#fff;
+
+    font-size:.9rem;
+
+}
+
+.portfolio-skill img{
+
+    width:18px;
+
+    height:18px;
+
+    object-fit:contain;
+
+}
+
+.portfolio-skills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:15px;
 
 }

@@ -561,5 +561,52 @@
         "showOnHomepage": true,
         "sortOrder": 24,
         "source":"Google Forms"
+    },
+    {
+        "id": 25,
+        "studentId": "sadiki-makungu",
+        "featured": true,
+        "name": "Sadiki Makungu",
+        "photo": "sadiki-makungu.jpg",
+        "institution": "Rosebank Polokwane",
+        "firstYear": 2023,
+        "lastYear": 2023,
+        "highestModule": "java",
+        "rating": 5,
+        "modules": 
+        [
+            "Java",
+            "PRLD"
+        ],
+        "testimonial": "He was my lecturer for Programming and Web development. He really created a solid foundation in my development knowledge. Very good lecturer and very patient and engages with students. Makes sure we're not behind.",
+        "date": "2026-07-06",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 25,
+        "source":"Google Forms"
+    },
+    {
+        "id": 26,
+        "studentId": "mutshatshi-vhuhwavho",
+        "featured": true,
+        "name": "Mutshatshi Vhuhwavho",
+        "photo": "",
+        "institution": "RichField Graduate Institute",
+        "firstYear": 2020,
+        "lastYear": 2022,
+        "highestModule": "csharp",
+        "rating": 5,
+        "modules": 
+        [
+            "C sharp",
+            "Java",
+            "Cpp"
+        ],
+        "testimonial": "He was a good lecturer and he had his own thing of explaining so that a student would understand them and he makes sure he shows you something and gives you an more complex exercise.",
+        "date": "2026-07-07",
+        "verified": true,
+        "showOnHomepage": true,
+        "sortOrder": 26,
+        "source":"Google Forms"
     }
 ]
