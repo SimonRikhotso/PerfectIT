@@ -268,13 +268,13 @@ alt="${studentName}">
 
 <div class="project-meta">
 
-<span>${project.module}</span>
+<span>📚 ${project.module}</span>
 
-<span>${project.level}</span>
+<span>📈 ${project.level}</span>
 
-<span>${project.type}</span>
+<span>🛠 ${project.type}</span>
 
-<span>${project.difficulty}</span>
+<span>⭐ ${project.difficulty}</span>
 
 </div>
 
@@ -298,9 +298,20 @@ ${tech}
 
 </div>
 
+<h4 class="skills-title">
+    Key Skills
+</h4>
+
+<div class="project-skills">
+
+${project.concepts.map(skill =>
+    `<span>${skill}</span>`
+).join("")}
+
+</div>
 
 <button class="preview-btn">
-View Complete Project
+🚀 Explore Project
 </button>
 
 `;
@@ -321,53 +332,136 @@ function openPreview(project) {
 
     body.innerHTML = `
 
-        <img class="preview-image" src="${project.image}" alt="${project.title}">
+<div class="portfolio-preview">
 
-        <h2>${project.title}</h2>
 
-        <p>${project.longDescription}</p>
+<div class="preview-feature">
 
-        ${project.youtube ? `
+${project.featured ? 
+`
+<div class="featured-badge">
+⭐ Featured Project
+</div>
+`
+:
+""}
 
-        <h4>Project Demonstration</h4>
+</div>
 
-        <div class="project-video">
 
-        <iframe
-            src="${project.youtube}"
-            title="${project.title}"
-            frameborder="0"
-            allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share"
-            allowfullscreen>
+<img 
+class="preview-image"
+src="${project.image}"
+alt="${project.title}">
 
-        </iframe>
 
-        </div>
+<h2>${project.title}</h2>
 
-    ` : ""}
 
-        <div class="resource-meta">
+<div class="preview-info">
 
-            <span>${project.module}</span>
-            <span>${project.level}</span>
-            <span>${project.difficulty}</span>
 
-        </div>
+<div>
+<strong>Module</strong>
+<p>${project.module}</p>
+</div>
 
-        <h4>Technologies</h4>
-        <p>${project.technologies.join(" • ")}</p>
 
-        <h4>Key Concepts</h4>
-        <p>${project.concepts.join(" • ")}</p>
+<div>
+<strong>Level</strong>
+<p>${project.level}</p>
+</div>
 
-    `;
+
+<div>
+<strong>Project Type</strong>
+<p>${project.type}</p>
+</div>
+
+
+<div>
+<strong>Difficulty</strong>
+<p>${project.difficulty}</p>
+</div>
+
+
+</div>
+
+
+
+<h3>
+Project Overview
+</h3>
+
+
+<p>
+${project.longDescription}
+</p>
+
+
+
+<h3>
+Technology Stack
+</h3>
+
+
+<div class="preview-tags">
+
+${project.technologies.map(item =>
+`
+<span>${item}</span>
+`
+).join("")}
+
+</div>
+
+
+
+<h3>
+Skills Demonstrated
+</h3>
+
+
+<div class="preview-tags">
+
+${project.concepts.map(item =>
+`
+<span>${item}</span>
+`
+).join("")}
+
+</div>
+
+
+
+${project.youtube ? `
+
+
+<h3>
+Project Demonstration
+</h3>
+
+
+<div class="project-video">
+
+<iframe
+src="${project.youtube}"
+title="${project.title}"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+
+`
+:
+""}
+
+
+</div>
+
+`;
 
     actions.innerHTML = "";
 

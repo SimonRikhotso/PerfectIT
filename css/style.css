@@ -1539,10 +1539,10 @@ transform:none;
 
 .preview-content{
     background:var(--card);
-    padding:28px;
+    padding:18px;
     border-radius:18px;
     width:90%;
-    max-width:700px;
+    max-width:1100px;
     max-height:85vh;
     display:flex;
     flex-direction:column;
@@ -1573,13 +1573,21 @@ transform:none;
 }
 
 .preview-image{
+
     display:block;
-    max-width:180px;
-    max-height:180px;
-    width:auto;
-    height:auto;
-    margin:0 auto 15px;
-    border-radius:10px;
+
+    width:100%;
+
+    max-width:500px;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    margin:0 auto 20px;
+
 }
 
 #previewBody{
@@ -1592,8 +1600,8 @@ transform:none;
 }
 
 #previewBody p{
-    line-height:1.7;
-    margin-bottom:20px;
+    line-height:1.5;
+    margin-bottom:10px;
 }
 
 .resource-meta{
@@ -1685,7 +1693,14 @@ transform:none;
     border:2px solid #facc15;
 
     box-shadow:
-    0 0 25px rgba(250,204,21,.25);
+    0 0 30px rgba(250,204,21,.2);
+
+}
+
+
+.project-card.featured h3{
+
+    color:#facc15;
 
 }
 
@@ -1728,6 +1743,48 @@ transform:none;
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 10px;
+}
+
+.skills-title{
+
+    margin-top:18px;
+
+    margin-bottom:8px;
+
+    color:var(--primary);
+
+    font-size:.95rem;
+
+}
+
+
+.project-skills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin-bottom:15px;
+
+}
+
+
+.project-skills span{
+
+    background:#0b1220;
+
+    border:1px solid #334155;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:.75rem;
+
+    color:#d1d5db;
+
 }
 
 .project-tech span {
@@ -2051,6 +2108,16 @@ transform:none;
         justify-content:center;
     }
 
+    .preview-content{
+
+        width:95%;
+
+        max-height:90vh;
+
+        padding:20px;
+
+    }
+
 }
 
 #studentSummary{
@@ -2151,3 +2218,96 @@ transform:none;
 
 }
 
+.portfolio-preview h3{
+
+    margin-top:25px;
+
+    margin-bottom:12px;
+
+    color:var(--primary);
+
+}
+
+
+.preview-info{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(150px,1fr));
+
+    gap:15px;
+
+    margin:20px 0;
+
+}
+
+
+.preview-info div{
+
+    background:#111827;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    border:1px solid var(--border);
+
+}
+
+
+.preview-info strong{
+
+    color:var(--primary);
+
+    display:block;
+
+    margin-bottom:5px;
+
+}
+
+
+.preview-info p{
+
+    margin:0;
+
+}
+
+.preview-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+}
+
+
+.preview-tags span{
+
+    background:#172033;
+
+    border:1px solid #334155;
+
+    padding:7px 14px;
+
+    border-radius:25px;
+
+    color:var(--primary);
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+}
+
+#previewActions a{
+
+    border-radius:30px;
+
+    padding:12px 22px;
+
+}
