@@ -1663,20 +1663,44 @@ transform:none;
 }
 
 .project-card{
+
     background:var(--card);
-    padding:20px;
-    border-radius:15px;
-    transition:0.3s ease;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    border:1px solid var(--border);
+
+    transition:.3s ease;
+
 }
 
 .project-card:hover{
     transform:translateY(-5px);
 }
 
+.project-card.featured{
+
+    border:2px solid #facc15;
+
+    box-shadow:
+    0 0 25px rgba(250,204,21,.25);
+
+}
+
 .project-image img{
+
     width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
     border-radius:10px;
+
     margin-bottom:15px;
+
 }
 
 .student-name{
@@ -1707,12 +1731,32 @@ transform:none;
 }
 
 .project-tech span {
-    background: #111827;
-    border: 1px solid var(--border);
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    color: var(--text);
+
+    background:#172033;
+
+    border:1px solid #334155;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:.8rem;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+.project-tech span:hover{
+
+    transform:translateY(-3px);
+
+    border-color:var(--primary);
+
 }
 
 .project-student{
@@ -2080,3 +2124,30 @@ transform:none;
     margin-top:15px;
 
 }
+
+.project-image{
+    position:relative;
+}
+
+
+.featured-badge{
+
+    position:absolute;
+
+    top:10px;
+    left:10px;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    background:#facc15;
+
+    color:#111;
+
+    font-size:0.85rem;
+
+    font-weight:bold;
+
+}
+

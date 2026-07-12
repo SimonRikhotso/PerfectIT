@@ -140,10 +140,38 @@ async function loadData() {
 
     if(selectedStudent){
 
-    const filteredProjects =
-        projects.filter(project =>
-            project.studentId === selectedStudent
-        );
+    let filteredProjects =
+    projects.filter(project =>
+        project.studentId === selectedStudent
+    );
+
+
+filteredProjects.sort((a,b)=>{
+
+    // Featured projects first
+    if(a.featured && !b.featured){
+        return -1;
+    }
+
+    if(!a.featured && b.featured){
+        return 1;
+    }
+
+
+    // Higher difficulty later
+    const difficultyOrder = {
+        "Easy":1,
+        "Medium":2,
+        "Hard":3
+    };
+
+
+    return difficultyOrder[b.difficulty] -
+           difficultyOrder[a.difficulty];
+
+});
+
+        portfolioSubtitle.textContent = `${filteredProjects.length} project${filteredProjects.length !== 1 ? "s" : ""} completed during this student's learning journey with PerfectIT.`;
 
     renderProjects(filteredProjects);
 
@@ -163,10 +191,24 @@ function renderProjects(data) {
 
     grid.innerHTML = "";
 
+    if (data.length === 0) {
+
+    grid.innerHTML = `
+        <div class="card">
+            <h2>No projects available yet</h2>
+            <p>
+                This student hasn't published any portfolio projects yet.
+            </p>
+        </div>
+    `;
+
+    return;
+}
+
     data.forEach(project => {
 
         const card = document.createElement("div");
-        card.className = "project-card";
+        card.className = project.featured ? "project-card featured" : "project-card";
 
         const student = getStudent(project.studentId);
 
@@ -185,53 +227,83 @@ function renderProjects(data) {
 
         card.innerHTML = `
 
-            <div class="project-image">
-                <img src="${project.image}" alt="${project.title}">
-            </div>
+<div class="project-image">
 
-            <div class="project-student">
+<img 
+src="${project.image}"
+alt="${project.title}">
 
-                <img src="${photo}" alt="${studentName}">
+${project.featured ? 
+`
+<div class="featured-badge">
+⭐ Featured Project
+</div>
+`
+:""}
 
-                <div class="student-details">
+</div>
 
-                    <h4>${studentName}</h4>
 
-                    <small>${institution}</small>
+<div class="project-student">
 
-                </div>
+<img 
+src="${photo}"
+alt="${studentName}">
 
-            </div>
 
-            <h3>${project.title}</h3>
+<div class="student-details">
 
-            <div class="project-meta">
+<h4>${studentName}</h4>
 
-                <span>${project.module}</span>
+<small>${institution}</small>
 
-                <span>${project.level}</span>
+</div>
 
-                <span>${project.type}</span>
+</div>
 
-            </div>
 
-            <p>
-                ${project.description}
-            </p>
 
-            <div class="project-tech">
+<h3>${project.title}</h3>
 
-                ${project.technologies.map(tech => 
-                    `<span>${tech}</span>`
-                ).join("")}
 
-            </div>
+<div class="project-meta">
 
-            <button class="preview-btn">
-                View Project
-            </button>
+<span>${project.module}</span>
 
-        `;
+<span>${project.level}</span>
+
+<span>${project.type}</span>
+
+<span>${project.difficulty}</span>
+
+</div>
+
+
+
+<p>
+${project.description}
+</p>
+
+
+
+<div class="project-tech">
+
+${project.technologies.map(tech=>
+`
+<span>
+${tech}
+</span>
+`
+).join("")}
+
+</div>
+
+
+<button class="preview-btn">
+View Complete Project
+</button>
+
+`;
 
         card.querySelector(".preview-btn").addEventListener("click", () => {
             openPreview(project);

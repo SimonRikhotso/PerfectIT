@@ -108,12 +108,12 @@ function renderProjects(){
                 </p>
 
                 <a
-                    href="student-projects.html"
-                    class="cta">
+    href="student-projects.html?student=${project.studentId}"
+    class="cta">
 
-                    View Project →
+    View Project →
 
-                </a>
+</a>
 
             </div>
 
