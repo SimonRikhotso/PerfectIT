@@ -222,6 +222,76 @@ ul{padding-left:18px}
   box-shadow:0 0 8px rgba(96,165,250,.3);
 }
 
+#contactForm label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+#contactForm select{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    background:white;
+
+    font:inherit;
+
+}
+
+#contactForm select:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 8px rgba(96,165,250,.3);
+
+}
+
+#contactForm .grid{
+
+    margin-bottom:20px;
+
+}
+
+#formStatus{
+
+    margin-top:20px;
+
+    font-weight:600;
+
+    text-align:center;
+
+    min-height:24px;
+
+}
+
+#formStatus.success{
+
+    color:#22C55E;
+
+}
+
+#formStatus.error{
+
+    color:#EF4444;
+
+}
+
+
+
 /* Floating Buttons */
 
 #topBtn{
