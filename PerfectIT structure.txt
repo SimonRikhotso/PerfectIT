@@ -1,4 +1,4 @@
-Root/[index.html, tutoring/[index.html, about.html, student-success.html, free-resources.html, student-projects.html,...],  technical-support/[], software-development/[], arcade-systems/[], css/[style.css], data/[resources.json, reviews.json], js/[resources.js, script.js, student-projects.js, testimonials.js], resources/[career/[], cpp/[], csharp/[], ...], images/[icons/[...], moduleIcon/[...], testimonials/[], perfectITTutoringIcon.png, ...]
+Root/[index.html, tutoring/[index.html, about.html, student-success.html, free-resources.html, student-projects.html,...],  technical-support/[], software-development/[], arcade-systems/[], css/[style.css], data/[projects.json, resources.json, reviews.json, students,json], js/[home.js, resources.js, script.js, student-projects.js,student-ui.js, testimonials.js], resources/[career/[], cpp/[], csharp/[], ...], images/[icons/[...], moduleIcon/[...], testimonials/[], perfectITTutoringIcon.png, ...]
 
 
 

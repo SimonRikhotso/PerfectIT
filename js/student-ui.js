@@ -171,3 +171,47 @@ function createPortfolioSkills(student){
     return html;
 
 }
+
+/* ==========================================
+   Student UI Helpers
+========================================== */
+
+function getStudentInitials(name){
+
+    if(!name) return "?";
+
+    return name
+        .trim()
+        .split(" ")
+        .map(word => word[0])
+        .slice(0,2)
+        .join("")
+        .toUpperCase();
+
+}
+
+function createStudentAvatar(student){
+
+    if(student.photo){
+
+        return `
+            <img
+                src="../images/testimonials/${student.photo}"
+                alt="${student.name}">
+        `;
+
+    }
+
+    return `
+        <div class="student-initials">
+            ${getStudentInitials(student.name)}
+        </div>
+    `;
+
+}
+
+function createStars(rating){
+
+    return "★".repeat(rating);
+
+}

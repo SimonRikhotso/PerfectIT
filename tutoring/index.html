@@ -42,8 +42,6 @@
 
         <a href="student-projects.html">Student Projects</a>
 
-        <a href="referrals.html">Referrals</a>
-
         <a href="contact.html">Contact</a>
 
     </div>
@@ -181,22 +179,25 @@
 
         </p>
 
-        <div class="success-highlights">
+<div class="student-carousel">
 
-    <div class="highlight">
-        <h3 id="testimonialCount">0</h3>
-        <p>Student Testimonials</p>
+    <button id="prevStudent" class="carousel-btn" type="button"
+            aria-label="Show previous student story">
+        &#10094;
+    </button>
+
+    <div
+        id="carouselTrack"
+        class="carousel-track"
+        aria-live="polite"
+        aria-atomic="true">
+
     </div>
 
-    <div class="highlight">
-        <h3 id="experienceYears">10+</h3>
-        <p>Years Teaching</p>
-    </div>
-
-    <div class="highlight">
-        <h3 id="moduleCount">0</h3>
-        <p>Programming Modules</p>
-    </div>
+    <button id="nextStudent" class="carousel-btn" type="button"
+            aria-label="Show next student story">
+        &#10095;
+    </button>
 
 </div>
 
@@ -222,7 +223,10 @@
 <footer>
     © 2026 PerfectIT. All rights reserved.
 </footer>
+
 <script src="../js/script.js"></script>
+<script src="../js/student-ui.js"></script>
+<script src="../js/home.js"></script>
 
 <button id="topBtn">
 ↑

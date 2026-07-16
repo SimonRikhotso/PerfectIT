@@ -113,6 +113,15 @@ const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
 
+    const selectedModule =
+        new URLSearchParams(window.location.search).get("module");
+
+    const moduleSelect = document.getElementById("module");
+
+    if(selectedModule && moduleSelect){
+        moduleSelect.value = selectedModule;
+    }
+
     const status = document.getElementById("formStatus");
 
     contactForm.addEventListener("submit", async (e) => {
@@ -173,63 +182,5 @@ if (contactForm) {
         button.textContent = "Send Enquiry";
 
     });
-
-}
-
-/* ==========================================
-   Homepage Statistics
-========================================== */
-
-const testimonialCount =
-    document.getElementById("testimonialCount");
-
-const moduleCount =
-    document.getElementById("moduleCount");
-
-if (testimonialCount || moduleCount) {
-
-    fetch("../data/reviews.json")
-
-        .then(response => response.json())
-
-        .then(reviews => {
-
-            if (testimonialCount) {
-
-                testimonialCount.textContent =
-                    `${reviews.length}+`;
-
-            }
-
-            if (moduleCount) {
-
-                const modules = new Set();
-
-                reviews.forEach(review => {
-
-                    if (review.modules) {
-
-                        review.modules.forEach(module => {
-
-                            modules.add(module.module);
-
-                        });
-
-                    }
-
-                });
-
-                moduleCount.textContent =
-                    modules.size;
-
-            }
-
-        })
-
-        .catch(error => {
-
-            console.error("Unable to load homepage statistics", error);
-
-        });
 
 }

@@ -4,6 +4,7 @@ const clearSearch = document.getElementById("clearSearch");
 const resourceCount = document.getElementById("resourceCount");
 const resourceGrid = document.getElementById("resourceGrid");
 const featuredResources = document.getElementById("featuredResources");
+const featuredResourceSection = document.getElementById("featuredResourceSection");
 const resourceSearch = document.getElementById("resourceSearch");
 const resourceFilters = document.getElementById("resourceFilters");
 
@@ -12,6 +13,10 @@ async function loadResources() {
     try {
 
         const response = await fetch("../data/resources.json");
+
+        if(!response.ok){
+            throw new Error(`Unable to load resources (${response.status})`);
+        }
 
         allResources = await response.json();
 
@@ -36,8 +41,6 @@ async function loadResources() {
 }
 
 loadResources();
-
-resourceSearch.addEventListener("input", filterResources);
 
 function displayResources(resources) {
 
@@ -125,13 +128,19 @@ function createFilters() {
 
 function filterResources() {
 
-    const search = resourceSearch.value.toLowerCase();
+    const search = resourceSearch.value.trim().toLowerCase();
 
     const activeButton = document.querySelector(".filter-btn.active");
 
     const category = activeButton
         ? activeButton.textContent
         : "All";
+
+    const filteringIsActive = search !== "" || category !== "All";
+
+    if(featuredResourceSection){
+        featuredResourceSection.hidden = filteringIsActive;
+    }
 
     let filtered = allResources;
 
@@ -163,7 +172,18 @@ function filterResources() {
 
 function displayFeatured() {
 
-    const featured = allResources.filter(resource => resource.featured);
+    const usage = getResourceUsage();
+
+    const featured = [...allResources]
+        .sort((first, second) => {
+            const usageDifference =
+                (usage[second.id] || 0) - (usage[first.id] || 0);
+
+            if(usageDifference !== 0) return usageDifference;
+
+            return Number(second.featured) - Number(first.featured);
+        })
+        .slice(0, 4);
 
     featuredResources.innerHTML = "";
 
@@ -177,28 +197,16 @@ function displayFeatured() {
 
 function createCard(resource) {
 
-    const button = resource.size === "Coming Soon"
+    const isDownload = resource.action === "download";
 
-        ? `
-            <button
-                class="download-btn disabled"
-                disabled>
-
-                🚧 Coming Soon
-
-            </button>
-        `
-
-        : `
-            <a
-                href="${resource.file}"
-                class="download-btn"
-                download>
-
-                📥 Download (${resource.size})
-
-            </a>
-        `;
+    const actionButton = `
+        <a
+            href="${resource.url}"
+            class="download-btn"
+            onclick="trackResourceUse(${resource.id})"
+            ${isDownload ? "download" : 'target="_blank" rel="noopener"'}>
+            ${isDownload ? "📥" : "↗"} ${resource.buttonLabel}
+        </a>`;
 
     return `
 
@@ -224,19 +232,52 @@ function createCard(resource) {
 
         </div>
 
-        ${button}
-
         <button
             class="preview-btn"
             onclick="previewResource(${resource.id})">
 
-            👁 Preview
+            👁 View Details
 
         </button>
+
+        ${actionButton}
 
     </div>
 
     `;
+
+}
+
+function getResourceUsage(){
+
+    try{
+        return JSON.parse(
+            localStorage.getItem("perfectITResourceUsage") || "{}"
+        );
+    }
+    catch(error){
+        return {};
+    }
+
+}
+
+function trackResourceUse(id){
+
+    const usage = getResourceUsage();
+
+    usage[id] = (usage[id] || 0) + 1;
+
+    try{
+        localStorage.setItem(
+            "perfectITResourceUsage",
+            JSON.stringify(usage)
+        );
+    }
+    catch(error){
+        console.warn("Resource popularity could not be saved.");
+    }
+
+    displayFeatured();
 
 }
 
@@ -266,26 +307,28 @@ function previewResource(id) {
     const resource = allResources.find(r => r.id === id);
     if (!resource) return;
 
-    const downloadButton =
-        resource.size === "Coming Soon"
-            ? `
-                <button class="download-btn disabled" disabled>
-                    🚧 Coming Soon
-                </button>
-            `
-            : `
-                <a href="${resource.file}" class="download-btn" download>
-                    📥 Download (${resource.size})
-                </a>
-            `;
+    const isDownload = resource.action === "download";
+
+    const actionButton = `
+        <a href="${resource.url}" class="download-btn"
+           onclick="trackResourceUse(${resource.id})"
+           ${isDownload ? "download" : 'target="_blank" rel="noopener"'}>
+            ${isDownload ? "📥" : "↗"} ${resource.buttonLabel}
+        </a>`;
+
+    const previewImage = resource.image
+        ? `<img src="${resource.image}" class="preview-image" alt="">`
+        : `<div class="preview-resource-icon">${resource.icon}</div>`;
 
     // BODY CONTENT ONLY
     document.getElementById("previewBody").innerHTML = `
-        <img src="${resource.image}" class="preview-image">
+        ${previewImage}
 
         <h2>${resource.title}</h2>
 
         <p>${resource.description}</p>
+
+        <p class="resource-source">Provided by ${resource.source}</p>
 
         <div class="resource-meta">
             <span>${resource.category}</span>
@@ -301,7 +344,7 @@ function previewResource(id) {
     `;
 
     // ACTION AREA (NO DUPLICATION)
-    document.getElementById("previewActions").innerHTML = downloadButton;
+    document.getElementById("previewActions").innerHTML = actionButton;
 
     document.getElementById("previewModal").style.display = "flex";
 }
@@ -326,4 +369,10 @@ window.addEventListener("click", event => {
 
     }
 
+});
+
+document.addEventListener("keydown", event => {
+    if(event.key === "Escape"){
+        document.getElementById("previewModal").style.display = "none";
+    }
 });
