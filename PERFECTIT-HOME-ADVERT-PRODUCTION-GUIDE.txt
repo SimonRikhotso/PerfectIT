@@ -1,0 +1,144 @@
+PERFECTIT HOME ADVERT — PRODUCTION GUIDE
+========================================
+
+PURPOSE
+-------
+Create a 36-second brand advert combining:
+- a calm voice-over;
+- very short clips of Simon teaching;
+- natural teaching audio between narration lines;
+- programming screens, student projects and class activity;
+- a polished PerfectIT ending.
+
+The website expects one final exported file:
+
+videos/home-advert/perfectit-home-advert.mp4
+
+The individual clips remain modular inside videos/home-advert/clips/ so they can
+be replaced during future edits.
+
+
+RECOMMENDED TIMELINE
+--------------------
+
+SCENE 01 — 0:00–0:04 (4 seconds)
+File: 01-opening.mp4
+Picture: PerfectIT logo, laptop opening, code appearing, or a clean class setup.
+Voice-over: “Every great software developer started exactly where you are.”
+On-screen text: YOUR PROGRAMMING JOURNEY STARTS HERE
+Music: Softly begins.
+Transition: Fade in.
+
+SCENE 02 — 0:04–0:07 (3 seconds)
+File: 02-teaching-java.mp4
+Picture: Simon teaching or explaining code.
+Audio: Use Simon’s original teaching audio for one clear sentence fragment.
+Example teaching audio: “Now let us see what happens when we run the program.”
+Music: Reduce to about 15%.
+Transition: Clean cut.
+
+SCENE 03 — 0:07–0:11 (4 seconds)
+File: 03-student-coding.mp4
+Picture: Typing, a Teams class, source code, notes, or a student working.
+Voice-over: “At PerfectIT, difficult concepts become practical skills.”
+On-screen text: STRUCTURED. PRACTICAL. SUPPORTIVE.
+Music: Return to about 30%.
+
+SCENE 04 — 0:11–0:14 (3 seconds)
+File: 04-teaching-debugging.mp4
+Picture: Simon debugging, drawing a diagram, or answering a question.
+Audio: Use a second short natural teaching moment.
+Example teaching audio: “The error is not the problem; it shows us where to look.”
+Music: Reduce beneath speech.
+
+SCENE 05 — 0:14–0:19 (5 seconds)
+File: 05-programming-modules.mp4
+Picture: Quick clips of Java, C#, C++, Python and programming logic.
+Voice-over: “From programming logic to Java, C sharp, C plus plus and Python…”
+On-screen text sequence: LOGIC • JAVA • C# • C++ • PYTHON
+Transition: Quick clean cuts, not flashy effects.
+
+SCENE 06 — 0:19–0:22 (3 seconds)
+File: 06-teaching-interaction.mp4
+Picture: A positive teaching moment, question, answer, or code result.
+Audio: Use Simon’s real audio.
+Example teaching audio: “Excellent. That is exactly how we solve it.”
+Music: Reduce beneath speech.
+
+SCENE 07 — 0:22–0:27 (5 seconds)
+File: 07-student-projects.mp4
+Picture: Student portfolio cards, software running, project screenshots or GitHub.
+Voice-over: “Students do more than memorise syntax. They learn to solve problems and build real software.”
+On-screen text: LEARN • BUILD • GROW
+
+SCENE 08 — 0:27–0:31 (4 seconds)
+File: 08-support.mp4
+Picture: Simon assisting a student, a live online class, or a focused lesson.
+Voice-over: “With experienced guidance, confidence becomes progress.”
+On-screen text: GUIDANCE THAT BUILDS CONFIDENCE
+
+SCENE 09 — 0:31–0:36 (5 seconds)
+File: 09-ending.mp4
+Picture: PerfectIT logo on a clean dark background.
+Voice-over: “Learn with confidence. Build with purpose. Start your programming journey with PerfectIT.”
+On-screen text:
+PERFECTIT
+LEARN WITH CONFIDENCE. BUILD WITH PURPOSE.
+perfectit.co.za
+Transition: Slow fade out. The ending should connect smoothly back to Scene 01.
+
+
+FULL VOICE-OVER SCRIPT
+----------------------
+“Every great software developer started exactly where you are.
+
+At PerfectIT, difficult concepts become practical skills.
+
+From programming logic to Java, C sharp, C plus plus and Python…
+
+Students do more than memorise syntax. They learn to solve problems and build
+real software.
+
+With experienced guidance, confidence becomes progress.
+
+Learn with confidence. Build with purpose. Start your programming journey with
+PerfectIT.”
+
+
+CLIP RULES
+----------
+1. Keep each teaching clip between 2 and 4 seconds.
+2. Select teaching audio that makes sense without the full lesson.
+3. Avoid showing private student information, marks, email addresses or class lists.
+4. Crop screens so code is visible but confidential details are not.
+5. Use landscape 16:9 footage whenever possible.
+6. Avoid more than two transition styles. Clean cuts and short fades are enough.
+7. Keep on-screen text short and large enough for mobile viewers.
+8. Add subtitles for both narration and Simon’s teaching audio.
+9. Keep background music below all speech.
+10. Make the final logo fade connect naturally to the opening so the loop feels smooth.
+
+
+AUDIO LEVEL STARTING POINTS
+---------------------------
+Narration: approximately -6 dB to -3 dB peak.
+Teaching speech: approximately -6 dB to -3 dB peak.
+Background music beneath speech: approximately -28 dB to -20 dB.
+Music in gaps without speech: approximately -18 dB to -14 dB.
+
+Adjust by listening; clear speech is more important than exact numbers.
+
+
+HOW TO ACTIVATE THE VIDEO
+-------------------------
+1. Export the final advert as perfectit-home-advert.mp4.
+2. Copy it to videos/home-advert/.
+3. Optionally export a poster image as poster.jpg into the same folder.
+4. Open data/videos.json.
+5. Find home-brand-advert.
+6. Change "enabled": false to "enabled": true.
+7. Test through a local server, not by double-clicking the HTML file.
+
+The video loops automatically. It begins muted because modern browsers block
+unsolicited audio. A visitor can choose “Play with sound,” after which the full
+narration and teaching audio play and repeat.

@@ -4225,3 +4225,315 @@ transform:none;
     }
 
 }
+
+/* =========================================================
+   VIDEO CONTENT SYSTEM
+   ========================================================= */
+
+[hidden]{
+    display:none !important;
+}
+
+.site-videos-section{
+    padding-top:20px;
+}
+
+.site-video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr));
+    gap:28px;
+    margin-top:32px;
+}
+
+.site-video-card,
+.testimonial-video-card{
+    overflow:hidden;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    box-shadow:0 18px 40px rgba(0,0,0,.22);
+}
+
+.responsive-video{
+    width:100%;
+    aspect-ratio:16 / 9;
+    overflow:hidden;
+    background:#020617;
+}
+
+.responsive-video video,
+.responsive-video iframe{
+    display:block;
+    width:100%;
+    height:100%;
+    border:0;
+    object-fit:cover;
+}
+
+.site-video-copy{
+    padding:22px;
+}
+
+.site-video-copy h3{
+    margin:8px 0 10px;
+}
+
+.site-video-copy p{
+    margin:0;
+    color:var(--muted);
+}
+
+.video-label{
+    display:inline-flex;
+    padding:6px 11px;
+    border:1px solid rgba(96,165,250,.4);
+    border-radius:999px;
+    color:var(--primary);
+    font-size:.78rem;
+    font-weight:700;
+}
+
+.testimonial-video-wrap{
+    margin:20px 0 8px;
+}
+
+.testimonial-video-heading{
+    margin:0 0 10px;
+    font-size:.95rem;
+    color:#dbeafe;
+}
+
+.testimonial-video-card{
+    border-radius:14px;
+}
+
+@media(max-width:600px){
+    .site-video-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .site-video-copy{
+        padding:18px;
+    }
+}
+
+/* =========================================================
+   FREE RESOURCES — LIBRARY SUMMARY AND MODULE ICON FALLBACKS
+   ========================================================= */
+
+.resource-summary{
+    width:min(1100px, 92%);
+    margin:-14px auto 28px;
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:16px;
+}
+
+.resource-summary-item{
+    padding:20px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:rgba(15, 23, 42, .96);
+    box-shadow:0 14px 34px rgba(0, 0, 0, .22);
+    text-align:center;
+}
+
+.resource-summary-item strong{
+    display:block;
+    color:var(--primary);
+    font-size:1.65rem;
+    margin-bottom:4px;
+}
+
+.resource-summary-item span{
+    color:#cbd5e1;
+    font-size:.9rem;
+}
+
+.resource-icon{
+    overflow:hidden;
+}
+
+.resource-module-icon{
+    width:58px;
+    height:58px;
+    object-fit:contain;
+    display:block;
+}
+
+.resource-card-heading{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    min-height:26px;
+}
+
+.resource-source-label,
+.resource-featured-label{
+    display:inline-flex;
+    align-items:center;
+    min-height:24px;
+    padding:4px 9px;
+    border-radius:999px;
+    font-size:.72rem;
+    font-weight:700;
+    line-height:1;
+}
+
+.resource-source-label{
+    color:#bfdbfe;
+    background:rgba(59, 130, 246, .12);
+    border:1px solid rgba(96, 165, 250, .22);
+}
+
+.resource-featured-label{
+    color:#fde68a;
+    background:rgba(245, 158, 11, .12);
+    border:1px solid rgba(245, 158, 11, .24);
+}
+
+.preview-resource-icon{
+    min-height:120px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.preview-resource-module-icon{
+    width:96px;
+    height:96px;
+    object-fit:contain;
+}
+
+@media(max-width:700px){
+    .resource-summary{
+        grid-template-columns:1fr;
+        margin-top:-20px;
+    }
+}
+
+/* =========================================================
+   HOME BRAND ADVERT — LOOPING VIDEO EXPERIENCE
+   ========================================================= */
+
+.home-brand-video-section{
+    padding-top:76px;
+}
+
+.home-brand-video-section .site-video-grid{
+    grid-template-columns:minmax(0, 1fr);
+    max-width:980px;
+}
+
+.home-brand-video-card{
+    overflow:hidden;
+}
+
+.home-brand-player{
+    position:relative;
+    background:#020617;
+    aspect-ratio:16 / 9;
+    overflow:hidden;
+}
+
+.home-brand-video{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+}
+
+.home-video-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(to top, rgba(2, 6, 23, .72), rgba(2, 6, 23, .12) 55%, rgba(2, 6, 23, .22));
+    transition:opacity .3s ease, visibility .3s ease;
+}
+
+.home-video-overlay.is-hidden{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+
+.home-video-sound-button{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:13px 20px;
+    border:1px solid rgba(255,255,255,.32);
+    border-radius:999px;
+    color:white;
+    background:rgba(2, 6, 23, .76);
+    backdrop-filter:blur(10px);
+    font:inherit;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 12px 30px rgba(0,0,0,.28);
+}
+
+.home-video-sound-button:hover{
+    transform:translateY(-2px);
+    border-color:var(--primary);
+}
+
+.home-video-controls{
+    position:absolute;
+    left:16px;
+    right:16px;
+    bottom:14px;
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    pointer-events:none;
+}
+
+.home-video-controls button{
+    pointer-events:auto;
+    padding:8px 13px;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:999px;
+    color:#f8fafc;
+    background:rgba(2, 6, 23, .72);
+    font:inherit;
+    font-size:.8rem;
+    font-weight:700;
+    cursor:pointer;
+    backdrop-filter:blur(8px);
+}
+
+.home-brand-video-copy{
+    text-align:center;
+}
+
+.home-video-note{
+    margin-top:10px !important;
+    color:#94a3b8 !important;
+    font-size:.82rem;
+}
+
+@media(max-width:600px){
+    .home-brand-video-section{
+        padding-top:56px;
+    }
+
+    .home-video-controls{
+        left:10px;
+        right:10px;
+        bottom:10px;
+    }
+
+    .home-video-controls button{
+        padding:7px 11px;
+        font-size:.74rem;
+    }
+}

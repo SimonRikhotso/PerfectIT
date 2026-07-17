@@ -317,6 +317,17 @@ function createCard(student, grid){
 
 </div>
 
+        ${student.video?.enabled && student.video?.source ? `
+
+        <div class="testimonial-video-wrap">
+            <h4 class="testimonial-video-heading">🎥 Student Video Testimonial</h4>
+            <div class="testimonial-video-card">
+                ${createVideoPlayer(student.video)}
+            </div>
+        </div>
+
+        ` : ""}
+
         <div class="review collapsed">
 
             <span class="quote-icon">&ldquo;</span>

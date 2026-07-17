@@ -1,0 +1,66 @@
+{
+  "home": [
+    {
+      "id": "home-brand-advert",
+      "title": "Discover PerfectIT",
+      "description": "A short introduction combining narration, real teaching moments and student-focused programming scenes.",
+      "type": "local",
+      "source": "../videos/home-advert/perfectit-home-advert.mp4",
+      "poster": "../videos/home-advert/poster.jpg",
+      "captions": "../videos/home-advert/perfectit-home-advert.vtt",
+      "enabled": false,
+      "presentation": "brand-advert",
+      "autoplay": true,
+      "loop": true,
+      "startMuted": true
+    }
+  ],
+  "about": [
+    {
+      "id": "about-teaching-clip",
+      "title": "Meet Your Lecturer",
+      "description": "A short clip showing Simon Rikhotso explaining a programming concept.",
+      "type": "local",
+      "source": "../videos/teaching/meet-your-lecturer.mp4",
+      "poster": "",
+      "captions": "",
+      "enabled": false
+    }
+  ],
+  "programs": [
+    {
+      "id": "program-java-demo",
+      "title": "Java Lesson Preview",
+      "description": "A short preview of a practical Java programming lesson.",
+      "program": "Java",
+      "type": "local",
+      "source": "../videos/teaching/java-preview.mp4",
+      "poster": "",
+      "captions": "",
+      "enabled": false
+    },
+    {
+      "id": "program-csharp-demo",
+      "title": "C# Lesson Preview",
+      "description": "A short preview of a structured C# programming lesson.",
+      "program": "C#",
+      "type": "local",
+      "source": "../videos/teaching/csharp-preview.mp4",
+      "poster": "",
+      "captions": "",
+      "enabled": false
+    }
+  ],
+  "methodology": [
+    {
+      "id": "methodology-live-coding",
+      "title": "See the Teaching Method in Action",
+      "description": "A practical teaching clip demonstrating explanation, live coding and guided problem-solving.",
+      "type": "local",
+      "source": "../videos/teaching/methodology-preview.mp4",
+      "poster": "",
+      "captions": "",
+      "enabled": false
+    }
+  ]
+}

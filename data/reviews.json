@@ -9,7 +9,15 @@
     "verified": true,
     "showOnHomepage": true,
     "sortOrder": 1,
-    "source": "Google Forms"
+    "source": "Google Forms",
+    "video": {
+      "type": "local",
+      "source": "../videos/testimonials/ashley-testimonial.mp4",
+      "poster": "",
+      "captions": "",
+      "title": "Ashley shares her PerfectIT experience",
+      "enabled": false
+    }
   },
   {
     "id": 2,

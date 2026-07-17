@@ -616,29 +616,20 @@ ${project.concepts.map(item =>
 
 
 
-${project.youtube ? `
+${(() => {
+    const projectVideo = project.video?.enabled && project.video?.source
+        ? { ...project.video, title: project.video.title || project.title }
+        : project.youtube
+            ? { type: "youtube", source: project.youtube, title: project.title }
+            : null;
 
-
-<h3>
-Project Demonstration
-</h3>
-
-
-<div class="project-video">
-
-<iframe
-src="${project.youtube}"
-title="${project.title}"
-allowfullscreen>
-
-</iframe>
-
-</div>
-
-
-`
-:
-""}
+    return projectVideo ? `
+        <h3>Project Demonstration</h3>
+        <div class="project-video">
+            ${createVideoPlayer(projectVideo)}
+        </div>
+    ` : "";
+})()}
 
 
 </div>

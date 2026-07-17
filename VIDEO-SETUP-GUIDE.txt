@@ -1,0 +1,67 @@
+PERFECTIT VIDEO SETUP GUIDE
+===========================
+
+The website is now prepared for three video types:
+
+1. TEACHING / INTRODUCTION VIDEOS
+   Data file: data/videos.json
+   Used on: Home, About, Programs and Methodology pages.
+
+2. STUDENT TESTIMONIAL VIDEOS
+   Data file: data/reviews.json
+   Used inside the matching student's card on Student Success.
+
+3. STUDENT PROJECT DEMONSTRATIONS
+   Data file: data/projects.json
+   Used inside the project preview on a student portfolio/project page.
+
+LOCAL MP4 EXAMPLE
+-----------------
+{
+  "type": "local",
+  "source": "../videos/testimonials/student-name.mp4",
+  "poster": "../images/video-posters/student-name.jpg",
+  "captions": "",
+  "title": "Student shares their PerfectIT experience",
+  "enabled": true
+}
+
+YOUTUBE EXAMPLE
+---------------
+{
+  "type": "youtube",
+  "source": "https://www.youtube.com/embed/VIDEO_ID",
+  "poster": "",
+  "captions": "",
+  "title": "Video title",
+  "enabled": true
+}
+
+STUDENT TESTIMONIAL
+-------------------
+Add the video object inside the relevant student record in reviews.json.
+A disabled example already exists in Ashley's review.
+
+PROJECT DEMONSTRATION
+---------------------
+Existing "youtube" fields still work.
+For a local MP4, add this to the project:
+
+"video": {
+  "type": "local",
+  "source": "../videos/projects/project-name.mp4",
+  "poster": "",
+  "captions": "",
+  "title": "Project demonstration",
+  "enabled": true
+}
+
+HIDING AND SHOWING
+------------------
+"enabled": false  hides the video completely.
+"enabled": true   publishes it, provided source is not empty.
+
+RECOMMENDED FORMAT
+------------------
+MP4, H.264 video, AAC audio, 16:9 landscape.
+Compress videos before uploading to keep GitHub Pages fast.

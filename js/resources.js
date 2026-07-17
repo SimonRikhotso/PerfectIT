@@ -7,6 +7,7 @@ const featuredResources = document.getElementById("featuredResources");
 const featuredResourceSection = document.getElementById("featuredResourceSection");
 const resourceSearch = document.getElementById("resourceSearch");
 const resourceFilters = document.getElementById("resourceFilters");
+const resourceSummary = document.getElementById("resourceSummary");
 
 async function loadResources() {
 
@@ -25,6 +26,8 @@ async function loadResources() {
         displayFeatured();
 
         displayResources(allResources);
+
+        displayResourceSummary();
 
     }
 
@@ -195,6 +198,77 @@ function displayFeatured() {
 
 }
 
+function getDefaultResourceImage(category) {
+
+    const categoryIcons = {
+        "Java": "../images/icons/Java-icon.png",
+        "C#": "../images/icons/Csharp_icon.png",
+        "C++": "../images/icons/Cpp-icon.png",
+        "Python": "../images/icons/Python-icon.png",
+        "Database": "../images/icons/database_icon.png",
+        "Programming Logic": "../images/icons/PRLD-icon.png",
+        "IPRG": "../images/icons/IPRG-icon.png",
+        "Systems Analysis": "../images/icons/SAND-icon.png",
+        "Developer Tools": "../images/PLogo.png"
+    };
+
+    return categoryIcons[category] || "../images/PLogo.png";
+
+}
+
+function getResourceImage(resource) {
+
+    return resource.image || getDefaultResourceImage(resource.category);
+
+}
+
+function createResourceIcon(resource, className = "resource-module-icon") {
+
+    const image = getResourceImage(resource);
+    const fallback = getDefaultResourceImage(resource.category);
+
+    return `
+        <img
+            src="${image}"
+            class="${className}"
+            alt="${resource.category} resource icon"
+            loading="lazy"
+            onerror="this.onerror=null;this.src='${fallback}'">
+    `;
+
+}
+
+function displayResourceSummary() {
+
+    if (!resourceSummary) return;
+
+    const categoryCount = new Set(
+        allResources.map(resource => resource.category)
+    ).size;
+
+    const sourceCount = new Set(
+        allResources.map(resource => resource.source)
+    ).size;
+
+    resourceSummary.innerHTML = `
+        <div class="resource-summary-item">
+            <strong>${allResources.length}</strong>
+            <span>Free resources</span>
+        </div>
+
+        <div class="resource-summary-item">
+            <strong>${categoryCount}</strong>
+            <span>Learning categories</span>
+        </div>
+
+        <div class="resource-summary-item">
+            <strong>${sourceCount}</strong>
+            <span>Trusted sources</span>
+        </div>
+    `;
+
+}
+
 function createCard(resource) {
 
     const isDownload = resource.action === "download";
@@ -210,12 +284,15 @@ function createCard(resource) {
 
     return `
 
-    <div class="resource-card">
+    <article class="resource-card">
 
         <div class="resource-icon">
+            ${createResourceIcon(resource)}
+        </div>
 
-            ${resource.icon}
-
+        <div class="resource-card-heading">
+            <span class="resource-source-label">${resource.source}</span>
+            ${resource.featured ? '<span class="resource-featured-label">Featured</span>' : ''}
         </div>
 
         <h3>${resource.title}</h3>
@@ -242,7 +319,7 @@ function createCard(resource) {
 
         ${actionButton}
 
-    </div>
+    </article>
 
     `;
 
@@ -316,9 +393,11 @@ function previewResource(id) {
             ${isDownload ? "📥" : "↗"} ${resource.buttonLabel}
         </a>`;
 
-    const previewImage = resource.image
-        ? `<img src="${resource.image}" class="preview-image" alt="">`
-        : `<div class="preview-resource-icon">${resource.icon}</div>`;
+    const previewImage = `
+        <div class="preview-resource-icon">
+            ${createResourceIcon(resource, "preview-resource-module-icon")}
+        </div>
+    `;
 
     // BODY CONTENT ONLY
     document.getElementById("previewBody").innerHTML = `
