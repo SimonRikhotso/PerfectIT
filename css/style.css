@@ -4428,7 +4428,9 @@ transform:none;
 
 .home-brand-video-section .site-video-grid{
     grid-template-columns:minmax(0, 1fr);
+    width:min(100%, 980px);
     max-width:980px;
+    margin:32px auto 0;
 }
 
 .home-brand-video-card{

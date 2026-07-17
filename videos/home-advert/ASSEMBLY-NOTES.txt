@@ -1,0 +1,16 @@
+PERFECTIT HOME ADVERT — CLEAN REBUILD
+
+The advert was rebuilt from the clean PerfectIT(2).zip project.
+
+Exact media order:
+1. First(1).mp3 — Voiceover 1
+2. First(1).mp4 — Teaching clip 1, with its own embedded classroom audio
+3. Second(1).mp3 — Voiceover 2
+4. Thursday session(1).mp4 — Teaching clip 2, with its own embedded classroom audio
+5. Third(1).mp3 — Voiceover 3
+6. PerfectIT call-to-action screen
+
+No footage or audio from the earlier advert attempts was reused.
+Both teaching recordings were cropped to hide the participant panel and Windows taskbar.
+The website advert container was centred at a responsive maximum width of 980px.
+Approximate final duration: 59.0 seconds.

@@ -8,7 +8,7 @@
       "source": "../videos/home-advert/perfectit-home-advert.mp4",
       "poster": "../videos/home-advert/poster.jpg",
       "captions": "../videos/home-advert/perfectit-home-advert.vtt",
-      "enabled": false,
+      "enabled": true,
       "presentation": "brand-advert",
       "autoplay": true,
       "loop": true,
