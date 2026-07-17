@@ -1,0 +1,34 @@
+PERFECTIT PORTFOLIO SHARING UPDATE - VERSION 2
+==============================================
+
+This version includes:
+
+1. Initials instead of the PerfectIT logo when an approved public student
+   does not have a photo.
+
+2. Module-coloured avatar rings for student initials.
+
+3. "PS" (PerfectIT Student) for anonymous/private project owners.
+
+4. A Share This Portfolio panel containing:
+   - Copy Link
+   - WhatsApp
+   - LinkedIn
+   - Print / Save PDF
+
+5. A second sharing invitation after the portfolio projects.
+
+6. A clean printable portfolio stylesheet.
+
+7. A visible Back to All Student Projects link.
+
+8. A larger, high-contrast project-preview close button.
+
+Files containing the main implementation:
+
+tutoring/student-projects.html
+js/student-projects.js
+css/style.css
+
+Archive version:
+PerfectIT-Portfolio-Sharing-v2-17-07-2026.zip

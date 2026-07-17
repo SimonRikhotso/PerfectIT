@@ -113,13 +113,31 @@ const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
 
-    const selectedModule =
-        new URLSearchParams(window.location.search).get("module");
+    const contactParams = new URLSearchParams(window.location.search);
+    const selectedModule = contactParams.get("module");
+    const opportunityStudent = contactParams.get("opportunity");
 
     const moduleSelect = document.getElementById("module");
 
     if(selectedModule && moduleSelect){
         moduleSelect.value = selectedModule;
+    }
+
+    if(opportunityStudent){
+        const message = document.getElementById("message");
+        const subject = contactForm.querySelector('[name="_subject"]');
+
+        if(moduleSelect){
+            moduleSelect.value = "Developer Opportunity / Recruitment";
+        }
+
+        if(message){
+            message.value = `I would like to enquire about a professional opportunity for ${opportunityStudent}. Please contact me to discuss the opportunity without sharing the student's private details.`;
+        }
+
+        if(subject){
+            subject.value = `PerfectIT Developer Opportunity Enquiry: ${opportunityStudent}`;
+        }
     }
 
     const status = document.getElementById("formStatus");

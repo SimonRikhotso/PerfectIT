@@ -1,57 +1,1018 @@
 [
-    {
-        "studentId": "mathebula-tiyiselani-ashley",
-
-        "displayName": "Ashley",
-
-        "photo": "../images/students/Mathebula-Tiyiselani.jpeg",
-
-        "qualification": "Final Year BSc Computer Science Student",
-
-        "bio": "Ashley developed a strong programming foundation through Java, Databases and Programming Logic. She enjoys building practical software solutions and continues expanding her programming skills.",
-
-        "github": "",
-
-        "linkedin": "",
-
-        "portfolioWebsite": "",
-
-         "portfolio": "https://portfolio.com",
-
-        "cv": "",
-
-        "availableForEmployment": true,
-
-        "allowPortfolio": true,
-
-        "featuredProject": 1
-    },
-
-    {
-        "studentId": "mukwevho-selwyn",
-
-        "displayName": "Selwyn",
-
-        "photo": "",
-
-        "qualification": "Final Year BSc Computer Science Student",
-
-        "bio": "",
-
-        "github": "",
-
-        "linkedin": "",
-
-        "portfolioWebsite": "",
-
-        "portfolio": "https://portfolio.com",
-
-        "cv": "",
-
-        "availableForEmployment": true,
-
-        "allowPortfolio": false,
-
-        "featuredProject": null
+  {
+    "studentId": "mathebula-tiyiselani-ashley",
+    "name": "Mathebula Tiyiselani Ashley",
+    "displayName": "Ashley",
+    "photo": "Mathebula-Tiyiselani.jpeg",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2022,
+    "lastYear": 2024,
+    "highestModule": "java",
+    "modules": [
+      "Java",
+      "Database",
+      "PRLD",
+      "IPRG"
+    ],
+    "qualification": "Final Year BSc Computer Science Student",
+    "bio": "Ashley developed a strong programming foundation through Java, Databases and Programming Logic. She enjoys building practical software solutions and continues expanding her programming skills.",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": true,
+    "featuredProject": 1,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
     }
+  },
+  {
+    "studentId": "mukwevho-selwyn",
+    "name": "Mukwevho Selwyn",
+    "displayName": "Selwyn",
+    "photo": "",
+    "institution": "Rosebank Online & Extra Class",
+    "firstYear": 2025,
+    "lastYear": 2026,
+    "highestModule": "csharp",
+    "modules": [
+      "C sharp",
+      "Java",
+      "PRLD"
+    ],
+    "qualification": "Final Year BSc Computer Science Student",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "bopape-matome-elijah",
+    "name": "Bopape Matome Elijah",
+    "displayName": "Bopape Matome Elijah",
+    "photo": "Bopape-Matome.png",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2024,
+    "lastYear": 2025,
+    "highestModule": "csharp",
+    "modules": [
+      "C sharp",
+      "Java",
+      "PRLD"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "pheme-tlou",
+    "name": "Pheme Tlou",
+    "displayName": "Pheme Tlou",
+    "photo": "Pheme-Tlou.jpg",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2024,
+    "lastYear": 2025,
+    "highestModule": "csharp",
+    "modules": [
+      "C sharp",
+      "Java",
+      "PRLD"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "mphelo-mahlatse",
+    "name": "Mphelo Mahlatse",
+    "displayName": "Mphelo Mahlatse",
+    "photo": "",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2024,
+    "lastYear": 2025,
+    "highestModule": "csharp",
+    "modules": [
+      "C sharp",
+      "Java",
+      "PRLD"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "gwala-zandile",
+    "name": "Gwala Zandile",
+    "displayName": "Gwala Zandile",
+    "photo": "",
+    "institution": "Rosebank Online",
+    "firstYear": 2025,
+    "lastYear": 2025,
+    "highestModule": "java",
+    "modules": [
+      "Java"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "mahlaela-keabetswe",
+    "name": "Mahlaela Keabetswe",
+    "displayName": "Mahlaela Keabetswe",
+    "photo": "",
+    "institution": "Rosebank Online",
+    "firstYear": 2025,
+    "lastYear": 2025,
+    "highestModule": "iprg",
+    "modules": [
+      "IPRG"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "eltawil-isam",
+    "name": "Eltawil Isam",
+    "displayName": "Eltawil Isam",
+    "photo": "",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2024,
+    "lastYear": 2025,
+    "highestModule": "csharp",
+    "modules": [
+      "C sharp",
+      "Java",
+      "PRLD"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "motsepe-kholofelo",
+    "name": "Motsepe Kholofelo",
+    "displayName": "Motsepe Kholofelo",
+    "photo": "Motsepe-Kholofelo.jpeg",
+    "institution": "Rosebank Online",
+    "firstYear": 2024,
+    "lastYear": 2025,
+    "highestModule": "iprg",
+    "modules": [
+      "IPRG"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "banyini-ntsako",
+    "name": "Banyini Ntsako",
+    "displayName": "Banyini Ntsako",
+    "photo": "",
+    "institution": "RGI & Extra Class",
+    "firstYear": 2025,
+    "lastYear": 2026,
+    "highestModule": "cpp",
+    "modules": [
+      "Cpp",
+      "Python"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "kgaphola-elias-malope-ntswaborwa",
+    "name": "Kgaphola Elias Malope Ntswaborwa",
+    "displayName": "Kgaphola Elias Malope Ntswaborwa",
+    "photo": "Kgaphola-Elias.jpg",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2024,
+    "lastYear": 2024,
+    "highestModule": "iprg",
+    "modules": [
+      "IPRG"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "lemao-olerato",
+    "name": "Lemao Olerato",
+    "displayName": "Lemao Olerato",
+    "photo": "",
+    "institution": "Rosebank Online",
+    "firstYear": 2025,
+    "lastYear": 2025,
+    "highestModule": "prld",
+    "modules": [
+      "PRLD"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "mathalise-vusani",
+    "name": "Mathalise Vusani",
+    "displayName": "Mathalise Vusani",
+    "photo": "",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2022,
+    "lastYear": 2023,
+    "highestModule": "java",
+    "modules": [
+      "Java",
+      "Database",
+      "PRLD"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "madisha-thlompho",
+    "name": "Madisha Thlompho",
+    "displayName": "Madisha Thlompho",
+    "photo": "Madisha-Thlompho.jpeg",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2022,
+    "lastYear": 2024,
+    "highestModule": "database",
+    "modules": [
+      "Database",
+      "PRLD",
+      "IPRG"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "phasiwe-bokang",
+    "name": "Phasiwe Bokang",
+    "displayName": "Phasiwe Bokang",
+    "photo": "",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2023,
+    "lastYear": 2024,
+    "highestModule": "database",
+    "modules": [
+      "Database",
+      "IPRG"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "maluleke-senzo-luther",
+    "name": "Maluleke Senzo Luther",
+    "displayName": "Maluleke Senzo Luther",
+    "photo": "Maluleke-Senzo.jpg",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2023,
+    "lastYear": 2024,
+    "highestModule": "java",
+    "modules": [
+      "Java",
+      "PRLD",
+      "IPRG"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "ramabulana-fulufhelo-hope",
+    "name": "Ramabulana Fulufhelo Hope",
+    "displayName": "Ramabulana Fulufhelo Hope",
+    "photo": "Ramabulana-Fulufhelo.jpg",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2023,
+    "lastYear": 2023,
+    "highestModule": "java",
+    "modules": [
+      "Java",
+      "PRLD"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "nephawe-tshedza",
+    "name": "Nephawe Tshedza",
+    "displayName": "Nephawe Tshedza",
+    "photo": "",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2023,
+    "lastYear": 2023,
+    "highestModule": "java",
+    "modules": [
+      "Java",
+      "Database",
+      "PRLD",
+      "IPRG"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "kapa-derrick",
+    "name": "Kapa Derrick",
+    "displayName": "Kapa Derrick",
+    "photo": "Kapa-Derrick.jpg",
+    "institution": "Rosebank Online & Extra Class",
+    "firstYear": 2024,
+    "lastYear": 2026,
+    "highestModule": "csharp",
+    "modules": [
+      "C sharp",
+      "Java",
+      "IPRG"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "rikhotso-nkhensani",
+    "name": "Rikhotso Nkhensani",
+    "displayName": "Rikhotso Nkhensani",
+    "photo": "Rikhotso-Nkhensani.jpg",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2023,
+    "lastYear": 2024,
+    "highestModule": "prld",
+    "modules": [
+      "PRLD",
+      "IPRG"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "kgosi-sheila",
+    "name": "Kgosi Sheila",
+    "displayName": "Kgosi Sheila",
+    "photo": "",
+    "institution": "Rosebank Online",
+    "firstYear": 2025,
+    "lastYear": 2025,
+    "highestModule": "prld",
+    "modules": [
+      "PRLD",
+      "IPRG"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "mashobane-erwin",
+    "name": "Mashobane Erwin",
+    "displayName": "Mashobane Erwin",
+    "photo": "",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2025,
+    "lastYear": 2025,
+    "highestModule": "java",
+    "modules": [
+      "Java"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "manenzhe-madzanga",
+    "name": "Manenzhe Madzanga",
+    "displayName": "Manenzhe Madzanga",
+    "photo": "manenzhe-madzanga.jpeg",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2021,
+    "lastYear": 2022,
+    "highestModule": "java",
+    "modules": [
+      "Java",
+      "Database"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "shipalane-rivoningo",
+    "name": "Shipalane Rivoningo",
+    "displayName": "Shipalane Rivoningo",
+    "photo": "shipalane-rivoningo.jpeg",
+    "institution": "RichField Graduate Institute",
+    "firstYear": 2018,
+    "lastYear": 2021,
+    "highestModule": "csharp",
+    "modules": [
+      "C sharp",
+      "Java",
+      "Cpp",
+      "VB"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "sadiki-makungu",
+    "name": "Sadiki Makungu",
+    "displayName": "Sadiki Makungu",
+    "photo": "sadiki-makungu.jpg",
+    "institution": "Rosebank Polokwane",
+    "firstYear": 2023,
+    "lastYear": 2023,
+    "highestModule": "java",
+    "modules": [
+      "Java",
+      "PRLD"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "mutshatshi-vhuhwavho",
+    "name": "Mutshatshi Vhuhwavho",
+    "displayName": "Mutshatshi Vhuhwavho",
+    "photo": "",
+    "institution": "RichField Graduate Institute",
+    "firstYear": 2020,
+    "lastYear": 2022,
+    "highestModule": "csharp",
+    "modules": [
+      "C sharp",
+      "Java",
+      "Cpp"
+    ],
+    "qualification": "",
+    "bio": "",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": false,
+    "featuredProject": null,
+    "openToOpportunities": false,
+    "professionalTitle": "",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": true,
+      "showInstitution": false,
+      "showStudyYears": false
+    }
+  },
+  {
+    "studentId": "demo-naledi",
+    "name": "Naledi Demo Student",
+    "displayName": "Naledi (Demo)",
+    "photo": "",
+    "institution": "",
+    "firstYear": null,
+    "lastYear": null,
+    "highestModule": "csharp",
+    "modules": [
+      "C sharp",
+      "Java",
+      "Database"
+    ],
+    "qualification": "Diploma in Information Technology (Demo)",
+    "bio": "Naledi is a fictional demonstration profile showing how an emerging developer can present practical software projects, technical skills and career interests through PerfectIT.",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": true,
+    "featuredProject": 101,
+    "openToOpportunities": true,
+    "professionalTitle": "Junior Software Developer",
+    "preferredRoles": [
+      "Junior Developer",
+      "Graduate Programme",
+      "Internship"
+    ],
+    "workPreferences": [
+      "On-site",
+      "Hybrid"
+    ],
+    "publicLocation": "Gauteng",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": false,
+      "showInstitution": false,
+      "showStudyYears": false
+    },
+    "isDemo": true
+  },
+  {
+    "studentId": "demo-thabo",
+    "name": "Thabo Demo Student",
+    "displayName": "Thabo (Demo)",
+    "photo": "",
+    "institution": "",
+    "firstYear": null,
+    "lastYear": null,
+    "highestModule": "java",
+    "modules": [
+      "Java",
+      "PRLD",
+      "IPRG"
+    ],
+    "qualification": "BSc Computer Science Graduate (Demo)",
+    "bio": "Thabo is a fictional demonstration profile designed to preview a privacy-conscious portfolio for a graduate interested in backend development and software support roles.",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": true,
+    "featuredProject": 103,
+    "openToOpportunities": true,
+    "professionalTitle": "Graduate Java Developer",
+    "preferredRoles": [
+      "Graduate Developer",
+      "Backend Intern",
+      "Technical Support"
+    ],
+    "workPreferences": [
+      "Remote",
+      "Hybrid"
+    ],
+    "publicLocation": "Limpopo",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": false,
+      "showInstitution": false,
+      "showStudyYears": false
+    },
+    "isDemo": true
+  },
+  {
+    "studentId": "demo-akhona",
+    "name": "Akhona Demo Student",
+    "displayName": "Akhona (Demo)",
+    "photo": "",
+    "institution": "",
+    "firstYear": null,
+    "lastYear": null,
+    "highestModule": "python",
+    "modules": [
+      "Python",
+      "Database",
+      "IPRG"
+    ],
+    "qualification": "Higher Certificate in Computing (Demo)",
+    "bio": "Akhona is a fictional demonstration profile showing a student portfolio that is published for skills visibility without publicly displaying employment availability.",
+    "github": "",
+    "linkedin": "",
+    "portfolioWebsite": "",
+    "portfolio": "",
+    "cv": "",
+    "allowPortfolio": true,
+    "featuredProject": 104,
+    "openToOpportunities": false,
+    "professionalTitle": "Emerging Python Developer",
+    "preferredRoles": [],
+    "workPreferences": [],
+    "publicLocation": "",
+    "contactThroughPerfectIT": true,
+    "portfolioVisibility": {
+      "showPhoto": false,
+      "showInstitution": false,
+      "showStudyYears": false
+    },
+    "isDemo": true
+  }
 ]

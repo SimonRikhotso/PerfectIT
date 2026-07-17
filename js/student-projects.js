@@ -3,6 +3,7 @@ let students = [];
 let reviews = [];
 
 const studentPhoto = document.getElementById("studentPhoto");
+const studentProfileInitials = document.getElementById("studentProfileInitials");
 const studentName = document.getElementById("studentName");
 const studentQualification = document.getElementById("studentQualification");
 const studentBio = document.getElementById("studentBio");
@@ -18,6 +19,25 @@ const projectsHeader = document.getElementById("projectsHeader");
 const portfolioHeader = document.getElementById("portfolioHeader");
 const portfolioTitle = document.getElementById("portfolioTitle");
 const portfolioSubtitle = document.getElementById("portfolioSubtitle");
+const developerDirectory = document.getElementById("developerDirectory");
+const developerGrid = document.getElementById("developerGrid");
+const opportunityPanel = document.getElementById("opportunityPanel");
+const professionalTitle = document.getElementById("professionalTitle");
+const opportunityDetails = document.getElementById("opportunityDetails");
+const opportunityContact = document.getElementById("opportunityContact");
+const demoProfileNotice = document.getElementById("demoProfileNotice");
+const demoDirectoryNotice = document.getElementById("demoDirectoryNotice");
+const portfolioSharePanel = document.getElementById("portfolioSharePanel");
+const portfolioShareFooter = document.getElementById("portfolioShareFooter");
+const copyPortfolioLink = document.getElementById("copyPortfolioLink");
+const copyPortfolioLinkFooter = document.getElementById("copyPortfolioLinkFooter");
+const whatsappShareLink = document.getElementById("whatsappShareLink");
+const whatsappShareLinkFooter = document.getElementById("whatsappShareLinkFooter");
+const linkedinShareLink = document.getElementById("linkedinShareLink");
+const linkedinShareLinkFooter = document.getElementById("linkedinShareLinkFooter");
+const printPortfolio = document.getElementById("printPortfolio");
+const shareFeedback = document.getElementById("shareFeedback");
+const grid = document.getElementById("projectsGrid");
 
 
 const githubLink = document.getElementById("githubLink");
@@ -29,23 +49,10 @@ const urlParams = new URLSearchParams(window.location.search);
 
 const selectedStudent = urlParams.get("student");
 
-if (selectedStudent) {
-
-    studentProfile.style.display = "block";
-
-    portfolioHeader.style.display = "block";
-
-    projectsHeader.style.display = "none";
-
-} else {
-
-    studentProfile.style.display = "none";
-
-    portfolioHeader.style.display = "none";
-
-    projectsHeader.style.display = "block";
-
-}
+studentProfile.style.display = "none";
+portfolioHeader.style.display = "none";
+developerDirectory.style.display = selectedStudent ? "none" : "block";
+projectsHeader.style.display = selectedStudent ? "none" : "block";
 
 const modal = document.getElementById("previewModal");
 const closeBtn = document.getElementById("closePreview");
@@ -67,6 +74,258 @@ function getReview(studentId) {
 
 }
 
+function hasPublicPortfolio(student) {
+    return Boolean(student?.allowPortfolio);
+}
+
+function getPortfolioPhoto(student) {
+    const mayShowPhoto = student?.portfolioVisibility?.showPhoto !== false;
+
+    return mayShowPhoto && student?.photo
+        ? `../images/students/${student.photo}`
+        : "../images/default-profile.png";
+}
+
+function mayShowPortfolioPhoto(student) {
+    return student?.portfolioVisibility?.showPhoto !== false && Boolean(student?.photo);
+}
+
+function getStudentRing(student) {
+    return moduleInfo[student?.highestModule]?.ring || "";
+}
+
+function createPortfolioAvatar(student, className = "developer-initials") {
+    if(mayShowPortfolioPhoto(student)){
+        return `<img src="../images/students/${student.photo}" alt="${student.displayName}">`;
+    }
+
+    return `
+        <div class="${className} ${getStudentRing(student)}"
+             role="img"
+             aria-label="${student.displayName} initials">
+            ${getStudentInitials(student.name || student.displayName)}
+        </div>
+    `;
+}
+
+async function copyText(textToCopy) {
+    if(navigator.clipboard && window.isSecureContext){
+        await navigator.clipboard.writeText(textToCopy);
+        return;
+    }
+
+    const temporaryInput = document.createElement("textarea");
+    temporaryInput.value = textToCopy;
+    temporaryInput.setAttribute("readonly", "");
+    temporaryInput.style.position = "fixed";
+    temporaryInput.style.opacity = "0";
+    document.body.appendChild(temporaryInput);
+    temporaryInput.select();
+    document.execCommand("copy");
+    temporaryInput.remove();
+}
+
+function configurePortfolioSharing(student) {
+    const portfolioUrl = window.location.href.split("#")[0];
+    const demoLabel = student.isDemo ? " demonstration" : "";
+    const shareMessage = `View ${student.displayName}'s${demoLabel} programming portfolio on PerfectIT. Explore the practical projects and technical skills presented here: ${portfolioUrl}`;
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareMessage)}`;
+    const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(portfolioUrl)}`;
+
+    portfolioSharePanel.style.display = "block";
+    portfolioShareFooter.style.display = "flex";
+    whatsappShareLink.href = whatsappUrl;
+    whatsappShareLinkFooter.href = whatsappUrl;
+    linkedinShareLink.href = linkedinUrl;
+    linkedinShareLinkFooter.href = linkedinUrl;
+
+    const handleCopy = async button => {
+        const originalText = button.textContent;
+
+        try{
+            await copyText(portfolioUrl);
+            button.textContent = "✓ Link Copied";
+            shareFeedback.textContent = "Portfolio link copied to your clipboard.";
+        }catch(error){
+            shareFeedback.textContent = "Unable to copy automatically. Please copy the address from your browser.";
+        }
+
+        window.setTimeout(() => {
+            button.textContent = originalText;
+            shareFeedback.textContent = "";
+        }, 2500);
+    };
+
+    copyPortfolioLink.onclick = () => handleCopy(copyPortfolioLink);
+    copyPortfolioLinkFooter.onclick = () => handleCopy(copyPortfolioLinkFooter);
+    printPortfolio.onclick = () => window.print();
+}
+
+function sortPortfolioProjects(studentProjects) {
+    const difficultyOrder = { Easy: 1, Medium: 2, Hard: 3 };
+
+    return studentProjects.sort((first, second) => {
+        if(first.featured && !second.featured) return -1;
+        if(!first.featured && second.featured) return 1;
+
+        return (difficultyOrder[second.difficulty] || 0)
+            - (difficultyOrder[first.difficulty] || 0);
+    });
+}
+
+function showPrivatePortfolioMessage() {
+    projectsHeader.style.display = "block";
+    projectsHeader.innerHTML = `
+        <h1>Portfolio Not Public</h1>
+        <p>
+            This student has not approved a public portfolio, or the portfolio
+            is not currently available. PerfectIT does not publish student
+            information without permission.
+        </p>
+        <a class="cta" href="student-projects.html">View Public Projects</a>
+    `;
+    grid.innerHTML = "";
+}
+
+function renderOpportunityProfile(student) {
+    opportunityPanel.style.display = student.openToOpportunities ? "block" : "none";
+
+    if(!student.openToOpportunities) return;
+
+    professionalTitle.textContent = student.professionalTitle || "Emerging Developer";
+
+    const details = [];
+
+    if(student.preferredRoles?.length){
+        details.push(`<div><strong>Interested in</strong><span>${student.preferredRoles.join(" • ")}</span></div>`);
+    }
+
+    if(student.workPreferences?.length){
+        details.push(`<div><strong>Work preference</strong><span>${student.workPreferences.join(" • ")}</span></div>`);
+    }
+
+    if(student.publicLocation){
+        details.push(`<div><strong>Location</strong><span>${student.publicLocation}</span></div>`);
+    }
+
+    opportunityDetails.innerHTML = details.join("");
+
+    if(student.isDemo){
+        opportunityContact.style.display = "none";
+    }else{
+        opportunityContact.style.display = "inline-flex";
+        opportunityContact.href = `contact.html?opportunity=${encodeURIComponent(student.displayName)}`;
+    }
+}
+
+function renderPortfolio(student) {
+    document.body.classList.add("portfolio-view");
+    studentProfile.style.display = "block";
+    portfolioHeader.style.display = "block";
+
+    if(mayShowPortfolioPhoto(student)){
+        studentPhoto.src = getPortfolioPhoto(student);
+        studentPhoto.alt = student.displayName || "Student portfolio photo";
+        studentPhoto.style.display = "block";
+        studentProfileInitials.style.display = "none";
+    }else{
+        studentPhoto.style.display = "none";
+        studentProfileInitials.style.display = "grid";
+        studentProfileInitials.className = `student-profile-initials ${getStudentRing(student)}`;
+        studentProfileInitials.textContent = getStudentInitials(student.name || student.displayName);
+        studentProfileInitials.setAttribute("aria-label", `${student.displayName} initials`);
+    }
+    studentName.textContent = student.displayName;
+    studentQualification.textContent = student.qualification || "Emerging Developer";
+    studentBio.textContent = student.bio || "";
+    demoProfileNotice.style.display = student.isDemo ? "block" : "none";
+
+    const review = getReview(student.studentId);
+
+    studentVerification.textContent = review?.verified ? "✔ Verified Former Student" : "";
+    studentRating.textContent = review?.rating ? "⭐".repeat(review.rating) : "";
+    studentInstitution.textContent = student.portfolioVisibility?.showInstitution
+        ? student.institution || ""
+        : "";
+    studentYears.textContent = student.portfolioVisibility?.showStudyYears
+        && student.firstYear && student.lastYear
+        ? `${student.firstYear} - ${student.lastYear}`
+        : "";
+    studentModules.innerHTML = createPortfolioSkills(student);
+
+    portfolioTitle.textContent = `${student.displayName}'s Portfolio`;
+
+    [githubLink, linkedinLink, portfolioLink, cvLink].forEach(link => {
+        link.style.display = "none";
+        link.rel = "noopener noreferrer";
+    });
+
+    const publicLinks = [
+        [githubLink, student.github],
+        [linkedinLink, student.linkedin],
+        [portfolioLink, student.portfolioWebsite || student.portfolio],
+        [cvLink, student.cv]
+    ];
+
+    publicLinks.forEach(([element, url]) => {
+        if(url){
+            element.href = url;
+            element.style.display = "inline-block";
+        }
+    });
+
+    renderOpportunityProfile(student);
+    configurePortfolioSharing(student);
+}
+
+function renderDeveloperDirectory() {
+    const publicStudents = students.filter(hasPublicPortfolio);
+    demoDirectoryNotice.style.display = publicStudents.some(student => student.isDemo)
+        ? "block"
+        : "none";
+
+    if(publicStudents.length === 0){
+        developerGrid.innerHTML = `
+            <div class="directory-empty-state">
+                <h3>Student portfolios are being prepared</h3>
+                <p>Profiles will appear here only after each student has approved publication.</p>
+            </div>
+        `;
+        return;
+    }
+
+    developerGrid.innerHTML = publicStudents.map(student => {
+        const projectCount = projects.filter(
+            project => project.studentId === student.studentId
+        ).length;
+        const status = student.openToOpportunities
+            ? `<span class="developer-status available">Open to Opportunities</span>`
+            : `<span class="developer-status">Portfolio Published</span>`;
+        const demoStatus = student.isDemo
+            ? `<span class="developer-status demo">Demonstration Profile</span>`
+            : "";
+
+        return `
+            <article class="developer-card">
+                ${createPortfolioAvatar(student)}
+                <div class="developer-card-content">
+                    ${demoStatus}
+                    ${status}
+                    <h3>${student.displayName}</h3>
+                    <p>${student.professionalTitle || student.qualification || "Emerging Developer"}</p>
+                    <div class="developer-skill-list">
+                        ${student.modules.slice(0, 4).map(module => `<span>${module}</span>`).join("")}
+                    </div>
+                    <small>${projectCount} published project${projectCount === 1 ? "" : "s"}</small>
+                    <a href="student-projects.html?student=${encodeURIComponent(student.studentId)}">
+                        View Portfolio →
+                    </a>
+                </div>
+            </article>
+        `;
+    }).join("");
+}
+
 async function loadData() {
 
     const [projectsResponse, studentsResponse, reviewsResponse] = await Promise.all([
@@ -79,113 +338,31 @@ async function loadData() {
     students = await studentsResponse.json();
     reviews = await reviewsResponse.json();
 
-    if (selectedStudent) {
-
-    const student = getStudent(selectedStudent);
-
-    if (student) {
-
-        studentPhoto.src = student.photo || "../images/default-profile.png";
-        studentPhoto.alt = student.displayName;
-
-        studentName.textContent = student.displayName;
-        studentQualification.textContent = student.qualification || "";
-        studentBio.textContent = student.bio || "";
-
-        const review = getReview(student.studentId);
-
-        if(review)
-        {
-
-            studentVerification.textContent = review.verified ? "✔ Verified Former Student" : "";
-
-            studentRating.textContent = "⭐".repeat(review.rating);
-
-            studentInstitution.textContent = review.institution;
-
-            studentYears.textContent = `${review.firstYear} - ${review.lastYear}`;
-
-            //studentModules.innerHTML = createModuleBadges(review, false);
-            studentModules.innerHTML = createPortfolioSkills(review, true);
-
-        }
-
-        portfolioTitle.textContent = `${student.displayName}'s Portfolio`;
-
-        portfolioSubtitle.textContent = "A collection of programming projects completed during the student's learning journey with PerfectIT.";
-        
-        if (student.github) {
-            githubLink.href = student.github;
-            githubLink.style.display = "inline-block";
-        }
-
-        if (student.linkedin) {
-            linkedinLink.href = student.linkedin;
-            linkedinLink.style.display = "inline-block";
-        }
-
-        if (student.portfolio) {
-            portfolioLink.href = student.portfolio;
-            portfolioLink.style.display = "inline-block";
-        }
-
-        if (student.cv) {
-            cvLink.href = student.cv;
-            cvLink.style.display = "inline-block";
-        }
-
-    }
-
-}
-
     if(selectedStudent){
+        const student = getStudent(selectedStudent);
 
-    let filteredProjects =
-    projects.filter(project =>
-        project.studentId === selectedStudent
-    );
+        if(!hasPublicPortfolio(student)){
+            showPrivatePortfolioMessage();
+            return;
+        }
 
+        renderPortfolio(student);
 
-filteredProjects.sort((a,b)=>{
-
-    // Featured projects first
-    if(a.featured && !b.featured){
-        return -1;
-    }
-
-    if(!a.featured && b.featured){
-        return 1;
-    }
-
-
-    // Higher difficulty later
-    const difficultyOrder = {
-        "Easy":1,
-        "Medium":2,
-        "Hard":3
-    };
-
-
-    return difficultyOrder[b.difficulty] -
-           difficultyOrder[a.difficulty];
-
-});
+        const filteredProjects = sortPortfolioProjects(
+            projects.filter(project => project.studentId === selectedStudent)
+        );
 
         portfolioSubtitle.textContent = `${filteredProjects.length} project${filteredProjects.length !== 1 ? "s" : ""} completed during this student's learning journey with PerfectIT.`;
+        renderProjects(filteredProjects);
+        return;
+    }
 
-    renderProjects(filteredProjects);
-
-}else{
-
+    renderDeveloperDirectory();
     renderProjects(projects);
 
 }
 
-}
-
 loadData();
-
-const grid = document.getElementById("projectsGrid");
 
 function renderProjects(data) {
 
@@ -211,19 +388,14 @@ function renderProjects(data) {
         card.className = project.featured ? "project-card featured" : "project-card";
 
         const student = getStudent(project.studentId);
-
-        console.log(project.studentId);
-        console.log(student);
-
-        const review = getReview(project.studentId);
-
-          const studentName = review?.name || "Anonymous Student";
-
-        const institution = review?.institution || "";
-
-       const photo = student?.photo
-        ? student.photo
-        : "../images/default-profile.png";
+        const publicStudent = hasPublicPortfolio(student) ? student : null;
+        const studentName = publicStudent?.displayName || "PerfectIT Student";
+        const institution = publicStudent?.portfolioVisibility?.showInstitution
+            ? publicStudent.institution || ""
+            : "";
+        const studentAvatar = publicStudent
+            ? createPortfolioAvatar(publicStudent, "project-student-initials")
+            : `<div class="project-student-initials" role="img" aria-label="Anonymous PerfectIT student">PS</div>`;
 
         card.innerHTML = `
 
@@ -241,14 +413,18 @@ ${project.featured ?
 `
 :""}
 
+${project.isDemo ? `
+<div class="demo-project-badge">
+Demo Project
+</div>
+` : ""}
+
 </div>
 
 
 <div class="project-student">
 
-<img 
-src="${photo}"
-alt="${studentName}">
+${studentAvatar}
 
 
 <div class="student-details">
@@ -336,6 +512,12 @@ function openPreview(project) {
 
 
 <div class="preview-feature">
+
+${project.isDemo ? `
+<div class="demo-preview-label">
+Demonstration Project — fictional example
+</div>
+` : ""}
 
 ${project.featured ? 
 `

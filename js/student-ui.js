@@ -71,9 +71,9 @@ function createStudentPhoto(student){
 
         return `
             <img
-                src="../images/testimonials/${student.photo}"
+                src="../images/students/${student.photo}"
                 alt="${student.name}"
-                class="${moduleInfo[student.highestModule].ring}">
+                class="${moduleInfo[student.highestModule]?.ring || ""}">
         `;
 
     }
@@ -84,7 +84,7 @@ function createStudentPhoto(student){
         names[0][0] + names[names.length - 1][0];
 
     return `
-        <div class="avatar ${moduleInfo[student.highestModule].ring}">
+        <div class="avatar ${moduleInfo[student.highestModule]?.ring || ""}">
             ${initials}
         </div>
     `;
@@ -196,7 +196,7 @@ function createStudentAvatar(student){
 
         return `
             <img
-                src="../images/testimonials/${student.photo}"
+                src="../images/students/${student.photo}"
                 alt="${student.name}">
         `;
 

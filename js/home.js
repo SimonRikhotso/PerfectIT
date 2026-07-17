@@ -14,16 +14,28 @@ async function loadStudents(){
     track.innerHTML = `<p class="carousel-message">Loading student stories...</p>`;
 
     try{
-        const response = await fetch("../data/reviews.json");
+        const [studentResponse, reviewResponse] = await Promise.all([
+            fetch("../data/students.json"),
+            fetch("../data/reviews.json")
+        ]);
 
-        if(!response.ok){
-            throw new Error(`Unable to load reviews (${response.status})`);
+        if(!studentResponse.ok || !reviewResponse.ok){
+            throw new Error("Unable to load student stories");
         }
 
-        const reviews = await response.json();
+        const students = await studentResponse.json();
+        const reviews = await reviewResponse.json();
+        const studentsById = new Map(
+            students.map(student => [student.studentId, student])
+        );
 
         homepageStudents = reviews
-            .filter(student => student.showOnHomepage)
+            .filter(review => review.showOnHomepage)
+            .map(review => ({
+                ...studentsById.get(review.studentId),
+                ...review
+            }))
+            .filter(student => student.studentId && student.name)
             .sort((first, second) =>
                 (first.sortOrder ?? 999) - (second.sortOrder ?? 999)
             );

@@ -1147,7 +1147,7 @@ footer{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(500px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(min(500px,100%),1fr));
 
     gap:35px;
 
@@ -1172,6 +1172,10 @@ footer{
     flex-direction:column;
 
     transition:all .3s ease;
+
+    min-width:0;
+
+    max-width:100%;
 
 }
 
@@ -1204,6 +1208,16 @@ align-items:center;
 gap:15px;
 
 width:100%;
+
+min-width:0;
+
+}
+
+.student-info{
+
+min-width:0;
+
+overflow-wrap:anywhere;
 
 }
 
@@ -2151,9 +2165,34 @@ transform:none;
     position:absolute;
     top:10px;
     right:15px;
-    font-size:28px;
+    z-index:20;
+    width:46px;
+    height:46px;
+    display:grid;
+    place-items:center;
+    padding:0;
+    border:2px solid rgba(255,255,255,.7);
+    border-radius:50%;
+    background:rgba(7,11,20,.92);
+    box-shadow:0 8px 22px rgba(0,0,0,.45);
+    color:#fff;
+    font-size:34px;
+    line-height:1;
     cursor:pointer;
-    color:white;
+    transition:transform .2s ease,background .2s ease,border-color .2s ease;
+}
+
+.close-preview:hover,
+.close-preview:focus-visible{
+    background:#dc2626;
+    border-color:#fecaca;
+    outline:none;
+    transform:scale(1.08);
+}
+
+.close-preview span{
+    display:block;
+    translate:0 -2px;
 }
 
 .preview-image{
@@ -2426,6 +2465,15 @@ transform:none;
 
 }
 
+.project-student-initials{
+    width:60px;
+    height:60px;
+    flex-shrink:0;
+    border:2px solid var(--primary);
+    border-radius:50%;
+    font-size:1rem;
+}
+
 .student-details h4{
 
     margin:0;
@@ -2484,7 +2532,7 @@ transform:none;
     display:grid;
 
     grid-template-columns:
-        repeat(auto-fit,minmax(340px,1fr));
+        repeat(auto-fit,minmax(min(340px,100%),1fr));
 
     gap:25px;
 
@@ -2506,6 +2554,10 @@ transform:none;
 
     padding:18px;
 
+    min-width:0;
+
+    max-width:100%;
+
 }
 
 .project-showcase-card img{
@@ -2525,6 +2577,10 @@ transform:none;
 .project-showcase-info{
 
     flex:1;
+
+    min-width:0;
+
+    overflow-wrap:anywhere;
 
 }
 
@@ -2550,6 +2606,8 @@ transform:none;
     gap:12px;
 
     margin-top:18px;
+
+    max-width:100%;
 
 }
 
@@ -2599,6 +2657,86 @@ transform:none;
 
     margin-top:20px;
 
+    min-width:0;
+
+    max-width:100%;
+
+}
+
+/* ==========================================
+   Student Success - Mobile Width
+========================================== */
+
+@media (max-width:768px){
+
+    #student-success,
+    .student-projects-showcase-section{
+        width:100%;
+        max-width:100%;
+        padding-inline:15px;
+    }
+
+    .testimonial-grid,
+    .projects-showcase{
+        width:100%;
+        min-width:0;
+        grid-template-columns:minmax(0,1fr);
+        gap:22px;
+    }
+
+    .testimonial-card{
+        width:100%;
+        min-width:0;
+        padding:16px;
+    }
+
+    .student{
+        align-items:flex-start;
+    }
+
+    .student-info h3,
+    .student-info p,
+    .review-text,
+    .cert-title{
+        overflow-wrap:anywhere;
+        word-break:normal;
+    }
+
+    .skill-badges{
+        justify-content:flex-start;
+        gap:12px;
+    }
+
+    .project-showcase-card{
+        width:100%;
+        min-width:0;
+        padding:14px;
+        gap:14px;
+    }
+
+    .project-showcase-card img{
+        width:90px;
+        height:75px;
+    }
+
+}
+
+@media (max-width:420px){
+
+    .student{
+        flex-direction:column;
+    }
+
+    .project-showcase-card{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .project-showcase-card img{
+        width:100%;
+        height:160px;
+    }
+
 }
 
 .project-gallery-title{
@@ -2617,8 +2755,281 @@ transform:none;
    Student Profile
 ================================ */
 
+.developer-directory{
+    max-width:1150px;
+    margin:0 auto 20px;
+}
+
+.portfolio-back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    margin-bottom:18px;
+    padding:10px 16px;
+    color:#dbeafe;
+    background:#111827;
+    border:1px solid #334155;
+    border-radius:999px;
+    font-weight:800;
+    text-decoration:none;
+    transition:var(--transition);
+}
+
+.portfolio-back-link:hover,
+.portfolio-back-link:focus-visible{
+    color:#fff;
+    background:#1d4ed8;
+    border-color:var(--primary);
+    outline:none;
+    transform:translateX(-3px);
+}
+
+.developer-directory-heading{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(280px,520px);
+    gap:35px;
+    align-items:end;
+    margin-bottom:25px;
+}
+
+.developer-directory-heading h2{
+    margin:5px 0 0;
+}
+
+.developer-directory-heading p{
+    color:var(--muted);
+}
+
+.section-eyebrow{
+    color:var(--accent);
+    font-size:.78rem;
+    font-weight:800;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+}
+
+.developer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));
+    gap:22px;
+}
+
+.developer-card{
+    display:flex;
+    gap:20px;
+    min-width:0;
+    padding:22px;
+    background:linear-gradient(145deg,#0f172a,#0b1220);
+    border:1px solid #263449;
+    border-radius:18px;
+    box-shadow:var(--shadow-sm);
+}
+
+.developer-card > img,
+.developer-initials{
+    width:105px;
+    height:105px;
+    flex-shrink:0;
+    object-fit:cover;
+    border:3px solid var(--primary);
+    border-radius:50%;
+}
+
+.developer-initials,
+.project-student-initials,
+.student-profile-initials{
+    display:grid;
+    place-items:center;
+    color:#fff;
+    background:linear-gradient(135deg,#1d4ed8,#0f172a);
+    font-weight:900;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+}
+
+.developer-initials{
+    font-size:1.55rem;
+}
+
+.developer-card-content{
+    min-width:0;
+}
+
+.developer-card-content h3{
+    margin:8px 0 2px;
+}
+
+.developer-card-content p{
+    color:var(--muted);
+    overflow-wrap:anywhere;
+}
+
+.developer-card-content small{
+    display:block;
+    margin:12px 0;
+    color:#cbd5e1;
+}
+
+.developer-card-content > a{
+    color:var(--primary);
+    font-weight:800;
+    text-decoration:none;
+}
+
+.developer-status{
+    display:inline-flex;
+    padding:5px 10px;
+    color:#bfdbfe;
+    background:rgba(96,165,250,.12);
+    border:1px solid rgba(96,165,250,.3);
+    border-radius:999px;
+    font-size:.72rem;
+    font-weight:800;
+}
+
+.developer-status.available,
+.opportunity-badge{
+    color:#bbf7d0;
+    background:rgba(34,197,94,.12);
+    border-color:rgba(34,197,94,.38);
+}
+
+.developer-status + .developer-status{
+    margin-left:6px;
+}
+
+.developer-status.demo{
+    color:#fde68a;
+    background:rgba(250,204,21,.1);
+    border-color:rgba(250,204,21,.35);
+}
+
+.developer-skill-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-top:12px;
+}
+
+.developer-skill-list span{
+    padding:4px 9px;
+    color:#dbeafe;
+    background:#172033;
+    border:1px solid #334155;
+    border-radius:999px;
+    font-size:.72rem;
+}
+
+.privacy-assurance,
+.directory-empty-state,
+.demo-directory-notice{
+    margin-top:20px;
+    padding:16px 18px;
+    color:#cbd5e1;
+    background:rgba(15,23,42,.75);
+    border:1px solid #263449;
+    border-radius:14px;
+}
+
+.demo-directory-notice,
+.demo-profile-notice{
+    color:#fde68a;
+    background:rgba(250,204,21,.08);
+    border:1px solid rgba(250,204,21,.3);
+    border-radius:12px;
+    font-weight:700;
+}
+
+.demo-profile-notice{
+    padding:10px 13px;
+}
+
+.demo-project-badge{
+    position:absolute;
+    top:48px;
+    left:10px;
+    z-index:1;
+    padding:5px 10px;
+    color:#111827;
+    background:#fde68a;
+    border-radius:999px;
+    font-size:.72rem;
+    font-weight:900;
+}
+
+.demo-preview-label{
+    display:inline-flex;
+    margin-bottom:12px;
+    padding:7px 12px;
+    color:#fde68a;
+    background:rgba(250,204,21,.1);
+    border:1px solid rgba(250,204,21,.35);
+    border-radius:999px;
+    font-size:.78rem;
+    font-weight:900;
+}
+
+.directory-empty-state{
+    grid-column:1/-1;
+}
+
+.opportunity-panel{
+    margin:18px 0;
+    padding:18px;
+    background:rgba(34,197,94,.07);
+    border:1px solid rgba(34,197,94,.3);
+    border-radius:16px;
+}
+
+.opportunity-badge{
+    display:inline-flex;
+    padding:6px 11px;
+    border:1px solid rgba(34,197,94,.38);
+    border-radius:999px;
+    font-size:.75rem;
+    font-weight:800;
+}
+
+#professionalTitle{
+    color:#dcfce7;
+    font-weight:700;
+}
+
+.opportunity-details{
+    display:grid;
+    gap:10px;
+    margin:12px 0;
+}
+
+.opportunity-details div{
+    display:flex;
+    flex-direction:column;
+}
+
+.opportunity-details strong{
+    color:#86efac;
+    font-size:.78rem;
+}
+
+.opportunity-contact{
+    display:inline-flex;
+    margin-top:8px;
+    padding:10px 16px;
+    color:#052e16;
+    background:var(--accent);
+    border-radius:999px;
+    font-weight:800;
+    text-decoration:none;
+}
+
 .student-profile{
     margin:40px auto;
+}
+
+.student-profile-avatar{
+    width:220px;
+    height:220px;
+    flex-shrink:0;
 }
 
 .student-profile-card{
@@ -2639,6 +3050,89 @@ transform:none;
     object-fit:cover;
     border:6px solid var(--primary);
     flex-shrink:0;
+}
+
+.student-profile-initials{
+    width:220px;
+    height:220px;
+    border:6px solid var(--primary);
+    border-radius:50%;
+    font-size:3rem;
+}
+
+.portfolio-share-panel{
+    margin-top:24px;
+    padding:18px;
+    background:#0b1220;
+    border:1px solid #334155;
+    border-radius:16px;
+}
+
+.portfolio-share-panel p{
+    margin:4px 0 12px;
+    color:var(--muted);
+}
+
+.portfolio-share-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.portfolio-share-actions button,
+.portfolio-share-actions a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:42px;
+    padding:9px 14px;
+    color:#fff;
+    background:#172033;
+    border:1px solid #334155;
+    border-radius:999px;
+    font:inherit;
+    font-size:.85rem;
+    font-weight:800;
+    text-decoration:none;
+    cursor:pointer;
+    transition:var(--transition);
+}
+
+.portfolio-share-actions button:hover,
+.portfolio-share-actions button:focus-visible,
+.portfolio-share-actions a:hover,
+.portfolio-share-actions a:focus-visible{
+    background:#1d4ed8;
+    border-color:var(--primary);
+    outline:none;
+    transform:translateY(-2px);
+}
+
+#shareFeedback{
+    display:block;
+    min-height:1.3em;
+    margin-top:8px;
+    color:#86efac;
+}
+
+.portfolio-share-footer{
+    max-width:1100px;
+    margin:25px auto;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+    padding:25px;
+    background:linear-gradient(135deg,rgba(37,99,235,.15),rgba(34,197,94,.08));
+    border:1px solid rgba(96,165,250,.32);
+    border-radius:18px;
+}
+
+.portfolio-share-footer h2{
+    margin-bottom:5px;
+}
+
+.portfolio-share-footer p{
+    color:var(--muted);
 }
 
 .student-details{
@@ -2678,6 +3172,37 @@ transform:none;
 
 @media(max-width:768px){
 
+    .close-preview{
+        top:8px;
+        right:8px;
+        width:48px;
+        height:48px;
+    }
+
+    .portfolio-back-link{
+        width:100%;
+        justify-content:center;
+    }
+
+    .developer-directory-heading{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+
+    .developer-card{
+        flex-direction:column;
+    }
+
+    .developer-card > img{
+        width:90px;
+        height:90px;
+    }
+
+    .developer-initials{
+        width:90px;
+        height:90px;
+    }
+
     .student-profile-card{
         flex-direction:column;
         text-align:center;
@@ -2686,6 +3211,27 @@ transform:none;
     .student-profile-card img{
         width:170px;
         height:170px;
+    }
+
+    .student-profile-avatar,
+    .student-profile-initials{
+        width:170px;
+        height:170px;
+    }
+
+    .student-profile-initials{
+        font-size:2.4rem;
+    }
+
+    .portfolio-share-footer{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .portfolio-share-actions,
+    .portfolio-share-actions button,
+    .portfolio-share-actions a{
+        width:100%;
     }
 
     .student-links{
@@ -3591,4 +4137,91 @@ transform:none;
     .resource-library-section{
         padding-inline:18px;
     }
+}
+
+/* ==========================================
+   Printable Student Portfolio
+========================================== */
+
+@media print{
+
+    @page{
+        margin:14mm;
+    }
+
+    body.portfolio-view{
+        padding-top:0;
+        color:#111827;
+        background:#fff;
+        font-size:11pt;
+    }
+
+    body.portfolio-view header,
+    body.portfolio-view footer,
+    body.portfolio-view #topBtn,
+    body.portfolio-view .whatsapp-float,
+    body.portfolio-view .preview-modal,
+    body.portfolio-view .portfolio-back-link,
+    body.portfolio-view .portfolio-share-panel,
+    body.portfolio-view .portfolio-share-footer,
+    body.portfolio-view .preview-btn,
+    body.portfolio-view main > section:not(.student-profile):not(#portfolioHeader):not(.projects-grid){
+        display:none!important;
+    }
+
+    body.portfolio-view main,
+    body.portfolio-view section,
+    body.portfolio-view .projects-grid{
+        max-width:none;
+        margin:0;
+        padding:0;
+    }
+
+    body.portfolio-view .student-profile-card,
+    body.portfolio-view .project-card{
+        color:#111827;
+        background:#fff;
+        border:1px solid #cbd5e1;
+        box-shadow:none;
+        break-inside:avoid;
+    }
+
+    body.portfolio-view .student-profile-card{
+        margin-bottom:18px;
+    }
+
+    body.portfolio-view .projects-grid{
+        display:grid!important;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:12px;
+    }
+
+    body.portfolio-view h1,
+    body.portfolio-view h2,
+    body.portfolio-view h3,
+    body.portfolio-view h4,
+    body.portfolio-view .skills-title{
+        color:#111827!important;
+    }
+
+    body.portfolio-view .portfolio-skill,
+    body.portfolio-view .project-tech span,
+    body.portfolio-view .project-skills span,
+    body.portfolio-view .project-meta span{
+        color:#111827!important;
+        background:#f1f5f9!important;
+        border-color:#cbd5e1!important;
+    }
+
+    body.portfolio-view .student-profile-initials,
+    body.portfolio-view .project-student-initials{
+        color:#111827!important;
+        background:#f1f5f9!important;
+        border-color:#64748b!important;
+    }
+
+    body.portfolio-view .project-image img{
+        height:150px;
+    }
+
 }

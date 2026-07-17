@@ -19,19 +19,30 @@ async function loadReviews() {
 
     try {
 
-        const [reviewResponse, projectResponse] = await Promise.all([
+        const [reviewResponse, studentResponse, projectResponse] = await Promise.all([
             fetch("../data/reviews.json"),
+            fetch("../data/students.json"),
             fetch("../data/projects.json")
         ]);
 
         const reviews = await reviewResponse.json();
-        allProjects = await projectResponse.json();
+        const students = await studentResponse.json();
+        const projects = await projectResponse.json();
+        allProjects = projects.filter(project => !project.isDemo);
 
-        reviews.sort((a, b) => a.sortOrder - b.sortOrder);
+        const studentsById = new Map(
+            students.map(student => [student.studentId, student])
+        );
 
-        allReviews = reviews;
+        allReviews = reviews
+            .map(review => ({
+                ...studentsById.get(review.studentId),
+                ...review
+            }))
+            .filter(student => student.studentId && student.name)
+            .sort((a, b) => a.sortOrder - b.sortOrder);
 
-        document.getElementById("reviewCount").textContent = reviews.length;
+        document.getElementById("reviewCount").textContent = allReviews.length;
 
         applyFilters();
 
@@ -80,6 +91,10 @@ function renderProjects(){
                 review.studentId === project.studentId
             );
 
+        const projectLink = student?.allowPortfolio
+            ? `student-projects.html?student=${encodeURIComponent(project.studentId)}`
+            : "student-projects.html";
+
         const card =
             document.createElement("div");
 
@@ -108,7 +123,7 @@ function renderProjects(){
                 </p>
 
                 <a
-    href="student-projects.html?student=${project.studentId}"
+    href="${projectLink}"
     class="cta">
 
     View Project →
@@ -226,12 +241,16 @@ function createProjectGallery(projects, student){
 
     let html = "";
 
+    const projectLink = student.allowPortfolio
+        ? `student-projects.html?student=${encodeURIComponent(student.studentId)}`
+        : "student-projects.html";
+
     projects.forEach(project => {
 
         html += `
 
             <a
-                href="student-projects.html?student=${student.studentId}"
+                href="${projectLink}"
                 class="project-thumb"
                 title="${project.title}">
 

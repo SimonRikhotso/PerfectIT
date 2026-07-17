@@ -1,73 +1,194 @@
 [
   {
     "id": 1,
-    "studentId":"mathebula-tiyiselani-ashley",
+    "studentId": "mathebula-tiyiselani-ashley",
     "title": "Student Management System",
     "module": "Java Programming",
     "level": "Beginner",
     "type": "Console / OOP Project",
-
     "description": "A Java application that manages student records using object-oriented principles.",
     "longDescription": "This project demonstrates core OOP concepts including classes, objects, encapsulation, and file handling. The system allows adding, updating, searching, and deleting student records.",
-
-    "technologies": ["Java", "OOP", "File Handling"],
-    "concepts": ["Classes & Objects", "Encapsulation", "Arrays/Lists", "CRUD Operations"],
-
+    "technologies": [
+      "Java",
+      "OOP",
+      "File Handling"
+    ],
+    "concepts": [
+      "Classes & Objects",
+      "Encapsulation",
+      "Arrays/Lists",
+      "CRUD Operations"
+    ],
     "image": "../images/projects/student-management.jpg",
-
     "youtube": "https://www.youtube.com/embed/14YNfWI08X4",
     "github": "",
     "download": "",
-
     "difficulty": "Easy",
     "featured": true
   },
-
   {
     "id": 2,
-    "studentId":"mukwevho-selwyn",
+    "studentId": "mukwevho-selwyn",
     "title": "Library Management System",
     "module": "Database Programming",
     "level": "Intermediate",
     "type": "SQL Project",
-
     "description": "A relational database system for managing books, users, and borrowing records.",
     "longDescription": "This project focuses on database design and SQL queries. It includes entity relationships, normalization, and query optimization.",
-
-    "technologies": ["MySQL", "SQL"],
-    "concepts": ["ERD Design", "Joins", "Normalization", "CRUD Queries"],
-
+    "technologies": [
+      "MySQL",
+      "SQL"
+    ],
+    "concepts": [
+      "ERD Design",
+      "Joins",
+      "Normalization",
+      "CRUD Queries"
+    ],
     "image": "../images/projects/library-system.jpg",
-
     "youtube": "https://www.youtube.com/embed/14YNfWI08X4",
     "github": "",
     "download": "",
-
     "difficulty": "Medium",
     "featured": true
   },
-
   {
     "id": 3,
-    "studentId":"mathebula-tiyiselani-ashley",
+    "studentId": "mathebula-tiyiselani-ashley",
     "title": "Weather App (API Integration)",
     "module": "Python Programming",
     "level": "Intermediate",
     "type": "GUI + API Project",
-
     "description": "A Python application that fetches live weather data using an external API.",
     "longDescription": "This project introduces API consumption, JSON parsing, and GUI development using Tkinter.",
-
-    "technologies": ["Python", "Tkinter", "REST API"],
-    "concepts": ["API Requests", "JSON Parsing", "GUI Design", "Error Handling"],
-
+    "technologies": [
+      "Python",
+      "Tkinter",
+      "REST API"
+    ],
+    "concepts": [
+      "API Requests",
+      "JSON Parsing",
+      "GUI Design",
+      "Error Handling"
+    ],
     "image": "../images/projects/weather-app.png",
-
     "youtube": "https://www.youtube.com/embed/14YNfWI08X4",
     "github": "",
     "download": "",
-
     "difficulty": "Medium",
     "featured": false
+  },
+  {
+    "id": 101,
+    "studentId": "demo-naledi",
+    "title": "Clinic Appointment Manager (Demo)",
+    "module": "C# Programming",
+    "level": "Intermediate",
+    "type": "Desktop / OOP Project",
+    "description": "A demonstration C# application for scheduling appointments and managing basic patient queues.",
+    "longDescription": "This fictional demonstration project shows how a student can present object-oriented design, validation, collections and a practical workflow without exposing private academic work.",
+    "technologies": [
+      "C#",
+      ".NET",
+      "OOP"
+    ],
+    "concepts": [
+      "Classes & Objects",
+      "Validation",
+      "Collections",
+      "CRUD Operations"
+    ],
+    "image": "../images/projects/student-management.jpg",
+    "youtube": "",
+    "github": "",
+    "download": "",
+    "difficulty": "Medium",
+    "featured": true,
+    "isDemo": true
+  },
+  {
+    "id": 102,
+    "studentId": "demo-naledi",
+    "title": "Community Stock Tracker (Demo)",
+    "module": "Database Programming",
+    "level": "Intermediate",
+    "type": "Database Project",
+    "description": "A demonstration inventory system for tracking products, quantities and stock movements.",
+    "longDescription": "This fictional database project demonstrates relational design, structured queries, validation and reporting in a portfolio-friendly format.",
+    "technologies": [
+      "SQL",
+      "MySQL",
+      "C#"
+    ],
+    "concepts": [
+      "Database Design",
+      "Joins",
+      "Normalization",
+      "Reporting"
+    ],
+    "image": "../images/projects/library-system.jpg",
+    "youtube": "",
+    "github": "",
+    "download": "",
+    "difficulty": "Medium",
+    "featured": false,
+    "isDemo": true
+  },
+  {
+    "id": 103,
+    "studentId": "demo-thabo",
+    "title": "Help Desk Ticket System (Demo)",
+    "module": "Java Programming",
+    "level": "Intermediate",
+    "type": "Console / OOP Project",
+    "description": "A demonstration Java system for logging, prioritising and resolving technical-support tickets.",
+    "longDescription": "This fictional project demonstrates Java classes, inheritance, collections, exception handling and clear problem-solving documentation.",
+    "technologies": [
+      "Java",
+      "OOP",
+      "Collections"
+    ],
+    "concepts": [
+      "Inheritance",
+      "Exception Handling",
+      "Lists",
+      "Status Workflows"
+    ],
+    "image": "../images/projects/premium_photo-1661877737564-3dfd7282efcb.avif",
+    "youtube": "",
+    "github": "",
+    "download": "",
+    "difficulty": "Medium",
+    "featured": true,
+    "isDemo": true
+  },
+  {
+    "id": 104,
+    "studentId": "demo-akhona",
+    "title": "Study Planner (Demo)",
+    "module": "Python Programming",
+    "level": "Beginner",
+    "type": "GUI Project",
+    "description": "A demonstration Python application for organising modules, study sessions and deadlines.",
+    "longDescription": "This fictional project shows how an emerging Python developer can present GUI design, input validation, data storage and usability decisions.",
+    "technologies": [
+      "Python",
+      "Tkinter",
+      "JSON"
+    ],
+    "concepts": [
+      "GUI Design",
+      "File Storage",
+      "Validation",
+      "Error Handling"
+    ],
+    "image": "../images/projects/weather-app.png",
+    "youtube": "",
+    "github": "",
+    "download": "",
+    "difficulty": "Easy",
+    "featured": true,
+    "isDemo": true
   }
 ]

@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -5,12 +7,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Student Success | PerfectIT Programming Tutoring</title>
+<title>Student Projects & Portfolios | PerfectIT Programming Tutoring</title>
 
 <link rel="icon" type="image/png" href="../images/PLogo.png">
 
 <meta name="description"
-content="Read genuine experiences from university students who improved their programming skills through PerfectIT tutoring.">
+content="Explore privacy-approved PerfectIT student portfolios, practical programming projects and emerging developers open to opportunities.">
 
 <link rel="stylesheet" href="../css/style.css">
 
@@ -60,13 +62,46 @@ content="Read genuine experiences from university students who improved their pr
 
     <div class="student-profile-card">
 
-        <img id="studentPhoto" src="../images/PLogo.png" alt="Student">
+        <div class="student-profile-avatar" id="studentProfileAvatar">
+
+            <img id="studentPhoto" src="../images/PLogo.png" alt="Student">
+
+            <div id="studentProfileInitials"
+                 class="student-profile-initials"
+                 style="display:none;"
+                 aria-hidden="true"></div>
+
+        </div>
 
         <div class="student-details">
 
             <h1 id="studentName">Loading...</h1>
 
             <p id="studentQualification"></p>
+
+            <p id="demoProfileNotice"
+               class="demo-profile-notice"
+               style="display:none;">
+                Demonstration Profile — fictional student information for website testing.
+            </p>
+
+            <div id="opportunityPanel"
+                 class="opportunity-panel"
+                 style="display:none;">
+
+                <span class="opportunity-badge">Open to Opportunities</span>
+
+                <p id="professionalTitle"></p>
+
+                <div id="opportunityDetails" class="opportunity-details"></div>
+
+                <a id="opportunityContact"
+                   class="opportunity-contact"
+                   href="contact.html">
+                    Enquire Through PerfectIT
+                </a>
+
+            </div>
 
             <div id="studentSummary">
 
@@ -123,6 +158,45 @@ content="Read genuine experiences from university students who improved their pr
 
             </div>
 
+            <div id="portfolioSharePanel"
+                 class="portfolio-share-panel"
+                 style="display:none;">
+
+                <div>
+                    <span class="section-eyebrow">Share This Portfolio</span>
+                    <p>Help this emerging developer reach more opportunities.</p>
+                </div>
+
+                <div class="portfolio-share-actions">
+
+                    <button id="copyPortfolioLink" type="button">
+                        🔗 Copy Link
+                    </button>
+
+                    <a id="whatsappShareLink"
+                       href="#"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        WhatsApp
+                    </a>
+
+                    <a id="linkedinShareLink"
+                       href="#"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+
+                    <button id="printPortfolio" type="button">
+                        🖨 Print / Save PDF
+                    </button>
+
+                </div>
+
+                <small id="shareFeedback" role="status" aria-live="polite"></small>
+
+            </div>
+
         </div>
 
     </div>
@@ -130,6 +204,11 @@ content="Read genuine experiences from university students who improved their pr
 </section>
 
 <section id="portfolioHeader" style="display:none;">
+
+    <a class="portfolio-back-link" href="student-projects.html">
+        <span aria-hidden="true">←</span>
+        Back to All Student Projects
+    </a>
 
     <h2 id="portfolioTitle"></h2>
 
@@ -139,17 +218,74 @@ content="Read genuine experiences from university students who improved their pr
 
 <section class="projects-header" id="projectsHeader">
 
-    <h1>Student Projects</h1>
+    <h1>Student Projects & Emerging Developers</h1>
 
     <p>
-        Real work completed by students while improving their programming skills.
-        These projects show practical problem-solving, not just theory.
+        Explore practical student work and privacy-approved portfolios.
+        Students control whether their profiles and opportunity status appear publicly.
+    </p>
+
+</section>
+
+<section class="developer-directory" id="developerDirectory">
+
+    <div class="developer-directory-heading">
+
+        <div>
+            <span class="section-eyebrow">Student Portfolio Directory</span>
+            <h2>Discover Emerging Developers</h2>
+        </div>
+
+        <p>
+            These students have chosen to publish a PerfectIT portfolio.
+            Opportunity availability is displayed only when separately approved by the student.
+        </p>
+
+    </div>
+
+    <div id="developerGrid" class="developer-grid"></div>
+
+    <p id="demoDirectoryNotice"
+       class="demo-directory-notice"
+       style="display:none;">
+        Demo profiles are fictional examples used to preview this feature.
+        They do not represent real students or job candidates.
+    </p>
+
+    <p class="privacy-assurance">
+        🔒 Personal contact details are never displayed. Recruitment and opportunity
+        enquiries are routed through PerfectIT.
     </p>
 
 </section>
 
 
 <section class="projects-grid" id="projectsGrid">
+
+</section>
+
+<section id="portfolioShareFooter"
+         class="portfolio-share-footer"
+         style="display:none;">
+
+    <div>
+        <h2>Help This Developer Get Discovered</h2>
+        <p>
+            Share this approved portfolio with someone looking for emerging technology talent.
+        </p>
+    </div>
+
+    <div class="portfolio-share-actions">
+        <button id="copyPortfolioLinkFooter" type="button">🔗 Copy Link</button>
+        <a id="whatsappShareLinkFooter"
+           href="#"
+           target="_blank"
+           rel="noopener noreferrer">WhatsApp</a>
+        <a id="linkedinShareLinkFooter"
+           href="#"
+           target="_blank"
+           rel="noopener noreferrer">LinkedIn</a>
+    </div>
 
 </section>
 
@@ -192,7 +328,12 @@ Start Learning Today
 
     <div class="preview-content">
 
-        <span id="closePreview" class="close-preview">&times;</span>
+        <button id="closePreview"
+                class="close-preview"
+                type="button"
+                aria-label="Close project preview">
+            <span aria-hidden="true">&times;</span>
+        </button>
 
         <div id="previewBody"></div>
 
