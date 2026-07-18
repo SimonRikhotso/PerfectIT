@@ -7,7 +7,7 @@ function escapeVideoText(value = "") {
         .replaceAll("'", "&#039;");
 }
 
-function createStandardVideoPlayer(video) {
+function createVideoPlayer(video) {
     const title = escapeVideoText(video.title || "PerfectIT video");
     const source = escapeVideoText(video.source || "");
 
@@ -180,7 +180,7 @@ async function loadPageVideos() {
 
         grid.innerHTML = videos.map(video => `
             <article class="site-video-card">
-                ${createStandardVideoPlayer(video)}
+                ${createVideoPlayer(video)}
                 <div class="site-video-copy">
                     ${video.program ? `<span class="video-label">${escapeVideoText(video.program)}</span>` : ""}
                     <h3>${escapeVideoText(video.title)}</h3>
