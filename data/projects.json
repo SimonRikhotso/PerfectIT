@@ -4,7 +4,7 @@
     "studentId": "mathebula-tiyiselani-ashley",
     "title": "Student Management System",
     "module": "Java Programming",
-    "level": "Beginner",
+    "level": "Intermediate",
     "type": "Console / OOP Project",
     "description": "A Java application that manages student records using object-oriented principles.",
     "longDescription": "This project demonstrates core OOP concepts including classes, objects, encapsulation, and file handling. The system allows adding, updating, searching, and deleting student records.",
@@ -20,10 +20,10 @@
       "CRUD Operations"
     ],
     "image": "../images/projects/student-management.jpg",
-    "youtube": "https://www.youtube.com/embed/14YNfWI08X4",
+    "youtube": "https://www.youtube.com/embed/oi2B_8ssHdY?si=MoJF0CGKI4ozBjwy",
     "github": "",
     "download": "",
-    "difficulty": "Easy",
+    "difficulty": "Meduim",
     "featured": true
   },
   {
