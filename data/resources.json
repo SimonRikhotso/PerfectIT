@@ -9,7 +9,7 @@
     "featured": true,
     "topics": ["Classes", "Objects", "Constructors", "Inheritance", "Polymorphism", "Encapsulation"],
     "image": "../images/icons/Java-icon.png",
-    "url": "../resources/java-oop-cheatsheet.pdf",
+    "url": "../resources/Java-oop-cheatsheet.pdf",
     "action": "download",
     "buttonLabel": "Download PDF",
     "source": "PerfectIT"

@@ -828,6 +828,7 @@ footer{
   display:flex;
   justify-content:center;
   align-items:center;
+  position:relative;
   width:60px;height:60px;
   border-radius:50%;
   transition:var(--transition);
@@ -840,6 +841,39 @@ footer{
 
 .landing-icons a:hover{background:#172033}
 .landing-icons a:hover img{transform:scale(1.2)}
+
+.landing-icon-label{
+  position:absolute;
+  left:50%;
+  bottom:-29px;
+  z-index:10;
+  width:max-content;
+  max-width:170px;
+  padding:6px 9px;
+  border:1px solid rgba(96,165,250,.42);
+  border-radius:7px;
+  background:#0f172a;
+  color:#e5e7eb;
+  box-shadow:0 8px 22px rgba(0,0,0,.34);
+  font-size:.72rem;
+  font-weight:700;
+  line-height:1.1;
+  pointer-events:none;
+  opacity:0;
+  transform:translate(-50%,-4px);
+  transition:opacity .18s ease,transform .18s ease;
+}
+
+.landing-icons a:hover .landing-icon-label,
+.landing-icons a:focus-visible .landing-icon-label{
+  opacity:1;
+  transform:translate(-50%,0);
+}
+
+.landing-icons a:focus-visible{
+  outline:2px solid var(--primary);
+  outline-offset:3px;
+}
 
 /* Mobile */
 
@@ -976,7 +1010,7 @@ footer{
     /* Landing Navigation */
 
     .landing-navbar{
-        height:70px;
+        height:82px;
         padding:0 10px;
     }
 
@@ -986,13 +1020,37 @@ footer{
     }
 
     .landing-icons a{
-        width:44px;
-        height:44px;
+        flex-direction:column;
+        width:58px;
+        height:66px;
+        border-radius:10px;
     }
 
     .landing-icons img{
         width:24px;
         height:24px;
+    }
+
+    .landing-icon-label{
+        position:static;
+        width:58px;
+        max-width:none;
+        margin-top:4px;
+        padding:0;
+        border:0;
+        background:transparent;
+        box-shadow:none;
+        color:#cbd5e1;
+        font-size:.53rem;
+        line-height:1.05;
+        text-align:center;
+        opacity:1;
+        transform:none;
+    }
+
+    .landing-icons a:hover .landing-icon-label,
+    .landing-icons a:focus-visible .landing-icon-label{
+        transform:none;
     }
 
     .featured-student{
@@ -3822,6 +3880,84 @@ transform:none;
 .program-card > p{
     margin:22px 0 14px;
     color:#bdc7d6;
+}
+
+.program-price-summary{
+    display:inline-flex;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:6px 10px;
+    margin:22px 0 4px;
+    padding:12px 17px;
+    border:1px solid rgba(34,197,94,.48);
+    border-radius:12px;
+    background:rgba(34,197,94,.09);
+}
+
+.program-price-summary span,
+.program-price-summary small{
+    color:#cbd5e1;
+}
+
+.program-price-summary strong{
+    color:var(--accent);
+    font-size:1.65rem;
+}
+
+.program-card-price{
+    display:flex;
+    align-items:baseline;
+    gap:6px;
+    width:max-content;
+    margin:0 0 17px;
+    padding:6px 10px;
+    border-radius:8px;
+    background:rgba(34,197,94,.1);
+    color:var(--accent);
+}
+
+.program-card-price strong{
+    font-size:1.08rem;
+}
+
+.program-card-price span{
+    color:#aeb9c8;
+    font-size:.75rem;
+}
+
+.hero-price-note{
+    display:flex;
+    align-items:baseline;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:5px 8px;
+    width:max-content;
+    max-width:100%;
+    margin:19px auto 2px;
+    padding:9px 13px;
+    border:1px solid rgba(34,197,94,.4);
+    border-radius:10px;
+    background:rgba(34,197,94,.08);
+    color:#cbd5e1;
+    text-align:center;
+    text-decoration:none;
+    transition:var(--transition);
+}
+
+.hero-price-note:hover{
+    border-color:var(--accent);
+    background:rgba(34,197,94,.14);
+    transform:translateY(-2px);
+}
+
+.hero-price-note strong{
+    color:var(--accent);
+    font-size:1.25rem;
+}
+
+.hero-price-note span,
+.hero-price-note small{
+    font-size:.78rem;
 }
 
 .program-card ul{
