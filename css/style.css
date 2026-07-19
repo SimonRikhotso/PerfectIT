@@ -4675,3 +4675,83 @@ transform:none;
         font-size:.74rem;
     }
 }
+
+
+/* ==========================================
+   Landing page mobile launch fixes
+   ========================================== */
+@media (max-width:768px){
+  .landing-navbar{
+    width:100%;
+    min-width:0;
+    padding:0 8px;
+    gap:6px;
+    overflow:hidden;
+  }
+
+  .landing-navbar .main-logo{
+    flex:0 0 86px;
+    min-width:0;
+  }
+
+  .landing-navbar .main-logo img{
+    width:86px;
+    height:auto;
+    max-width:100%;
+  }
+
+  .landing-icons{
+    flex:1 1 auto;
+    min-width:0;
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:2px;
+  }
+
+  .landing-icons a{
+    width:100%;
+    min-width:0;
+    height:66px;
+  }
+
+  .landing-icon-label{
+    width:100%;
+    overflow-wrap:anywhere;
+  }
+
+  .landing-hero h1{
+    font-size:clamp(1.25rem,5.7vw,1.75rem);
+    line-height:1.15;
+    white-space:nowrap;
+  }
+}
+
+@media (max-width:420px){
+  .landing-navbar .main-logo{
+    flex-basis:72px;
+  }
+
+  .landing-navbar .main-logo img{
+    width:72px;
+  }
+
+  .landing-icons img{
+    width:22px;
+    height:22px;
+  }
+
+  .landing-icon-label{
+    font-size:.46rem;
+    line-height:1;
+  }
+
+  .landing-hero{
+    padding-left:10px;
+    padding-right:10px;
+  }
+
+  .landing-hero h1{
+    font-size:clamp(1.08rem,5.35vw,1.4rem);
+    letter-spacing:-.02em;
+  }
+}
