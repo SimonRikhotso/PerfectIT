@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employer Opportunity Enquiry | PerfectIT</title>
+<link rel="icon" type="image/png" href="../images/PLogo.png">
+<meta name="description" content="Contact PerfectIT about internships, junior developer roles, graduate programmes and other opportunities for emerging software talent.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="employer-page">
+<header>
+<nav class="navbar employer-navbar">
+    <div class="logo"><a href="../index.html" class="logo-link"><img src="../images/PLogo.png" alt="PerfectIT Logo"></a></div>
+    <div class="employer-nav-label"><span>Talent</span> for Employers</div>
+    <div class="menu-toggle" id="mobile-menu">☰</div>
+    <div class="nav-links" id="nav-links">
+        <a href="employers.html">Employer Home</a>
+        <a href="student-projects.html?audience=employer">Browse Talent</a>
+        <a href="employer-enquiry.html" class="active">Contact PerfectIT</a>
+        <a href="index.html" class="employer-nav-exit">Student Tutoring</a>
+    </div>
+</nav>
+</header>
+<main>
+<section class="employer-form-intro">
+    <span class="employer-kicker">Start a conversation</span>
+    <h1>Tell us about the opportunity.</h1>
+    <p>Share enough detail for PerfectIT to understand what you need. We will respond before any student details are shared or introductions are made.</p>
+</section>
+<section class="employer-form-layout">
+    <aside class="employer-form-aside">
+        <h2>Suitable enquiries include</h2>
+        <ul><li>Internships and workplace experience</li><li>Graduate programmes</li><li>Junior software development roles</li><li>Short-term project opportunities</li><li>Invitations to career or recruitment events</li></ul>
+        <p><strong>Privacy first:</strong> Personal student contact details are not published. Students decide whether to proceed with an opportunity.</p>
+    </aside>
+    <div class="employer-form-card">
+        <form id="contactForm">
+            <input type="hidden" name="_subject" value="New PerfectIT Employer Opportunity Enquiry">
+            <input type="hidden" name="enquiryType" value="Employer / Recruitment">
+            <div class="employer-form-grid">
+                <div><label for="fullName">Your Name</label><input type="text" id="fullName" name="fullName" required></div>
+                <div><label for="company">Company / Organisation</label><input type="text" id="company" name="company" required></div>
+                <div><label for="email">Work Email</label><input type="email" id="email" name="email" required></div>
+                <div><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone"></div>
+                <div><label for="opportunityType">Opportunity Type</label><select id="opportunityType" name="opportunityType" required><option value="">Select an opportunity</option><option>Internship</option><option>Graduate Programme</option><option>Junior Role</option><option>Workplace Exposure</option><option>Project / Contract Opportunity</option><option>Career Event</option><option>Other</option></select></div>
+                <div><label for="candidate">Student / Portfolio (optional)</label><input type="text" id="candidate" name="candidate" placeholder="Name of student viewed"></div>
+            </div>
+            <label for="message">Opportunity Details</label>
+            <textarea id="message" name="message" placeholder="Tell us about the role, required skills, location, work arrangement and expected start date..." required></textarea>
+            <label class="employer-consent"><input type="checkbox" name="responsibleContact" required> I understand that PerfectIT will contact the student first and will not disclose private details without permission.</label>
+            <button type="submit">Send Employer Enquiry</button>
+            <p id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+    </div>
+</section>
+</main>
+<footer>© 2026 PerfectIT. All rights reserved. <a href="employers.html">Employer Home</a></footer>
+<script src="../js/script.js"></script>
+</body>
+</html>

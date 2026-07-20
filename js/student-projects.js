@@ -48,6 +48,32 @@ const cvLink = document.getElementById("cvLink");
 const urlParams = new URLSearchParams(window.location.search);
 
 const selectedStudent = urlParams.get("student");
+const employerAudience = urlParams.get("audience") === "employer";
+
+const employerPortfolioBanner = document.getElementById("employerPortfolioBanner");
+const studentGuidanceCta = document.getElementById("studentGuidanceCta");
+
+if(employerAudience){
+    document.body.classList.add("employer-portfolio-mode");
+    if(employerPortfolioBanner) employerPortfolioBanner.style.display = "flex";
+    if(studentGuidanceCta) studentGuidanceCta.style.display = "none";
+    const portfolioBackLink = document.querySelector(".portfolio-back-link");
+    if(portfolioBackLink) portfolioBackLink.href = "student-projects.html?audience=employer";
+
+    const employerNavLinks = document.getElementById("nav-links");
+    if(employerNavLinks){
+        employerNavLinks.innerHTML = `
+            <a href="employers.html">Employer Home</a>
+            <a href="student-projects.html?audience=employer" class="active">Browse Talent</a>
+            <a href="employer-enquiry.html">Contact PerfectIT</a>
+            <a href="index.html" class="employer-nav-exit">Student Tutoring</a>
+        `;
+
+        employerNavLinks.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => employerNavLinks.classList.remove("active"));
+        });
+    }
+}
 
 studentProfile.style.display = "none";
 portfolioHeader.style.display = "none";
@@ -214,7 +240,7 @@ function renderOpportunityProfile(student) {
         opportunityContact.style.display = "none";
     }else{
         opportunityContact.style.display = "inline-flex";
-        opportunityContact.href = `contact.html?opportunity=${encodeURIComponent(student.displayName)}`;
+        opportunityContact.href = `employer-enquiry.html?candidate=${encodeURIComponent(student.displayName)}`;
     }
 }
 
@@ -317,7 +343,7 @@ function renderDeveloperDirectory() {
                         ${student.modules.slice(0, 4).map(module => `<span>${module}</span>`).join("")}
                     </div>
                     <small>${projectCount} published project${projectCount === 1 ? "" : "s"}</small>
-                    <a href="student-projects.html?student=${encodeURIComponent(student.studentId)}">
+                    <a href="student-projects.html?student=${encodeURIComponent(student.studentId)}${employerAudience ? "&audience=employer" : ""}">
                         View Portfolio →
                     </a>
                 </div>

@@ -116,6 +116,7 @@ if (contactForm) {
     const contactParams = new URLSearchParams(window.location.search);
     const selectedModule = contactParams.get("module");
     const opportunityStudent = contactParams.get("opportunity");
+    const employerCandidate = contactParams.get("candidate");
 
     const moduleSelect = document.getElementById("module");
 
@@ -138,6 +139,13 @@ if (contactForm) {
         if(subject){
             subject.value = `PerfectIT Developer Opportunity Enquiry: ${opportunityStudent}`;
         }
+    }
+
+    if(employerCandidate){
+        const candidate = document.getElementById("candidate");
+        const message = document.getElementById("message");
+        if(candidate) candidate.value = employerCandidate;
+        if(message) message.value = `I would like to discuss a professional opportunity for ${employerCandidate}.`;
     }
 
     const status = document.getElementById("formStatus");
@@ -197,7 +205,7 @@ if (contactForm) {
         }
 
         button.disabled = false;
-        button.textContent = "Send Enquiry";
+        button.textContent = contactForm.closest(".employer-form-card") ? "Send Employer Enquiry" : "Send Enquiry";
 
     });
 
