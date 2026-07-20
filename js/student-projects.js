@@ -60,13 +60,21 @@ if(employerAudience){
     const portfolioBackLink = document.querySelector(".portfolio-back-link");
     if(portfolioBackLink) portfolioBackLink.href = "student-projects.html?audience=employer";
 
+    const employerLogoLink = document.querySelector(".logo .logo-link");
+    if(employerLogoLink){
+        employerLogoLink.removeAttribute("href");
+        employerLogoLink.removeAttribute("target");
+        employerLogoLink.setAttribute("aria-label", "PerfectIT Talent for Employers");
+        employerLogoLink.classList.add("employer-logo-disabled");
+        employerLogoLink.tabIndex = -1;
+    }
+
     const employerNavLinks = document.getElementById("nav-links");
     if(employerNavLinks){
         employerNavLinks.innerHTML = `
             <a href="employers.html">Employer Home</a>
             <a href="student-projects.html?audience=employer" class="active">Browse Talent</a>
             <a href="employer-enquiry.html">Contact PerfectIT</a>
-            <a href="index.html" class="employer-nav-exit">Student Tutoring</a>
         `;
 
         employerNavLinks.querySelectorAll("a").forEach(link => {
