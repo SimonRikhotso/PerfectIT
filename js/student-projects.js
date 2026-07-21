@@ -672,11 +672,25 @@ ${(() => {
 
     actions.innerHTML = "";
 
+    if (project.website) {
+
+    actions.innerHTML += `
+        <a href="${project.website}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="download-btn project-website-btn">
+            🌐 Visit Live Website
+        </a>
+    `;
+
+}
+
     if (project.github) {
 
     actions.innerHTML += `
         <a href="${project.github}"
            target="_blank"
+           rel="noopener noreferrer"
            class="download-btn">
             💻 View Code
         </a>
@@ -689,6 +703,7 @@ if (project.download) {
     actions.innerHTML += `
         <a href="${project.download}"
            target="_blank"
+           rel="noopener noreferrer"
            class="download-btn">
             📥 Download Project
         </a>

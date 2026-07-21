@@ -24,38 +24,13 @@
     "github": "",
     "download": "",
     "difficulty": "Meduim",
-    "featured": true
+    "featured": true,
+    "website": ""
   },
   {
     "id": 2,
-    "studentId": "mukwevho-selwyn",
-    "title": "Library Management System",
-    "module": "Database Programming",
-    "level": "Intermediate",
-    "type": "SQL Project",
-    "description": "A relational database system for managing books, users, and borrowing records.",
-    "longDescription": "This project focuses on database design and SQL queries. It includes entity relationships, normalization, and query optimization.",
-    "technologies": [
-      "MySQL",
-      "SQL"
-    ],
-    "concepts": [
-      "ERD Design",
-      "Joins",
-      "Normalization",
-      "CRUD Queries"
-    ],
-    "image": "../images/projects/library-system.jpg",
-    "youtube": "",
-    "github": "",
-    "download": "",
-    "difficulty": "Medium",
-    "featured": true
-  },
-  {
-    "id": 3,
-    "studentId": "mathebula-tiyiselani-ashley",
-    "title": "Weather App (API Integration)",
+    "studentId": "eltawil-isam",
+    "title": "The bakery",
     "module": "Python Programming",
     "level": "Intermediate",
     "type": "GUI + API Project",
@@ -72,123 +47,148 @@
       "GUI Design",
       "Error Handling"
     ],
-    "image": "../images/projects/weather-app.png",
-    "youtube": "",
-    "github": "",
-    "download": "",
-    "difficulty": "Medium",
-    "featured": false
-  },
-  {
-    "id": 101,
-    "studentId": "demo-naledi",
-    "title": "Clinic Appointment Manager (Demo)",
-    "module": "C# Programming",
-    "level": "Intermediate",
-    "type": "Desktop / OOP Project",
-    "description": "A demonstration C# application for scheduling appointments and managing basic patient queues.",
-    "longDescription": "This fictional demonstration project shows how a student can present object-oriented design, validation, collections and a practical workflow without exposing private academic work.",
-    "technologies": [
-      "C#",
-      ".NET",
-      "OOP"
-    ],
-    "concepts": [
-      "Classes & Objects",
-      "Validation",
-      "Collections",
-      "CRUD Operations"
-    ],
-    "image": "../images/projects/student-management.jpg",
-    "youtube": "",
-    "github": "",
-    "download": "",
-    "difficulty": "Medium",
-    "featured": true,
-    "isDemo": true
-  },
-  {
-    "id": 102,
-    "studentId": "demo-naledi",
-    "title": "Community Stock Tracker (Demo)",
-    "module": "Database Programming",
-    "level": "Intermediate",
-    "type": "Database Project",
-    "description": "A demonstration inventory system for tracking products, quantities and stock movements.",
-    "longDescription": "This fictional database project demonstrates relational design, structured queries, validation and reporting in a portfolio-friendly format.",
-    "technologies": [
-      "SQL",
-      "MySQL",
-      "C#"
-    ],
-    "concepts": [
-      "Database Design",
-      "Joins",
-      "Normalization",
-      "Reporting"
-    ],
-    "image": "../images/projects/library-system.jpg",
+    "image": "../images/projects/freshlybacked.png",
     "youtube": "",
     "github": "",
     "download": "",
     "difficulty": "Medium",
     "featured": false,
-    "isDemo": true
+    "website": "https://fabulous-nougat-db216c.netlify.app/"
   },
   {
-    "id": 103,
-    "studentId": "demo-thabo",
-    "title": "Help Desk Ticket System (Demo)",
-    "module": "Java Programming",
+    "id": 3,
+    "studentId": "kapa-derrick",
+    "title": "JMSE Kapa Holdings",
+    "module": "PHP Programming",
     "level": "Intermediate",
-    "type": "Console / OOP Project",
-    "description": "A demonstration Java system for logging, prioritising and resolving technical-support tickets.",
-    "longDescription": "This fictional project demonstrates Java classes, inheritance, collections, exception handling and clear problem-solving documentation.",
+    "type": "Web Application",
+    "description": "A PHP based web application",
+    "longDescription": "JMSE KAPA HOLDINGS is a South African parent company building technology, education support, digital services, business systems and innovation platforms.",
     "technologies": [
-      "Java",
-      "OOP",
-      "Collections"
+      "Html",
+      "CSS",
+      "Java Script",
+      "PHP"
     ],
     "concepts": [
-      "Inheritance",
-      "Exception Handling",
-      "Lists",
-      "Status Workflows"
+      "Scripting",
+      "CSS Designing"
     ],
-    "image": "../images/projects/premium_photo-1661877737564-3dfd7282efcb.avif",
+    "image": "../images/projects/JMSEKapaHoldings.webp",
     "youtube": "",
     "github": "",
     "download": "",
     "difficulty": "Medium",
     "featured": true,
-    "isDemo": true
+    "website": "https://www.jmsekapaholdings.co.za/"
   },
   {
-    "id": 104,
-    "studentId": "demo-akhona",
-    "title": "Study Planner (Demo)",
-    "module": "Python Programming",
-    "level": "Beginner",
-    "type": "GUI Project",
-    "description": "A demonstration Python application for organising modules, study sessions and deadlines.",
-    "longDescription": "This fictional project shows how an emerging Python developer can present GUI design, input validation, data storage and usability decisions.",
+    "id": 4,
+    "studentId": "eltawil-isam",
+    "title": "Finance Flow",
+    "module": "Java Programming",
+    "level": "Intermediate",
+    "type": "GUI",
+    "description": "A Java application that teaches people how to spend money using gamification.",
+    "longDescription": "",
     "technologies": [
-      "Python",
-      "Tkinter",
-      "JSON"
+      "Java",
+      "XML"
     ],
     "concepts": [
-      "GUI Design",
-      "File Storage",
-      "Validation",
+      "Java",
+      "XML",
       "Error Handling"
     ],
-    "image": "../images/projects/weather-app.png",
+    "image": "../images/projects/FinanceFlow.png",
+    "youtube": "https://www.youtube.com/embed/6ZgTVWDMJqo?si=dKD_ViHN73bl72nK",
+    "github": "",
+    "download": "",
+    "difficulty": "Medium",
+    "featured": true,
+    "website": ""
+  },
+  {
+    "id": 5,
+    "studentId": "eltawil-isam",
+    "title": "Online Calculator",
+    "module": "Java Script",
+    "level": "Easy",
+    "type": "Web App",
+    "description": "An Online Calculator",
+    "longDescription": "",
+    "technologies": [
+      "Html",
+      "CSS",
+      "Java Script"
+    ],
+    "concepts": [
+      "Scripting",
+      "Error Handling"
+    ],
+    "image": "../images/projects/Calculator.png",
     "youtube": "",
     "github": "",
     "download": "",
     "difficulty": "Easy",
-    "featured": true,
-    "isDemo": true
+    "featured": false,
+    "website": "https://mycalculator-app.infinityfreeapp.com/?i=2"
+  },
+  {
+    "id": 6,
+    "studentId": "kapa-derrick",
+    "title": "tricorelearning",
+    "module": "PHP Programming",
+    "level": "Intermediate",
+    "type": "Web Application",
+    "description": "A hybrid tutoring and academic support institute for high school, tertiary, and TVET/NATED students. Learn online, in-person, or both — powered by TriCore Campus.",
+    "longDescription": "",
+    "technologies": [
+      "Html",
+      "CSS",
+      "Java Script",
+      "PHP"
+    ],
+    "concepts": [
+      "CSS Designing",
+      "Scripting"
+    ],
+    "image": "../images/projects/tricorelearning.webp",
+    "youtube": "",
+    "github": "",
+    "download": "",
+    "difficulty": "Medium",
+    "featured": false,
+    "website": "https://www.tricorelearning.co.za"
+  },
+  {
+    "id": 7,
+    "studentId": "eltawil-isam",
+    "title": "PastTimes",
+    "module": "PHP Programming",
+    "level": "Intermediate",
+    "type": "Website project",
+    "description": "A website to buy and sell clothes.",
+    "longDescription": "",
+    "technologies": [
+      "Html",
+      "CSS",
+      "Java Script",
+      "PHP",
+      "SQL"
+    ],
+    "concepts": [
+      "PHP Programming",
+      "Java Scripting",
+      "SQL Query Commands",
+      "Error Handling"
+    ],
+    "image": "../images/projects/PastTimes.png",
+    "youtube": "https://www.youtube.com/embed/E0NYT9d_Kso?si=7E53mZHmczwpq6-N",
+    "github": "",
+    "download": "",
+    "difficulty": "Medium",
+    "featured": false,
+    "website": ""
   }
 ]
